@@ -1,0 +1,6 @@
+@soul_whisper_HostAddress = http://localhost:5090
+
+GET {{soul_whisper_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
