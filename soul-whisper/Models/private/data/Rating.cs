@@ -11,3 +11,4 @@ public class Rating
     public required DateTime createAt{get;set;}
     public  DateTime? modifiedAt{get;set;}
 }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
