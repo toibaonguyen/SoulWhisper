@@ -6,7 +6,8 @@ public class Receipt
 {
     public required string id{get;set;}
     public required ReceiptType type {get;set;}
-    public required string payerId{get;set;}
+    public Doctor? doctor{get;set;}
+    public Patient? patient{get;set;}
     public required long Amount {get;set;}
     public required string Details{get;set;}
 }
