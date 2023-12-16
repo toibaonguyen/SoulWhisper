@@ -4,7 +4,7 @@ using soul_whisper.Models.Private.Enum;
 
 namespace soul_whisper.Models.Private.Data;
 
-public class Doctor_Registration
+public class Doctorship_Registration
 {
     public required long id {get;set;}
     public required Doctor registrant { get; set; }
