@@ -8,7 +8,7 @@ public class Doctor
     public required string email { get; set; }
     public required string password { get; set; }
     public required string name { get; set; }
-    public required Doctor_Image avatar {get;set;}
+    public required string avatar {get;set;}
     public required DateOnly birthday { get; set; }
     public required Gender gender { get; set; }
     public required ActivationStatus activationStatus { get; set; }
