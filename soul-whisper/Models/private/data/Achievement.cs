@@ -5,7 +5,7 @@ namespace soul_whisper.Models.Private.Data;
 
 public class Achievement
 {
-    public required string id { get; set; }
+    public required Guid id { get; set; }
     public required Doctor doctor{get;set;}
     public required string image { get; set; }
     public required AchievementType type { get; set; }

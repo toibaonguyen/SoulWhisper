@@ -1,10 +1,12 @@
 
 using Microsoft.EntityFrameworkCore;
+using soul_whisper.Configs.KeyConfiguration;
 using soul_whisper.Models.Private.Data;
 namespace soul_whisper.Data;
 
 public class FlatformContext : DbContext
 {
+    private string connectionString=DatabaseConfig.CONNECTION_STRING;
     public DbSet<Achievement_Image> achievement_images { get; set; }
     public DbSet<Achievement> achievements { get; set; }
     public DbSet<Admin> admins { get; set; }
@@ -22,8 +24,8 @@ public class FlatformContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(
-            @"Server=(localdb)\mssqllocaldb;Database=Blogging;Trusted_Connection=True");
+        base.OnConfiguring(optionsBuilder);
+        optionsBuilder.UseSqlServer(this.connectionString);
     }
 
 }
