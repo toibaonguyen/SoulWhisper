@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace soul_whisper.Models.Private.Data;
 
 public class Diagnosis

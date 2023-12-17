@@ -1,10 +1,13 @@
+using System.ComponentModel.DataAnnotations;
 using soul_whisper.Models.Private.Enum;
 
 namespace soul_whisper.Models.Private.Data;
 
 public class Patient
 {
+    [Key]
     public required Guid id { get; set; }
+    //unique
     public required string email { get; set; }
     public required string password { get; set; }
     public required string name { get; set; }

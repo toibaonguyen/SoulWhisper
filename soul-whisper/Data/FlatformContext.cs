@@ -6,7 +6,7 @@ namespace soul_whisper.Data;
 
 public class FlatformContext : DbContext
 {
-    private string connectionString=DatabaseConfig.CONNECTION_STRING;
+    private string connectionString = DatabaseConfig.CONNECTION_STRING;
     public DbSet<Achievement_Image> achievement_images { get; set; }
     public DbSet<Achievement> achievements { get; set; }
     public DbSet<Admin> admins { get; set; }
@@ -26,6 +26,13 @@ public class FlatformContext : DbContext
     {
         base.OnConfiguring(optionsBuilder);
         optionsBuilder.UseSqlServer(this.connectionString);
+    }
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+        modelBuilder.Entity<Admin>().HasIndex(a => a.email).IsUnique();
+        modelBuilder.Entity<Patient>().HasIndex(a => a.email).IsUnique();
+        modelBuilder.Entity<Doctor>().HasIndex(a => a.email).IsUnique();
     }
 
 }
