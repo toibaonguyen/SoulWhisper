@@ -9,7 +9,6 @@ public class Achievement_Image
 {
     [Key]
     public required Guid id { get; set; }
-    [ForeignKey("id")]
     public required Achievement belongTo {get;set;}
     public required string image { get; set; }
     
