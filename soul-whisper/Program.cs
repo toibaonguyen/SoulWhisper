@@ -1,3 +1,5 @@
+using soul_whisper.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -23,5 +25,8 @@ app.UseAuthorization();
 app.UseRouting();
 
 app.MapControllers();
+
+FlatformContext context=new FlatformContext();
+await context.CreateDatabase();
 
 app.Run();

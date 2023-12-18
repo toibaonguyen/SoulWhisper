@@ -34,6 +34,7 @@ public class FlatformContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
+        modelBuilder.Entity<Appointment>().HasOne(a=>a.diagnosis).WithOne(d=>d.appointment);
         modelBuilder.Entity<Admin>().HasIndex(a => a.email).IsUnique();
         modelBuilder.Entity<Patient>().HasIndex(a => a.email).IsUnique();
         modelBuilder.Entity<Doctor>().HasIndex(a => a.email).IsUnique();
