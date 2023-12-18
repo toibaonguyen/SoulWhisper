@@ -4,7 +4,7 @@ namespace soul_whisper.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class WeatherForecastController : ControllerBase
+public class WeatherForecastController : ControllerBase 
 {
     private static readonly string[] Summaries = new[]
     {
@@ -18,16 +18,12 @@ public class WeatherForecastController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
+    [HttpGet("{id}")]
+    public int Get(string id,string numb)
     {
+        Console.WriteLine(id);
+        Console.WriteLine(numb);
         Console.WriteLine($"i'm here: {this._logger}");
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-        {
-            Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-        })
-        .ToArray();
+        return 10;
     }
 }

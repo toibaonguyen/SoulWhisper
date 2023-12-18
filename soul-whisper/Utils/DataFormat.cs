@@ -14,9 +14,7 @@ public static class DataFormat
             var value = property.GetValue(obj);
             if (value != null)
             {
-#pragma warning disable CS8604 // Possible null reference argument.
-                claims.Add(new Claim(property.Name, value.ToString()));
-#pragma warning restore CS8604 // Possible null reference argument.
+                claims?.Add(new Claim(property.Name, value.ToString()));
             }
         }
 

@@ -12,7 +12,6 @@ public class FlatformContext : DbContext
     public DbSet<Achievement> achievements { get; set; }
     public DbSet<Admin> admins { get; set; }
     public DbSet<Appointment> appointments { get; set; }
-    public DbSet<Diagnosis> diagnoses { get; set; }
     public DbSet<Doctor> doctors { get; set; }
     public DbSet<Doctorship_Registration> doctorship_registrations { get; set; }
     public DbSet<Exercise> exercises { get; set; }
@@ -22,6 +21,7 @@ public class FlatformContext : DbContext
     public DbSet<Rating> ratings { get; set; }
     public DbSet<Receipt> receipts { get; set; }
     public DbSet<Rule> rules { get; set; }
+    public DbSet<Message> messages{get;set;}
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -34,7 +34,6 @@ public class FlatformContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        modelBuilder.Entity<Appointment>().HasOne(a=>a.diagnosis).WithOne(d=>d.appointment);
         modelBuilder.Entity<Admin>().HasIndex(a => a.email).IsUnique();
         modelBuilder.Entity<Patient>().HasIndex(a => a.email).IsUnique();
         modelBuilder.Entity<Doctor>().HasIndex(a => a.email).IsUnique();
@@ -44,22 +43,22 @@ public class FlatformContext : DbContext
     {
         String databasename = Database.GetDbConnection().Database;
 
-        Console.WriteLine("Tạo " + databasename);
+        Console.WriteLine("Create " + databasename);
         bool result = await Database.EnsureCreatedAsync();
-        string resultstring = result ? "tạo  thành  công" : "đã có trước đó";
-        Console.WriteLine($"CSDL {databasename} : {resultstring}");
+        string resultstring = result ? "create successfully" : "already exist";
+        Console.WriteLine($"Database {databasename} : {resultstring}");
     }
     public async Task DeleteDatabase()
     {
             String databasename = Database.GetDbConnection().Database;
-            Console.Write($"Có chắc chắn xóa {databasename} (y) ? ");
-             string input = Console.ReadLine();
+            Console.Write($"Wanna delete {databasename} (y) ? ");
+             string? input = Console.ReadLine();
 
             // // Hỏi lại cho chắc
-            if (input.ToLower() == "y")
+            if (input?.ToLower() == "y")
             {
                 bool deleted = await Database.EnsureDeletedAsync();
-                string deletionInfo = deleted ? "đã xóa" : "không xóa được";
+                string deletionInfo = deleted ? "deleted" : "Can not delete";
                 Console.WriteLine($"{databasename} {deletionInfo}");
             }
 
