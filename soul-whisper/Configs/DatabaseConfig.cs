@@ -1,4 +1,4 @@
-namespace soul_whisper.Configs.KeyConfiguration;
+namespace soul_whisper.Configs;
 
 public static class DatabaseConfig
 {

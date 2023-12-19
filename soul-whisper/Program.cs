@@ -1,5 +1,6 @@
 using soul_whisper.Data;
 using soul_whisper.Middlewares;
+using soul_whisper.Models.Private.Business;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +25,8 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.UseRouting();
+
+app.UseMiddleware<GlobalModifierMiddleware>();
 
 app.MapControllers();
 

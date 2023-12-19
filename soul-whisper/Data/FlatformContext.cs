@@ -1,6 +1,6 @@
 
 using Microsoft.EntityFrameworkCore;
-using soul_whisper.Configs.KeyConfiguration;
+using soul_whisper.Configs;
 using soul_whisper.Models.Private.Data;
 namespace soul_whisper.Data;
 
@@ -27,9 +27,10 @@ public class FlatformContext : DbContext
     {
         base.OnConfiguring(optionsBuilder);
         // Tạo ILoggerFactory
-        ILoggerFactory loggerFactory = LoggerFactory.Create(builder => builder.AddConsole());
+        // ILoggerFactory loggerFactory = LoggerFactory.Create(builder => builder.AddConsole());
 
-        optionsBuilder.UseSqlServer(this.connectionString).UseLoggerFactory(loggerFactory);
+        // optionsBuilder.UseSqlServer(this.connectionString).UseLoggerFactory(loggerFactory);
+        optionsBuilder.UseSqlServer(this.connectionString);
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

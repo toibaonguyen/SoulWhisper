@@ -19,11 +19,9 @@ public class AccessTokenFactory : TokenFactory<UserDTO>
 
 public class RefreshTokenFactory : TokenFactory<UserDTO>
 {
-
     public Token CreateToken(UserDTO payload)
     {
         return new RefreshToken(payload);
     }
-
 }
 

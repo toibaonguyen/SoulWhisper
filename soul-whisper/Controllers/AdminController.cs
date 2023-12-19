@@ -11,17 +11,23 @@ namespace soul_whisper.Controllers;
 public class AdminController : ControllerBase
 {
     private readonly ILogger<AdminController> _logger;
+    private readonly string LOGOUT_SUCCESSFULLY="Logout fully!";
+    private readonly string LOGOUT_FAILLY="Logout fully!";
     [HttpPost("/logout")]
-    public ActionResult<bool> test()
+    public async Task<ActionResult<BaseResponseDTO>> test()
     {
         string authHeaderValue = HttpContext.Request.Headers["Authorization"];
         if (String.IsNullOrEmpty(authHeaderValue))
         {
-            Console.WriteLine("Token is empty!");
-            throw new Exception("MET QUA NHA");
+            throw new UnauthorizedAccessException(this.LOGOUT_FAILLY);
         }
+        var adminService = new AdminService();
+
         var myMachine = new TokenConverterMachine();
-        return myMachine.ConvertAccessTokenToUserDTO(authHeaderValue);
+        UserDTO user = myMachine.ConvertAccessTokenToUserDTO(authHeaderValue);
+        await adminService.Logout(user.userId);
+
+        return  Ok(new ContainMessageResponse{message=this.LOGOUT_SUCCESSFULLY});
     }
 
     public AdminController(ILogger<AdminController> logger)
@@ -29,13 +35,12 @@ public class AdminController : ControllerBase
         _logger = logger;
     }
     [HttpPost("/login")]
-    public async Task<IActionResult> Login(LoginRequestDTO account)
+    public async Task<ActionResult<BaseResponseDTO>> Login(LoginRequestDTO account)
     {
         try
         {
             AdminService service = new AdminService();
             AccessRightDTO accessRight = await service.Login(account.email, account.password);
-
             ContainDataResponseDTO response = new ContainDataResponseDTO { data = accessRight };
             return Ok(response);
         }

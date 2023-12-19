@@ -1,16 +1,29 @@
 
 using System.Security.Cryptography;
 using Microsoft.IdentityModel.Tokens;
-using soul_whisper.Configs.KeyConfiguration;
+using soul_whisper.Configs;
 using System.IdentityModel.Tokens.Jwt;
 using soul_whisper.Models.Public;
+using System.Security.Claims;
+using soul_whisper.Models.Public.Enum;
+using soul_whisper.Models.Private.Business;
 
 namespace soul_whisper.Helpers;
 
-public class TokenConverterMachine
+public interface TokenConverter
 {
+    public UserDTO ConvertAccessTokenToUserDTO(string accessToken);
+    public UserDTO ConvertRefreshTokenToUserDTO(string refreshToken);
+}
+
+public class TokenConverterMachine : TokenConverter
+{
+    private Guid userID;
+    private UserRole userRole;
     private RsaSecurityKey accessTokenKey;
     private RsaSecurityKey refreshTokenKey;
+    private string INVALID_TOKEN = "Invalid Token";
+    private string EXPIRED_TOKEN = "Expired Token";
     public TokenConverterMachine()
     {
         RSA Arsa = RSA.Create();
@@ -23,49 +36,137 @@ public class TokenConverterMachine
         Frsa.ImportFromPem(refreshTokenKeyText);
         this.refreshTokenKey = new RsaSecurityKey(Frsa);
     }
-    public bool ConvertAccessTokenToUserDTO(string accessToken)
+    public UserDTO ConvertAccessTokenToUserDTO(string accessToken)
     {
-        var tokenHandler = new JwtSecurityTokenHandler();
 
-        var validationParameters = new TokenValidationParameters
-        {
-            ValidateLifetime = true, // Kiểm tra thời gian sống của token
-            ValidateAudience=false,
-            ValidateIssuer=false,
-            IssuerSigningKey = this.accessTokenKey
-        };
         try
         {
-            tokenHandler.ValidateToken(accessToken, validationParameters, out _);
-            return true; // Token hợp lệ
+            var tokenHandler = new JwtSecurityTokenHandler();
+
+            var validationParameters = new TokenValidationParameters
+            {
+                ValidateLifetime = false,
+                ValidateAudience = false,
+                ValidateIssuer = false,
+                IssuerSigningKey = this.accessTokenKey
+            };
+            SecurityToken pad;
+            var token = tokenHandler.ValidateToken(accessToken, validationParameters, out pad);
+
+
+            foreach (Claim claim in token.Claims.ToArray())
+            {
+                switch (claim.Type)
+                {
+                    case "userId":
+                        userID = Guid.Parse(claim.Value);
+                        if (TokenOperation.legitAccessTokens.Count(e => e.userId == userID) < 1)
+                        {
+                            throw new SecurityTokenInvalidLifetimeException(this.INVALID_TOKEN);
+                        }
+
+                        break;
+                    case "role":
+                        if (claim.Value == "ADMIN")
+                        {
+                            userRole = UserRole.ADMIN;
+                        }
+                        else if (claim.ValueType == "DOCTOR")
+                        {
+                            userRole = UserRole.DOCTOR;
+                        }
+                        else if (claim.ValueType == "PATIENT")
+                        {
+                            userRole = UserRole.PATIENT;
+                        }
+                        break;
+
+                }
+            }
+
+            UserDTO user = new UserDTO { userId = userID, role = userRole };
+            return user; // Token hợp lệ
         }
         catch (Exception e)
         {
-            Console.WriteLine($"Mua it thoi: {e.Message}");
-
-            return false; // Token không hợp lệ
+            Console.WriteLine($"Mua it thoi: {e.GetType()}");
+            if (e is SecurityTokenInvalidLifetimeException)
+            {
+                throw new SecurityTokenInvalidLifetimeException(this.EXPIRED_TOKEN);
+            }
+            else if (e is ArgumentException)
+            {
+                throw new ArgumentException(this.INVALID_TOKEN);
+            }
+            throw; // Token không hợp lệ
         }
 
     }
-    public bool ConvertRefreshTokenToUserDTO(string refreshToken)
+    public UserDTO ConvertRefreshTokenToUserDTO(string refreshToken)
     {
-        var tokenHandler = new JwtSecurityTokenHandler();
-
-        var validationParameters = new TokenValidationParameters
-        {
-            ValidateLifetime = true, // Kiểm tra thời gian sống của token
-            ValidateAudience=false,
-            ValidateIssuer=false,
-            IssuerSigningKey = this.refreshTokenKey
-        };
         try
         {
-            tokenHandler.ValidateToken(refreshToken, validationParameters, out _);
-            return true; // Token hợp lệ
+            var tokenHandler = new JwtSecurityTokenHandler();
+
+            var validationParameters = new TokenValidationParameters
+            {
+                ValidateLifetime = false,
+                ValidateAudience = false,
+                ValidateIssuer = false,
+                IssuerSigningKey = this.refreshTokenKey
+            };
+            SecurityToken pad;
+            var token = tokenHandler.ValidateToken(refreshToken, validationParameters, out pad);
+
+
+            foreach (Claim claim in token.Claims.ToArray())
+            {
+                switch (claim.Type)
+                {
+                    case "userId":
+                        userID = Guid.Parse(claim.Value);
+                        if (TokenOperation.legitRefreshTokens.Count(e => e.userId == userID) < 1)
+                        {
+                            throw new SecurityTokenInvalidLifetimeException(this.EXPIRED_TOKEN);
+                        }
+
+                        break;
+                    case "role":
+                        if (claim.Value == "ADMIN")
+                        {
+                            userRole = UserRole.ADMIN;
+                        }
+                        else if (claim.ValueType == "DOCTOR")
+                        {
+                            userRole = UserRole.DOCTOR;
+                        }
+                        else if (claim.ValueType == "PATIENT")
+                        {
+                            userRole = UserRole.PATIENT;
+                        }
+                        break;
+
+                }
+            }
+
+            UserDTO user = new UserDTO { userId = userID, role = userRole };
+            return user; // Token hợp lệ
+
+
         }
-        catch (Exception)
+        catch (Exception e)
         {
-            return false; // Token không hợp lệ
+            Console.WriteLine($"Mua it thoi 1: {e.GetType()}");
+            if (e is SecurityTokenInvalidLifetimeException)
+            {
+                throw new SecurityTokenInvalidLifetimeException(this.EXPIRED_TOKEN);
+            }
+            else if (e is ArgumentException)
+            {
+                throw new ArgumentException(this.INVALID_TOKEN);
+            }
+            throw; // Token không hợp lệ
         }
     }
+
 }

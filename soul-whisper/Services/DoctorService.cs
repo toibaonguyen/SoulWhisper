@@ -2,6 +2,7 @@ using System.Security.Authentication;
 using Microsoft.EntityFrameworkCore;
 using soul_whisper.Data;
 using soul_whisper.Helpers.TokenFactory;
+using soul_whisper.Models.Private.Business.Doctor;
 using soul_whisper.Models.Private.Business.Token;
 using soul_whisper.Models.Private.Business.User;
 using soul_whisper.Models.Private.Enum;
@@ -38,11 +39,11 @@ public class DoctorService:IOperation{
             
         }
     }
-    public async Task Logout(string accessToken)
+    public async Task Logout(Guid userId)
     {
         
     }
-    public async Task Register(Admin admin)
+    public async Task Register(Doctor doctor)
     {
 
     }

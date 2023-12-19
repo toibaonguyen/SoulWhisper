@@ -40,7 +40,7 @@ public class PatientService : IOperation
 
         }
     }
-    public async Task Logout(string accessToken)
+    public async Task Logout(Guid userId)
     {
 
     }

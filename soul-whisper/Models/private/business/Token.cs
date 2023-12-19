@@ -3,7 +3,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Cryptography;
 using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
-using soul_whisper.Configs.KeyConfiguration;
+using soul_whisper.Configs;
 using soul_whisper.Utils;
 
 namespace soul_whisper.Models.Private.Business.Token;
@@ -32,11 +32,11 @@ public class AccessToken : Token
         JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
         JwtSecurityToken token = new JwtSecurityToken
         (
-            signingCredentials : new SigningCredentials(
+            signingCredentials: new SigningCredentials(
                 this.privateKey, SecurityAlgorithms.RsaSha256
             ),
-            expires : DateTime.UtcNow.AddMinutes(15),
-            claims : DataFormat.CreateClaimsFromObject(this.payload)
+            claims: MyTools.CreateClaimsFromObject(this.payload),
+            expires: DateTime.Now
         );
         string accessToken = tokenHandler.WriteToken(token);
         return accessToken;
@@ -59,11 +59,11 @@ public class RefreshToken : Token
         JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
         JwtSecurityToken token = new JwtSecurityToken
         (
-            signingCredentials : new SigningCredentials(
+            signingCredentials: new SigningCredentials(
                 this.privateKey, SecurityAlgorithms.RsaSha256
             ),
-            expires : DateTime.UtcNow.AddMonths(1),
-            claims : DataFormat.CreateClaimsFromObject(this.payload)
+            claims: MyTools.CreateClaimsFromObject(this.payload),
+            expires: DateTime.Now
         );
         string refreshToken = tokenHandler.WriteToken(token);
         return refreshToken;

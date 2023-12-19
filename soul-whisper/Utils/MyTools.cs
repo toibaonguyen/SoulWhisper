@@ -1,9 +1,10 @@
+using System.IdentityModel.Tokens.Jwt;
 using System.Reflection;
 using System.Security.Claims;
 
 namespace soul_whisper.Utils;
 
-public static class DataFormat
+public static class MyTools
 {
     public static IEnumerable<Claim> CreateClaimsFromObject(object obj)
     {
@@ -21,6 +22,12 @@ public static class DataFormat
         }
 
         return claims;
+    }
+    public static string GetClaimValue(JwtSecurityToken token, string claimType)
+    {
+        Claim claim = token.Claims.FirstOrDefault(c => c.Type == claimType);
+
+        return claim?.Value;
     }
 
 }

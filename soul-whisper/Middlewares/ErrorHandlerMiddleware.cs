@@ -1,4 +1,5 @@
 
+using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using soul_whisper.Models.Public;
 
@@ -30,25 +31,32 @@ public class GlobalErrorHandlerMiddleware
     private static async Task HandleExceptionAsync(HttpContext context, Exception exception)
     {
         int statusCode;
-        string errorMessage = exception.Message==""?exception.Message:"Something wrong!"; // Có thể thay đổi tùy vào loại ngoại lệ
-        switch(exception)
+        string errorMessage = exception.Message != "" ? exception.Message : "Something wrong!"; // Có thể thay đổi tùy vào loại ngoại lệ
+        switch (exception)
         {
             case UnauthorizedAccessException _:
                 statusCode = StatusCodes.Status401Unauthorized;
                 break;
             case InvalidOperationException _:
-                statusCode= StatusCodes.Status403Forbidden;
+                statusCode = StatusCodes.Status403Forbidden;
+                break;
+            case SecurityTokenInvalidLifetimeException _:
+                statusCode = StatusCodes.Status401Unauthorized;
+                break;
+            case ArgumentException _:
+                statusCode = StatusCodes.Status403Forbidden;
                 break;
             default:
-            statusCode=500;
-            break;
+                statusCode = 500;
+                break;
 
         }
 
         // Kiểm tra ngoại lệ và cập nhật thông báo lỗi cụ thể nếu cần thiết
 
-        var response = new ContainMessageResponse{
-            message=errorMessage
+        var response = new ContainMessageResponse
+        {
+            message = errorMessage
         };
 
         context.Response.ContentType = "application/json";
