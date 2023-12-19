@@ -1,4 +1,4 @@
-namespace soul_whisper.Models.Private.Business;
+namespace soul_whisper.Helpers;
 
 public struct SomethingDumas
 {
@@ -11,7 +11,7 @@ public struct SomethingDumas
         this.token = token; this.expiredAt = expiredAt;
     }
 }
-public static class TokenOperation
+public static class TokenOperator
 {
     static public List<SomethingDumas> legitAccessTokens=[] ;
     static public List<SomethingDumas> legitRefreshTokens=[] ;

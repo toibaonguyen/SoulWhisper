@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using soul_whisper.Configs;
 using soul_whisper.Data;
 using soul_whisper.Helpers.TokenFactory;
-using soul_whisper.Models.Private.Business;
+using soul_whisper.Helpers;
 using soul_whisper.Models.Private.Business.Token;
 using soul_whisper.Models.Private.Business.User;
 using soul_whisper.Models.Private.Enum;
@@ -11,7 +11,6 @@ using soul_whisper.Models.Public;
 using soul_whisper.Models.Public.Enum;
 
 namespace soul_whisper.Service;
-
 public class AdminService : IOperation
 {
     private const string WRONG_EMAIL_OR_PASSWORD = "Wrong email or password";
@@ -34,16 +33,16 @@ public class AdminService : IOperation
                 }
                 else
                 {
-                    TokenOperation.RemoveAccessToken(admin.id);
-                    TokenOperation.RemoveRefreshToken(admin.id);
+                    TokenOperator.RemoveAccessToken(admin.id);
+                    TokenOperator.RemoveRefreshToken(admin.id);
                     AccessTokenFactory accessTokenFactory = new AccessTokenFactory();
                     RefreshTokenFactory refreshTokenFactory = new RefreshTokenFactory();
                     AccessToken accessToken = (AccessToken)accessTokenFactory.CreateToken(new UserDTO { userId = admin.id, role = UserRole.ADMIN });
                     RefreshToken refreshToken = (RefreshToken)refreshTokenFactory.CreateToken(new UserDTO { userId = admin.id, role = UserRole.ADMIN });
                     string accessTokenS=accessToken.ToString();
                     string refreshTokenS=refreshToken.ToString();
-                    TokenOperation.AddLegitAccessToken(admin.id,accessTokenS,DateTime.Now.AddSeconds(TokenConfig.ACCESS_TOKEN_EXPIRATION_IN_SECONDS));
-                    TokenOperation.AddLegitRefreshToken(admin.id,refreshTokenS,DateTime.Now.AddSeconds(TokenConfig.REFRESH_TOKEN_EXPIRATION_IN_SECONDS));
+                    TokenOperator.AddLegitAccessToken(admin.id,accessTokenS,DateTime.Now.AddSeconds(TokenConfig.ACCESS_TOKEN_EXPIRATION_IN_SECONDS));
+                    TokenOperator.AddLegitRefreshToken(admin.id,refreshTokenS,DateTime.Now.AddSeconds(TokenConfig.REFRESH_TOKEN_EXPIRATION_IN_SECONDS));
                     return new AccessRightDTO { accessToken = accessTokenS, refreshToken = refreshTokenS };
                 }
 
@@ -51,14 +50,13 @@ public class AdminService : IOperation
         }
         catch (Exception e)
         {
-            Console.WriteLine($"CMN:{e.Message}");
             throw e;
         }
     }
     public async Task Logout(Guid userId)
     {
-        TokenOperation.RemoveAccessToken(userId);
-        TokenOperation.RemoveRefreshToken(userId);
+        TokenOperator.RemoveAccessToken(userId);
+        TokenOperator.RemoveRefreshToken(userId);
     }
     public async Task Register(Admin admin)
     {

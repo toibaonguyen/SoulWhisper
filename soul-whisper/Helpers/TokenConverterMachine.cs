@@ -60,9 +60,9 @@ public class TokenConverterMachine : TokenConverter
                 {
                     case "userId":
                         userID = Guid.Parse(claim.Value);
-                        if (TokenOperation.legitAccessTokens.Count(e => e.userId == userID) < 1)
+                        if (TokenOperator.legitAccessTokens.Count(e => e.userId == userID) < 1)
                         {
-                            throw new SecurityTokenInvalidLifetimeException(this.INVALID_TOKEN);
+                            throw new SecurityTokenInvalidLifetimeException(this.EXPIRED_TOKEN);
                         }
 
                         break;
@@ -125,7 +125,7 @@ public class TokenConverterMachine : TokenConverter
                 {
                     case "userId":
                         userID = Guid.Parse(claim.Value);
-                        if (TokenOperation.legitRefreshTokens.Count(e => e.userId == userID) < 1)
+                        if (TokenOperator.legitRefreshTokens.Count(e => e.userId == userID) < 1)
                         {
                             throw new SecurityTokenInvalidLifetimeException(this.EXPIRED_TOKEN);
                         }
@@ -156,7 +156,6 @@ public class TokenConverterMachine : TokenConverter
         }
         catch (Exception e)
         {
-            Console.WriteLine($"Mua it thoi 1: {e.GetType()}");
             if (e is SecurityTokenInvalidLifetimeException)
             {
                 throw new SecurityTokenInvalidLifetimeException(this.EXPIRED_TOKEN);

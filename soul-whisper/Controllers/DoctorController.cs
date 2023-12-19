@@ -6,15 +6,15 @@ using soul_whisper.Service;
 namespace soul_whisper.Controllers;
 
 [ApiController]
-[Route("[controller]", Name = "admin")]
+[Route("[controller]", Name = "doctor")]
 
-public class AdminController : ControllerBase
+public class DoctorController : ControllerBase
 {
-    private readonly ILogger<AdminController> _logger;
+    private readonly ILogger<DoctorController> _logger;
     private readonly string LOGOUT_SUCCESSFULLY = "Logout fully!";
     private readonly string LOGOUT_FAILLY = "Logout fully!";
 
-    public AdminController(ILogger<AdminController> logger)
+    public DoctorController(ILogger<DoctorController> logger)
     {
         _logger = logger;
     }
@@ -23,7 +23,7 @@ public class AdminController : ControllerBase
     {
         try
         {
-            AdminService service = new AdminService();
+            DoctorService service = new DoctorService();
             AccessRightDTO accessRight = await service.Login(account.email, account.password);
             ContainDataResponseDTO response = new ContainDataResponseDTO { data = accessRight };
             return Ok(response);
@@ -32,7 +32,9 @@ public class AdminController : ControllerBase
         {
             throw;
         }
+
     }
+
     [HttpPost("logout")]
     public async Task<ActionResult<BaseResponseDTO>> Logout()
     {
@@ -41,11 +43,11 @@ public class AdminController : ControllerBase
         {
             throw new UnauthorizedAccessException(this.LOGOUT_FAILLY);
         }
-        var adminService = new AdminService();
+        DoctorService service = new DoctorService();
 
         var myMachine = new TokenConverterMachine();
         UserDTO user = myMachine.ConvertAccessTokenToUserDTO(authHeaderValue);
-        await adminService.Logout(user.userId);
+        await service.Logout(user.userId);
 
         return Ok(new ContainMessageResponse { message = this.LOGOUT_SUCCESSFULLY });
     }
