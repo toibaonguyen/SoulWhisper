@@ -9,6 +9,7 @@ namespace soul_whisper.Models.Private.Data;
 [Table("Achievement")]
 public class Achievement
 {
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Key]
     public required Guid id { get; set; }
     public required Doctor doctor { get; set; }

@@ -6,6 +6,7 @@ namespace soul_whisper.Models.Private.Data;
 
 public class Appointment
 {
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Key]
     public required Guid id { get; set; }
     public required AppointmentType type { get; set; }

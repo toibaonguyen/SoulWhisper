@@ -8,6 +8,7 @@ namespace soul_whisper.Models.Private.Data;
 [Table("Admin")]
 public class Admin
 {
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Key]
     public required Guid id { get; set; }
     //unique

@@ -4,6 +4,6 @@ namespace soul_whisper.Models.Public;
 
 public class UserDTO
 {
-    public required string userId{get; set;}
-    public required Role role{get;set;}
+    public required Guid userId{get; set;}
+    public required UserRole role{get;set;}
 }

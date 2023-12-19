@@ -1,9 +1,9 @@
+using soul_whisper.Models.Private.Business.User;
 using soul_whisper.Models.Public;
 
 namespace soul_whisper.Service;
 
-interface IUser{
-    public  Task<AccessRightDTO> Login(); 
-    public  Task Logout();
-    public Task Register();
+interface IOperation{
+    public  Task<AccessRightDTO> Login(string email,string password); 
+    public  Task Logout(string accessToken);
 }

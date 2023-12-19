@@ -1,4 +1,5 @@
 
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Cryptography;
 using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
@@ -25,20 +26,19 @@ public class AccessToken : Token
         string privateKeyText = File.ReadAllText(KeyConfiguration.ACCESS_TOKEN_PRIVATE_KEY_FILE_PATH);
         rsa.ImportFromPem(privateKeyText);
         this.privateKey = new RsaSecurityKey(rsa);
-
     }
     public override string ToString()
     {
-        JsonWebTokenHandler tokenHandler = new JsonWebTokenHandler();
-        SecurityTokenDescriptor tokenDescriptor = new SecurityTokenDescriptor
-        {
-            SigningCredentials = new SigningCredentials(
-                this.privateKey, SecurityAlgorithms.RsaSsaPssSha256
+        JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
+        JwtSecurityToken token = new JwtSecurityToken
+        (
+            signingCredentials : new SigningCredentials(
+                this.privateKey, SecurityAlgorithms.RsaSha256
             ),
-            Expires = DateTime.UtcNow.AddMinutes(5),
-            Subject = DataFormat.CreateClaimsFromObject(this.payload)
-        };
-        string accessToken = tokenHandler.CreateToken(tokenDescriptor);
+            expires : DateTime.UtcNow.AddMinutes(15),
+            claims : DataFormat.CreateClaimsFromObject(this.payload)
+        );
+        string accessToken = tokenHandler.WriteToken(token);
         return accessToken;
     }
 
@@ -56,16 +56,16 @@ public class RefreshToken : Token
     }
     public override string ToString()
     {
-        JsonWebTokenHandler tokenHandler = new JsonWebTokenHandler();
-        SecurityTokenDescriptor tokenDescriptor = new SecurityTokenDescriptor
-        {
-            SigningCredentials = new SigningCredentials(
-                this.privateKey, SecurityAlgorithms.RsaSsaPssSha256
+        JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
+        JwtSecurityToken token = new JwtSecurityToken
+        (
+            signingCredentials : new SigningCredentials(
+                this.privateKey, SecurityAlgorithms.RsaSha256
             ),
-            Expires = DateTime.UtcNow.AddHours(1),
-            Subject = DataFormat.CreateClaimsFromObject(this.payload)
-        };
-        string refreshToken = tokenHandler.CreateToken(tokenDescriptor);
+            expires : DateTime.UtcNow.AddMonths(1),
+            claims : DataFormat.CreateClaimsFromObject(this.payload)
+        );
+        string refreshToken = tokenHandler.WriteToken(token);
         return refreshToken;
     }
 }

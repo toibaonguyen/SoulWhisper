@@ -1,6 +1,6 @@
 namespace soul_whisper.Models.Public.Enum;
 
-public enum Role 
+public enum UserRole 
 {
     ADMIN,
     DOCTOR,

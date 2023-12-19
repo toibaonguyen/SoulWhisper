@@ -1,4 +1,5 @@
 using soul_whisper.Data;
+using soul_whisper.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +27,7 @@ app.UseRouting();
 
 app.MapControllers();
 
-FlatformContext context=new FlatformContext();
-await context.CreateDatabase();
+app.UseMiddleware<GlobalErrorHandlerMiddleware>();
+// FlatformContext context=new FlatformContext();
+// await context.CreateDatabase();
 app.Run();

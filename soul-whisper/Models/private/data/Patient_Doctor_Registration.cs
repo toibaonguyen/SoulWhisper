@@ -6,6 +6,7 @@ namespace soul_whisper.Models.Private.Data;
 
 public class Patient_Doctor_Registration
 {
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Key]
     public required Guid id { get; set; }
 

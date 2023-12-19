@@ -6,6 +6,7 @@ namespace soul_whisper.Models.Private.Data;
 
 public class Receipt
 {
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Key]
     public required Guid id{get;set;}
     public required ReceiptType type {get;set;}

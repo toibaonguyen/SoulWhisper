@@ -9,6 +9,7 @@ namespace soul_whisper.Models.Private.Data;
 
 public class Doctorship_Registration
 {
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Key]
     public required Guid id { get; set; }
     [ForeignKey("id")]
