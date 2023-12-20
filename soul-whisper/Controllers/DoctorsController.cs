@@ -8,13 +8,13 @@ namespace soul_whisper.Controllers;
 [ApiController]
 [Route("[controller]", Name = "doctor")]
 
-public class DoctorController : ControllerBase
+public class DoctorsController : ControllerBase
 {
-    private readonly ILogger<DoctorController> _logger;
+    private readonly ILogger<DoctorsController> _logger;
     private readonly string LOGOUT_SUCCESSFULLY = "Logout fully!";
     private readonly string LOGOUT_FAILLY = "Logout fully!";
 
-    public DoctorController(ILogger<DoctorController> logger)
+    public DoctorsController(ILogger<DoctorsController> logger)
     {
         _logger = logger;
     }
@@ -49,7 +49,7 @@ public class DoctorController : ControllerBase
         UserDTO user = myMachine.ConvertAccessTokenToUserDTO(authHeaderValue);
         await service.Logout(user.userId);
 
-        return Ok(new ContainMessageResponse { message = this.LOGOUT_SUCCESSFULLY });
+        return Ok(new ContainMessageResponseDTO { message = this.LOGOUT_SUCCESSFULLY });
     }
 }
 

@@ -54,7 +54,7 @@ public class GlobalErrorHandlerMiddleware
 
         // Kiểm tra ngoại lệ và cập nhật thông báo lỗi cụ thể nếu cần thiết
 
-        var response = new ContainMessageResponse
+        var response = new ContainMessageResponseDTO
         {
             message = errorMessage
         };
