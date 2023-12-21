@@ -19,7 +19,7 @@ public class DoctorsController : ControllerBase
         _logger = logger;
     }
     [HttpPost("login")]
-    public async Task<ActionResult<BaseResponseDTO>> Login(LoginRequestDTO account)
+    public async Task<ActionResult<BaseResponseDTO>> Login(AccountDTO account)
     {
         try
         {
@@ -38,7 +38,7 @@ public class DoctorsController : ControllerBase
     [HttpPost("logout")]
     public async Task<ActionResult<BaseResponseDTO>> Logout()
     {
-        string authHeaderValue = HttpContext.Request.Headers["Authorization"];
+        string? authHeaderValue = HttpContext.Request.Headers["Authorization"];
         if (String.IsNullOrEmpty(authHeaderValue))
         {
             throw new UnauthorizedAccessException(this.LOGOUT_FAILLY);

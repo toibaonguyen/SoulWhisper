@@ -48,9 +48,9 @@ public class AdminService : IOperation
 
             }
         }
-        catch (Exception e)
+        catch (Exception)
         {
-            throw e;
+            throw;
         }
     }
     public async Task Logout(Guid userId)

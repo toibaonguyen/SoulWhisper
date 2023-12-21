@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("soul-whisper")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1295249d0aafb342d0986d35fd057f139f596a90")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56f651a011dcd4accf13ed7a9dd906c1ca263b0e")]
 [assembly: System.Reflection.AssemblyProductAttribute("soul-whisper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("soul-whisper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
