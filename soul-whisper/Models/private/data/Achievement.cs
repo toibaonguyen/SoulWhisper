@@ -13,7 +13,7 @@ public class Achievement
     [Key]
     public required Guid id { get; set; }
     public required Doctor doctor { get; set; }
-    public required ICollection<Achievement_Image> image { get; set; }
+    public required ICollection<Achievement_Image> images { get; set; }
     public required AchievementType type { get; set; }
     public required string title { get; set; }
     public required string description { get; set; }

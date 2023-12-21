@@ -1,4 +1,5 @@
 
+using System.Reflection;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using soul_whisper.Models.Public;
@@ -45,6 +46,9 @@ public class GlobalErrorHandlerMiddleware
                 break;
             case ArgumentException _:
                 statusCode = StatusCodes.Status403Forbidden;
+                break;
+            case TargetException _:
+             statusCode = StatusCodes.Status404NotFound;
                 break;
             default:
                 statusCode = 500;
