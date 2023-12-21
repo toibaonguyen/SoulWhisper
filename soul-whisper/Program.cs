@@ -1,6 +1,5 @@
 using soul_whisper.Data;
 using soul_whisper.Middlewares;
-using soul_whisper.Models.Private.Business;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +19,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
@@ -31,6 +31,5 @@ app.UseMiddleware<GlobalModifierMiddleware>();
 app.MapControllers();
 
 app.UseMiddleware<GlobalErrorHandlerMiddleware>();
-// FlatformContext context=new FlatformContext();
-// await context.CreateDatabase();
+
 app.Run();

@@ -11,9 +11,20 @@ namespace soul_whisper.Controllers;
 public class DoctorsController : ControllerBase
 {
     private readonly ILogger<DoctorsController> _logger;
+        private readonly string MISSING_TOKEN = "Missing token!";
     private readonly string LOGOUT_SUCCESSFULLY = "Logout fully!";
     private readonly string LOGOUT_FAILLY = "Logout fully!";
-
+private UserDTO ConvertAccessTokenToUserDTO()
+    {
+       string? authHeaderValue = HttpContext.Request.Headers["Authorization"];
+        if (String.IsNullOrEmpty(authHeaderValue))
+        {
+            throw new UnauthorizedAccessException(this.MISSING_TOKEN);
+        }
+        var myMachine = new TokenConverterMachine();
+        UserDTO user = myMachine.ConvertAccessTokenToUserDTO(authHeaderValue);
+        return user;
+    }
     public DoctorsController(ILogger<DoctorsController> logger)
     {
         _logger = logger;
@@ -38,44 +49,33 @@ public class DoctorsController : ControllerBase
     [HttpPost("logout")]
     public async Task<ActionResult<BaseResponseDTO>> Logout()
     {
-        string? authHeaderValue = HttpContext.Request.Headers["Authorization"];
-        if (String.IsNullOrEmpty(authHeaderValue))
-        {
-            throw new UnauthorizedAccessException(this.LOGOUT_FAILLY);
-        }
-        DoctorService service = new DoctorService();
 
-        var myMachine = new TokenConverterMachine();
-        UserDTO user = myMachine.ConvertAccessTokenToUserDTO(authHeaderValue);
+        DoctorService service = new DoctorService();
+        UserDTO user = this.ConvertAccessTokenToUserDTO();
         await service.Logout(user.userId);
 
         return Ok(new ContainMessageResponseDTO { message = this.LOGOUT_SUCCESSFULLY });
     }
-    [HttpGet]
-    public async Task<ActionResult<BaseResponseDTO>> GetDoctors()
-    {
-        string? limit = HttpContext.Request.Query["limit"];
-    }
-    [HttpPost]
-    public async Task<ActionResult<BaseResponseDTO>> CreateDoctor(DoctorDTO doctor)
-    {
+    // [HttpGet]
+    // public async Task<ActionResult<BaseResponseDTO>> GetDoctors()
+    // {
+    //     string? limit = HttpContext.Request.Query["limit"];
+    // }
+    // [HttpPost]
+    // public async Task<ActionResult<BaseResponseDTO>> CreateDoctor(DoctorDTO doctor)
+    // {
 
-    }
-    [HttpGet("{doctorId}")]
-    public async Task<ActionResult<BaseResponseDTO>> GetDoctorByDoctorId(Guid doctorId)
-    {
+    // }
+    // [HttpGet("{doctorId}")]
+    // public async Task<ActionResult<BaseResponseDTO>> GetDoctorByDoctorId(Guid doctorId)
+    // {
 
-    }
-    [HttpPut("{doctorId}")]
-    public async Task<ActionResult<BaseResponseDTO>> SetDoctor(Guid doctorId, DoctorDTO doctor)
-    {
+    // }
+    // [HttpPatch("{doctorId}")]
+    // public async Task<ActionResult<BaseResponseDTO>> UpdateDoctor(Guid doctorId, UpdateDoctorDTO doctor)
+    // {
 
-    }
-    [HttpPatch("{doctorId}")]
-    public async Task<ActionResult<BaseResponseDTO>> UpdateDoctor(Guid doctorId, UpdateDoctorDTO doctor)
-    {
-
-    }
+    // }
 
 
 }

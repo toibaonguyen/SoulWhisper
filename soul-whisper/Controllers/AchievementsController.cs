@@ -11,31 +11,49 @@ namespace soul_whisper.Controllers;
 public class AchievementsController : ControllerBase
 {
     private readonly ILogger<AchievementsController> _logger;
-
+    private readonly string MISSING_TOKEN = "Missing token!";
     public AchievementsController(ILogger<AchievementsController> logger)
     {
         _logger = logger;
     }
-    [HttpGet]
-    public async Task<ActionResult<BaseResponseDTO>> GetAchievements()
+    private UserDTO ConvertAccessTokenToUserDTO()
     {
-
+       string? authHeaderValue = HttpContext.Request.Headers["Authorization"];
+        if (String.IsNullOrEmpty(authHeaderValue))
+        {
+            throw new UnauthorizedAccessException(this.MISSING_TOKEN);
+        }
+        var myMachine = new TokenConverterMachine();
+        UserDTO user = myMachine.ConvertAccessTokenToUserDTO(authHeaderValue);
+        return user;
     }
-    [HttpGet("{achievementId}")]
-    public async Task<ActionResult<BaseResponseDTO>> GetAchievementById(Guid achievementId)
-    {
+    // [HttpGet]
+    // public async Task<ActionResult<BaseResponseDTO>> GetAchievements()
+    // {
 
-    }
-    [HttpPost]
-    public async Task<ActionResult<BaseResponseDTO>> CreateAppointment(AchievementDTO achievement)
-    {
+    // }
+    
+    // [HttpGet("{achievementId}")]
+    // public async Task<ActionResult<BaseResponseDTO>> GetAchievementById(Guid achievementId)
+    // {
 
-    }
+    // }
+    // [HttpPost]
+    // public async Task<ActionResult<BaseResponseDTO>> CreateAppointment(AchievementDTO achievement)
+    // {
 
-    [HttpPatch("{achievementId}")]
-    public async Task<ActionResult<BaseResponseDTO>> UpdateAppointment(Guid achievementId, UpdateAchievementDTO achievement)
-    {
+    // }
 
-    }
+    // [HttpPatch("{achievementId}")]
+    // public async Task<ActionResult<BaseResponseDTO>> UpdateAppointment(Guid achievementId, UpdateAchievementDTO achievement)
+    // {
+
+    // }
+
+    //    [HttpDelete("{achievementId}")]
+    // public async Task<ActionResult<BaseResponseDTO>> DeleteAchievement(Guid achievementId)
+    // {
+
+    // }
 }
 

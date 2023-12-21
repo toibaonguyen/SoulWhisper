@@ -11,35 +11,41 @@ namespace soul_whisper.Controllers;
 public class AppointmentsController : ControllerBase
 {
     private readonly ILogger<AppointmentsController> _logger;
-
+    private readonly string MISSING_TOKEN = "Missing token!";
     public AppointmentsController(ILogger<AppointmentsController> logger)
     {
         _logger = logger;
     }
-    [HttpGet]
-    public async Task<ActionResult<BaseResponseDTO>> GetAppointments()
+    private UserDTO ConvertAccessTokenToUserDTO()
     {
-
+       string? authHeaderValue = HttpContext.Request.Headers["Authorization"];
+        if (String.IsNullOrEmpty(authHeaderValue))
+        {
+            throw new UnauthorizedAccessException(this.MISSING_TOKEN);
+        }
+        var myMachine = new TokenConverterMachine();
+        UserDTO user = myMachine.ConvertAccessTokenToUserDTO(authHeaderValue);
+        return user;
     }
-    [HttpGet("{appointmentId}")]
-    public async Task<ActionResult<BaseResponseDTO>> GetAppointmentById(Guid appointmentId)
-    {
+    // [HttpGet]
+    // public async Task<ActionResult<BaseResponseDTO>> GetAppointments()
+    // {
 
-    }
-    [HttpPost]
-    public async Task<ActionResult<BaseResponseDTO>> CreateAppointment(AppointmentDTO appointment)
-    {
+    // }
+    // [HttpGet("{appointmentId}")]
+    // public async Task<ActionResult<BaseResponseDTO>> GetAppointmentById(Guid appointmentId)
+    // {
 
-    }
-    [HttpPut("{appointmentId}")]
-    public async Task<ActionResult<BaseResponseDTO>> SetAppointment(Guid appointmentId, AppointmentDTO appointment)
-    {
+    // }
+    // [HttpPost]
+    // public async Task<ActionResult<BaseResponseDTO>> CreateAppointment(AppointmentDTO appointment)
+    // {
 
-    }
-    [HttpPatch("{appointmentId}")]
-    public async Task<ActionResult<BaseResponseDTO>> UpdateAppointment(Guid appointmentId, UpdateAppointmentDTO appointment)
-    {
+    // }
+    // [HttpPatch("{appointmentId}")]
+    // public async Task<ActionResult<BaseResponseDTO>> UpdateAppointment(Guid appointmentId, UpdateAppointmentDTO appointment)
+    // {
 
-    }
+    // }
 }
 

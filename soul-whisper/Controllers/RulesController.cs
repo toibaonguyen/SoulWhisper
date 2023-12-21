@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using soul_whisper.Helpers;
+using soul_whisper.Models.Private.Business.Patient;
 using soul_whisper.Models.Public;
 using soul_whisper.Service;
 
@@ -9,69 +10,50 @@ namespace soul_whisper.Controllers;
 [Route("[controller]", Name = "rules")]
 
 public class RulesController : ControllerBase
-{
+{    private readonly string MISSING_TOKEN = "Missing token!";
     private readonly ILogger<RulesController> _logger;
-    private readonly string LOGOUT_SUCCESSFULLY = "Logout fully!";
-    private readonly string LOGOUT_FAILLY = "Logout fully!";
-
+private UserDTO ConvertAccessTokenToUserDTO()
+    {
+       string? authHeaderValue = HttpContext.Request.Headers["Authorization"];
+        if (String.IsNullOrEmpty(authHeaderValue))
+        {
+            throw new UnauthorizedAccessException(this.MISSING_TOKEN);
+        }
+        var myMachine = new TokenConverterMachine();
+        UserDTO user = myMachine.ConvertAccessTokenToUserDTO(authHeaderValue);
+        return user;
+    }
     public RulesController(ILogger<RulesController> logger)
     {
         _logger = logger;
     }
-    [HttpPost("login")]
-    public async Task<ActionResult<BaseResponseDTO>> Login(AccountDTO account)
-    {
-        try
-        {
-            DoctorService service = new DoctorService();
-            AccessRightDTO accessRight = await service.Login(account.email, account.password);
-            ContainDataResponseDTO response = new ContainDataResponseDTO { data = accessRight };
-            return Ok(response);
-        }
-        catch (Exception)
-        {
-            throw;
-        }
+    // [HttpGet]
+    // public async Task<ActionResult<BaseResponseDTO>> GetRules()
+    // {
+    //     string? limit = HttpContext.Request.Query["limit"];
+    // }
+    // [HttpPost]
+    // public async Task<ActionResult<BaseResponseDTO>> CreateRules(RuleDTO rule)
+    // {
 
-    }
+    // }
+    // [HttpGet("{ruleId}")]
+    // public async Task<ActionResult<BaseResponseDTO>> GetRuleByRuleId(Guid ruleId)
+    // {
 
-    [HttpPost("logout")]
-    public async Task<ActionResult<BaseResponseDTO>> Logout()
-    {
-        string? authHeaderValue = HttpContext.Request.Headers["Authorization"];
-        if (String.IsNullOrEmpty(authHeaderValue))
-        {
-            throw new UnauthorizedAccessException(this.LOGOUT_FAILLY);
-        }
-        DoctorService service = new DoctorService();
+    // }
+    // [HttpPatch("{ruleId}")]
+    // public async Task<ActionResult<BaseResponseDTO>> UpdateRule(Guid ruleId, UpdateRuleDTO updatePatient)
+    // {
 
-        var myMachine = new TokenConverterMachine();
-        UserDTO user = myMachine.ConvertAccessTokenToUserDTO(authHeaderValue);
-        await service.Logout(user.userId);
+    // }
+    //    [HttpDelete("{ruleId}")]
+    // public async Task<ActionResult<BaseResponseDTO>> DeleteRule(Guid ruleId)
+    // {
 
-        return Ok(new ContainMessageResponseDTO { message = this.LOGOUT_SUCCESSFULLY });
-    }
-    [HttpGet]
-    public async Task<ActionResult<BaseResponseDTO>> GetDoctors()
-    {
-        string? limit = HttpContext.Request.Query["limit"];
-    }
-    [HttpPost]
-    public async Task<ActionResult<BaseResponseDTO>> CreateDoctor(DoctorDTO doctor)
-    {
+    // }
 
-    }
-    [HttpGet("{doctorId}")]
-    public async Task<ActionResult<BaseResponseDTO>> GetDoctorByDoctorId(Guid doctorId)
-    {
 
-    }
-    [HttpPatch("{doctorId}")]
-    public async Task<ActionResult<BaseResponseDTO>> UpdateDoctor(Guid doctorId, UpdateDoctorDTO doctor)
-    {
 
-    }
-
- 
 }
 

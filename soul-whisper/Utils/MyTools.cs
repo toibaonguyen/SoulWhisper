@@ -1,6 +1,8 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Reflection;
 using System.Security.Claims;
+using soul_whisper.Models.Public;
+using soul_whisper.Service;
 
 namespace soul_whisper.Utils;
 
@@ -23,9 +25,9 @@ public static class MyTools
 
         return claims;
     }
-    public static string GetClaimValue(JwtSecurityToken token, string claimType)
+    public static string? GetClaimValue(JwtSecurityToken token, string claimType)
     {
-        Claim claim = token.Claims.FirstOrDefault(c => c.Type == claimType);
+        Claim? claim = token.Claims.FirstOrDefault(c => c.Type == claimType);
 
         return claim?.Value;
     }

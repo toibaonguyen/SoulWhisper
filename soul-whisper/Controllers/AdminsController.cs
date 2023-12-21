@@ -18,6 +18,17 @@ public class AdminsController : ControllerBase
     {
         _logger = logger;
     }
+    private UserDTO ConvertAccessTokenToUserDTO()
+    {
+       string? authHeaderValue = HttpContext.Request.Headers["Authorization"];
+        if (String.IsNullOrEmpty(authHeaderValue))
+        {
+            throw new UnauthorizedAccessException(this.MISSING_TOKEN);
+        }
+        var myMachine = new TokenConverterMachine();
+        UserDTO user = myMachine.ConvertAccessTokenToUserDTO(authHeaderValue);
+        return user;
+    }
     [HttpPost("login")]
     public async Task<ActionResult<BaseResponseDTO>> Login(AccountDTO account)
     {
@@ -36,44 +47,32 @@ public class AdminsController : ControllerBase
     [HttpPost("logout")]
     public async Task<ActionResult<BaseResponseDTO>> Logout()
     {
-        string? authHeaderValue = HttpContext.Request.Headers["Authorization"];
-        if (String.IsNullOrEmpty(authHeaderValue))
-        {
-            throw new UnauthorizedAccessException(this.MISSING_TOKEN);
-        }
+
+        UserDTO user = this.ConvertAccessTokenToUserDTO();
         var adminService = new AdminService();
-
-        var myMachine = new TokenConverterMachine();
-        UserDTO user = myMachine.ConvertAccessTokenToUserDTO(authHeaderValue);
         await adminService.Logout(user.userId);
-
         return Ok(new ContainMessageResponseDTO { message = this.LOGOUT_SUCCESSFULLY });
     }
-    [HttpGet("{adminId}")]
-    public async Task<ActionResult<BaseResponseDTO>> GetAdminById(Guid adminId)
-    {
+    // [HttpGet("{adminId}")]
+    // public async Task<ActionResult<BaseResponseDTO>> GetAdminById(Guid adminId)
+    // {
 
-    }
-    [HttpGet]
-    public async Task<ActionResult<BaseResponseDTO>> GetAdmins()
-    {
-        string? limit = HttpContext.Request.Query["limit"];
-    }
-    [HttpPost]
-    public async Task<ActionResult<BaseResponseDTO>> CreateAdmin(AdminDTO admin)
-    {
+    // }
+    // [HttpGet]
+    // public async Task<ActionResult<BaseResponseDTO>> GetAdmins()
+    // {
+    //     string? limit = HttpContext.Request.Query["limit"];
+    // }
+    // [HttpPost]
+    // public async Task<ActionResult<BaseResponseDTO>> CreateAdmin(AdminDTO admin)
+    // {
 
-    }
-    [HttpPut("{adminId}")]
-    public async Task<ActionResult<BaseResponseDTO>> SetAdmin(Guid adminId, AdminDTO admin)
-    {
+    // }
+    // [HttpPatch("{adminId}")]
+    // public async Task<ActionResult<BaseResponseDTO>> UpdateAdmin(Guid adminId, UpdateAdminDTO admin)
+    // {
 
-    }
-    [HttpPatch("{adminId}")]
-    public async Task<ActionResult<BaseResponseDTO>> UpdateAdmin(Guid adminId, UpdateAdminDTO admin)
-    {
-
-    }
+    // }
 
 }
 

@@ -14,7 +14,18 @@ public class PatientsController : ControllerBase
     private readonly ILogger<PatientsController> _logger;
     private readonly string LOGOUT_SUCCESSFULLY = "Logout fully!";
     private readonly string LOGOUT_FAIL = "Logout fully!";
-
+    private readonly string MISSING_TOKEN = "Missing token!";
+    private UserDTO ConvertAccessTokenToUserDTO()
+    {
+        string? authHeaderValue = HttpContext.Request.Headers["Authorization"];
+        if (String.IsNullOrEmpty(authHeaderValue))
+        {
+            throw new UnauthorizedAccessException(this.MISSING_TOKEN);
+        }
+        var myMachine = new TokenConverterMachine();
+        UserDTO user = myMachine.ConvertAccessTokenToUserDTO(authHeaderValue);
+        return user;
+    }
     public PatientsController(ILogger<PatientsController> logger)
     {
         _logger = logger;
@@ -39,40 +50,34 @@ public class PatientsController : ControllerBase
     [HttpPost("logout")]
     public async Task<ActionResult<BaseResponseDTO>> Logout()
     {
-        string? authHeaderValue = HttpContext.Request.Headers["Authorization"];
-        if (String.IsNullOrEmpty(authHeaderValue))
-        {
-            throw new UnauthorizedAccessException(this.LOGOUT_FAIL);
-        }
-        PatientService service = new PatientService();
 
-        var myMachine = new TokenConverterMachine();
-        UserDTO user = myMachine.ConvertAccessTokenToUserDTO(authHeaderValue);
+        PatientService service = new PatientService();
+        UserDTO user = this.ConvertAccessTokenToUserDTO();
         await service.Logout(user.userId);
 
         return Ok(new ContainMessageResponseDTO { message = this.LOGOUT_SUCCESSFULLY });
     }
 
-    [HttpGet]
-    public async Task<ActionResult<BaseResponseDTO>> GetPatienta()
-    {
-        string? limit = HttpContext.Request.Query["limit"];
-    }
-    [HttpPost]
-    public async Task<ActionResult<BaseResponseDTO>> CreatePatient(PatientDTO patient)
-    {
+    // [HttpGet]
+    // public async Task<ActionResult<BaseResponseDTO>> GetPatienta()
+    // {
+    //     string? limit = HttpContext.Request.Query["limit"];
+    // }
+    // [HttpPost]
+    // public async Task<ActionResult<BaseResponseDTO>> CreatePatient(PatientDTO patient)
+    // {
 
-    }
-    [HttpGet("{patientId}")]
-    public async Task<ActionResult<BaseResponseDTO>> GetPatientByPatientId(Guid patientId)
-    {
+    // }
+    // [HttpGet("{patientId}")]
+    // public async Task<ActionResult<BaseResponseDTO>> GetPatientByPatientId(Guid patientId)
+    // {
 
-    }
-    [HttpPatch("{patientId}")]
-    public async Task<ActionResult<BaseResponseDTO>> UpdatePatient(Guid patientId, UpdatePatientDTO updatePatient)
-    {
+    // }
+    // [HttpPatch("{patientId}")]
+    // public async Task<ActionResult<BaseResponseDTO>> UpdatePatient(Guid patientId, UpdatePatientDTO updatePatient)
+    // {
 
-    }
+    // }
 
 
 

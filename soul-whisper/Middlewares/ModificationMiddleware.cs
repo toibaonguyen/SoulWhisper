@@ -1,4 +1,5 @@
 
+using soul_whisper.Data;
 using soul_whisper.Helpers;
 
 namespace soul_whisper.Middlewares;
@@ -15,6 +16,9 @@ public class GlobalModifierMiddleware
 
     public async Task InvokeAsync(HttpContext context)
     {
+        // FlatformContext Appcontext=new FlatformContext();
+        // await Appcontext.DeleteDatabase();
+        // await Appcontext.CreateDatabase();
         // Xử lý trước khi gửi yêu cầu đến middleware tiếp theo
         // Console.WriteLine("-----------Middleware đang xử lý trước khi gửi yêu cầu đến middleware tiếp theo.");
         TokenOperator.RemoveExpiredTokens();
