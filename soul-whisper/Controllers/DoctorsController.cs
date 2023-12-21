@@ -6,7 +6,7 @@ using soul_whisper.Service;
 namespace soul_whisper.Controllers;
 
 [ApiController]
-[Route("[controller]", Name = "doctor")]
+[Route("[controller]", Name = "doctors")]
 
 public class DoctorsController : ControllerBase
 {
@@ -51,5 +51,32 @@ public class DoctorsController : ControllerBase
 
         return Ok(new ContainMessageResponseDTO { message = this.LOGOUT_SUCCESSFULLY });
     }
+    [HttpGet]
+    public async Task<ActionResult<BaseResponseDTO>> GetDoctors()
+    {
+        string? limit = HttpContext.Request.Query["limit"];
+    }
+    [HttpPost]
+    public async Task<ActionResult<BaseResponseDTO>> CreateDoctor(DoctorDTO doctor)
+    {
+
+    }
+    [HttpGet("{doctorId}")]
+    public async Task<ActionResult<BaseResponseDTO>> GetDoctorByDoctorId(Guid doctorId)
+    {
+
+    }
+    [HttpPut("{doctorId}")]
+    public async Task<ActionResult<BaseResponseDTO>> SetDoctor(Guid doctorId, DoctorDTO doctor)
+    {
+
+    }
+    [HttpPatch("{doctorId}")]
+    public async Task<ActionResult<BaseResponseDTO>> UpdateDoctor(Guid doctorId, UpdateDoctorDTO doctor)
+    {
+
+    }
+
+
 }
 

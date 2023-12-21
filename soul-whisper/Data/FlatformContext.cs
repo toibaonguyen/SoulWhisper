@@ -16,7 +16,7 @@ public class FlatformContext : DbContext
     public DbSet<Doctorship_Registration> doctorship_registrations { get; set; }
     public DbSet<Exercise> exercises { get; set; }
     public DbSet<Habit> habits { get; set; }
-    public DbSet<Patient_Doctor_Registration> patient_doctor_registrations { get; set; }
+    public DbSet<Appointment_Registration> appointment_Registrations { get; set; }
     public DbSet<Patient> patients { get; set; }
     public DbSet<Rating> ratings { get; set; }
     public DbSet<Receipt> receipts { get; set; }

@@ -6,7 +6,7 @@ using soul_whisper.Service;
 namespace soul_whisper.Controllers;
 
 [ApiController]
-[Route("[controller]", Name = "admin")]
+[Route("[controller]", Name = "admins")]
 
 public class AdminsController : ControllerBase
 {
@@ -49,8 +49,8 @@ public class AdminsController : ControllerBase
 
         return Ok(new ContainMessageResponseDTO { message = this.LOGOUT_SUCCESSFULLY });
     }
-    [HttpGet("{id}")]
-    public async Task<ActionResult<BaseResponseDTO>> GetAdminById(Guid id)
+    [HttpGet("{adminId}")]
+    public async Task<ActionResult<BaseResponseDTO>> GetAdminById(Guid adminId)
     {
 
     }
@@ -60,14 +60,20 @@ public class AdminsController : ControllerBase
         string? limit = HttpContext.Request.Query["limit"];
     }
     [HttpPost]
-    public async Task<ActionResult<BaseResponseDTO>> CreateAdminById(AdminDTO admin)
-    {
-        
-    }
-    [HttpPut("{id}")]
-    public async Task<ActionResult<BaseResponseDTO>> SetAdmin(Guid id,AdminDTO admin )
+    public async Task<ActionResult<BaseResponseDTO>> CreateAdmin(AdminDTO admin)
     {
 
     }
+    [HttpPut("{adminId}")]
+    public async Task<ActionResult<BaseResponseDTO>> SetAdmin(Guid adminId, AdminDTO admin)
+    {
+
+    }
+    [HttpPatch("{adminId}")]
+    public async Task<ActionResult<BaseResponseDTO>> UpdateAdmin(Guid adminId, UpdateAdminDTO admin)
+    {
+
+    }
+
 }
 

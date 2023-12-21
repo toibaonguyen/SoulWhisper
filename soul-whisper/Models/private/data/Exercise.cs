@@ -4,6 +4,7 @@ using soul_whisper.Models.Private.Enum;
 
 namespace soul_whisper.Models.Private.Data;
 
+[Table("Exercise")]
 public class Exercise
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

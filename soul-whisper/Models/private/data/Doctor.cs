@@ -4,6 +4,7 @@ using soul_whisper.Models.Private.Enum;
 
 namespace soul_whisper.Models.Private.Data;
 
+[Table("Doctor")]
 public class Doctor
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -23,7 +24,6 @@ public class Doctor
     public required decimal moneyInWallet { get; set; }
     public ICollection<Rating>? ratings { get; set; }
     public ICollection<Appointment>? appointments { get; set; }
-    public ICollection<Patient_Doctor_Registration>? patientDoctorRegistrations { get; set; }
+    public ICollection<Appointment_Registration>? appointmentRegistrations { get; set; }
     public ICollection<Receipt>? receipts { get; set; }
-    public ICollection<Exercise>? exercises { get; set; }
 }

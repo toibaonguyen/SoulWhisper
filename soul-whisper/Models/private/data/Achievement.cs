@@ -18,7 +18,8 @@ public class Achievement
     public required string title { get; set; }
     public required string description { get; set; }
     public required DateTime dateEarned { get; set; }
-    public required RegistrationStatus status { get; set; }
+    [DefaultValue(ActivationStatus.PENDING)]
+     public required ActivationStatus activationStatus { get; set; }
     [DefaultValue("GETDATE()")]
     public required DateTime createAt { get; set; }
     public required DateTime modifiedAt { get; set; }

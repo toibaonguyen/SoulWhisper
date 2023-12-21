@@ -4,6 +4,7 @@ using soul_whisper.Models.Private.Enum;
 
 namespace soul_whisper.Models.Private.Data;
 
+[Table("Rating")]
 public class Rating
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
