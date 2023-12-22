@@ -86,27 +86,64 @@ public class DoctorsController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<BaseResponseDTO>> CreateDoctor(DoctorDTO doctor)
     {
-        try{
+        try
+        {
 
-        var service = new DoctorService();
-        await service.Register(doctor);
-        return Ok(new ContainMessageResponseDTO{message="Created successfully"});
+            var service = new DoctorService();
+            await service.Register(doctor);
+            return Ok(new ContainMessageResponseDTO { message = "Created successfully" });
         }
-        catch(Exception)
+        catch (Exception e)
         {
             throw;
         }
     }
-    // [HttpGet("{doctorId}")]
-    // public async Task<ActionResult<BaseResponseDTO>> GetDoctorByDoctorId(Guid doctorId)
-    // {
+    [HttpGet("{doctorId}")]
+    public async Task<ActionResult<BaseResponseDTO>> GetDoctorByDoctorId(Guid doctorId)
+    {
+        try
+        {
+            UserDTO user = this.ConvertAccessTokenToUserDTO();
+            var service = new DoctorService();
+            List<DoctorDTO> ds = await service.GetDoctorDTOs();
+            if (user.role == UserRole.PATIENT)
+            {
+                return Ok(new ContainDataResponseDTO { data = ds.FirstOrDefault(d => d.id == doctorId && d.activationStatus == "ACTIVE") });
+            }
+            return Ok(new ContainDataResponseDTO { data = ds.FirstOrDefault(d => d.id == doctorId) });
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    [HttpPatch("{doctorId}")]
+    public async Task<ActionResult<BaseResponseDTO>> UpdateDoctor(Guid doctorId, UpdateDoctorDTO doctor)
+    {
+        try
+        {
+            UserDTO user = this.ConvertAccessTokenToUserDTO();
+            var service = new DoctorService();
+            await service.UpdateDoctor(doctorId, doctor);
+            if (user.role == UserRole.ADMIN)
+            {
+                return Ok(new ContainMessageResponseDTO { message = "Update successfully" });
+            }
+            else
+            {
+                if (doctor.activationStatus != null)
+                {
+                    return BadRequest(new ContainMessageResponseDTO { message = "Update fail due to you do not have permission" });
+                }
 
-    // }
-    // [HttpPatch("{doctorId}")]
-    // public async Task<ActionResult<BaseResponseDTO>> UpdateDoctor(Guid doctorId, UpdateDoctorDTO doctor)
-    // {
-
-    // }
+                return Ok(new ContainMessageResponseDTO { message = "Update successfully" });
+            }
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
 
 
 }

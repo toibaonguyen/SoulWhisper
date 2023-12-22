@@ -43,26 +43,37 @@ public static class ModelsConverterMachine
             startTime = appointment.startTime,
             endTime = appointment.endTime,
             diagnosis = appointment.diagnosis,
-            prescription=appointment.prescription,
-            notes=appointment.notes,
-            doctorId= (Guid)appointment.doctor.id,
-            patientId=(Guid)appointment.patient.id,
-            status=appointment.status.ToString()
+            prescription = appointment.prescription,
+            notes = appointment.notes,
+            doctorId = (Guid)appointment.doctor.id,
+            patientId = (Guid)appointment.patient.id,
+            status = appointment.status.ToString()
         };
     }
     static public DoctorDTO ConvertDoctorToDoctorDTO(Doctor d)
     {
         return new DoctorDTO
         {
-            id=d.id,
-            email=d.email,
-            password=d.password,
-            name=d.name,
-            avatar=d.avatar,
-            birthday=d.birthday,
-            gender=d.gender.ToString(),
-            activationStatus=d.activationStatus.ToString(),
-            specialty=d.specialty.ToString()
+            id = d.id,
+            email = d.email,
+            password = d.password,
+            name = d.name,
+            avatar = d.avatar,
+            birthday = d.birthday,
+            gender = d.gender.ToString(),
+            activationStatus = d.activationStatus.ToString(),
+            specialty = d.specialty.ToString()
+        };
+    }
+    static public ExerciseDTO ConvertExerciseToExerciseDTO(Exercise exercise)
+    {
+        return new ExerciseDTO
+        {
+            id = exercise.id,
+            type = exercise.type.ToString(),
+            name = exercise.name,
+            description = exercise.description,
+            duration = exercise.duration
         };
     }
 }

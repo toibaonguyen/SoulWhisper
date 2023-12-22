@@ -9,6 +9,7 @@ using soul_whisper.Models.Private.Enum;
 using soul_whisper.Models.Public;
 using soul_whisper.Models.Public.Enum;
 using soul_whisper.Models.Private.Data;
+using System.Reflection;
 
 namespace soul_whisper.Service;
 public class DoctorService : IOperation
@@ -73,10 +74,10 @@ public class DoctorService : IOperation
                     avatar = doctor.avatar,
                     birthday = doctor.birthday,
                     gender = (Gender)Enum.Parse(typeof(Gender), doctor.gender),
-                    activationStatus=ActivationStatus.PENDING,
-                    specialty=(MedicalSpecialty)Enum.Parse(typeof(MedicalSpecialty), doctor.specialty),
-                    achievements=[],
-                    moneyInWallet=0
+                    activationStatus = ActivationStatus.PENDING,
+                    specialty = (MedicalSpecialty)Enum.Parse(typeof(MedicalSpecialty), doctor.specialty),
+                    achievements = [],
+                    moneyInWallet = 0
                 });
                 context.SaveChanges();
             }
@@ -107,4 +108,29 @@ public class DoctorService : IOperation
         }
     }
 
+    public async Task UpdateDoctor(Guid dId, UpdateDoctorDTO update)
+    {
+        try
+        {
+            using (FlatformContext context = new FlatformContext())
+            {
+                var d = await context.doctors.FirstOrDefaultAsync(a => a.id == dId);
+                if (d == null)
+                {
+                    throw new TargetException("Doctor is not exist");
+                }
+                d.birthday = (DateOnly)(update.birthday != null ? update.birthday : d.birthday);
+                d.password = update.password ?? d.password;
+                d.avatar = update.avatar ?? d.avatar;
+                d.gender = update.gender != null ? (Gender)Enum.Parse(typeof(Gender), update.gender) : d.gender;
+                d.activationStatus = update.activationStatus != null ? (ActivationStatus)Enum.Parse(typeof(ActivationStatus), update.activationStatus) : d.activationStatus;
+                context.SaveChanges();
+
+            }
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
 }
