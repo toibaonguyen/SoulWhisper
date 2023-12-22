@@ -15,22 +15,30 @@ public static class TokenOperator
 {
     static public List<SomethingDumas> legitAccessTokens=[] ;
     static public List<SomethingDumas> legitRefreshTokens=[] ;
-    static public void AddLegitAccessToken(Guid userId, string accessToken, DateTime expiredAt)
+    static public void AddLegitAccessToken(Guid? userId, string accessToken, DateTime expiredAt)
     {
-        SomethingDumas dumasItem = new SomethingDumas(userId, accessToken, expiredAt);
+        if(userId==null)
+        {
+            throw new Exception();
+        }
+        SomethingDumas dumasItem = new SomethingDumas((Guid)userId, accessToken, expiredAt);
         legitAccessTokens.Add(dumasItem);
     }
-    static public void RemoveAccessToken(Guid userId)
+    static public void RemoveAccessToken(Guid? userId)
     {
 
         legitAccessTokens.RemoveAll(e => e.userId == userId);
     }
-    static public void AddLegitRefreshToken(Guid userId, string refreshToken, DateTime expiredAt)
+    static public void AddLegitRefreshToken(Guid? userId, string refreshToken, DateTime expiredAt)
     {
-        SomethingDumas dumasItem = new SomethingDumas(userId, refreshToken, expiredAt);
+        if(userId==null)
+        {
+            throw new Exception();
+        }
+        SomethingDumas dumasItem = new SomethingDumas((Guid)userId, refreshToken, expiredAt);
         legitRefreshTokens.Add(dumasItem);
     }
-    static public void RemoveRefreshToken(Guid userId)
+    static public void RemoveRefreshToken(Guid? userId)
     {
         legitRefreshTokens.RemoveAll(e => e.userId == userId);
     }

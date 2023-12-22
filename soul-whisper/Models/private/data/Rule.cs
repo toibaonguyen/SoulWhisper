@@ -9,7 +9,7 @@ public class Rule
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Key]
-    public required Guid id { get; set; }
+    public Guid? id { get; set; }
     public required RuleType type { get; set; }
     public required string title { get; set; }
     public required string description { get; set; }

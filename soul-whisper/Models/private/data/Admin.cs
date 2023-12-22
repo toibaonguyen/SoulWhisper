@@ -10,7 +10,7 @@ public class Admin
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Key]
-    public required Guid id { get; set; }
+    public Guid? id { get; set; }
     //unique
     public required string email { get; set; }
     public required string password { get; set; }

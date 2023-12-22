@@ -37,8 +37,8 @@ public class PatientService : IOperation
                     TokenOperator.RemoveRefreshToken(patient.id);
                     AccessTokenFactory accessTokenFactory = new AccessTokenFactory();
                     RefreshTokenFactory refreshTokenFactory = new RefreshTokenFactory();
-                    AccessToken accessToken = (AccessToken)accessTokenFactory.CreateToken(new UserDTO { userId = patient.id, role = UserRole.PATIENT });
-                    RefreshToken refreshToken = (RefreshToken)refreshTokenFactory.CreateToken(new UserDTO { userId = patient.id, role = UserRole.PATIENT });
+                    AccessToken accessToken = (AccessToken)accessTokenFactory.CreateToken(new UserDTO { userId = (Guid)patient.id, role = UserRole.PATIENT });
+                    RefreshToken refreshToken = (RefreshToken)refreshTokenFactory.CreateToken(new UserDTO { userId = (Guid)patient.id, role = UserRole.PATIENT });
                     string accessTokenS = accessToken.ToString();
                     string refreshTokenS = refreshToken.ToString();
                     TokenOperator.AddLegitAccessToken(patient.id, accessTokenS, DateTime.Now.AddSeconds(TokenConfig.ACCESS_TOKEN_EXPIRATION_IN_SECONDS));
@@ -48,12 +48,12 @@ public class PatientService : IOperation
 
             }
         }
-        catch (Exception e)
+        catch (Exception )
         {
-            throw e;
+            throw ;
         }
     }
-    public async Task Logout(Guid userId)
+    public void Logout(Guid userId)
     {
         TokenOperator.RemoveAccessToken(userId);
         TokenOperator.RemoveRefreshToken(userId);

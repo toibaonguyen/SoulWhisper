@@ -9,7 +9,7 @@ public class Achievement_Image
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Key]
-    public required Guid id { get; set; }
+    public  Guid? id { get; set; }
     public required Achievement belongTo {get;set;}
     public required string image { get; set; }
     

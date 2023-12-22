@@ -10,7 +10,7 @@ public class Message
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Key]
-    public required Guid id { get; set; }
+    public Guid? id { get; set; }
 
     public required Guid sender { get; set; }
 

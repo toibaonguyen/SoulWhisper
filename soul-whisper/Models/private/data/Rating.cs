@@ -9,7 +9,7 @@ public class Rating
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Key]
-    public required Guid id{get;set;}
+    public Guid? id{get;set;}
     public required Patient patient { get; set; }
     public required Doctor doctor { get; set; }
     public required int value { get; set; }

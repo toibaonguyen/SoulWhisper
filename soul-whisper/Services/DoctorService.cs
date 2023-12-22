@@ -37,8 +37,8 @@ public class DoctorService : IOperation
                     TokenOperator.RemoveRefreshToken(doctor.id);
                     AccessTokenFactory accessTokenFactory = new AccessTokenFactory();
                     RefreshTokenFactory refreshTokenFactory = new RefreshTokenFactory();
-                    AccessToken accessToken = (AccessToken)accessTokenFactory.CreateToken(new UserDTO { userId = doctor.id, role = UserRole.DOCTOR });
-                    RefreshToken refreshToken = (RefreshToken)refreshTokenFactory.CreateToken(new UserDTO { userId = doctor.id, role = UserRole.DOCTOR });
+                    AccessToken accessToken = (AccessToken)accessTokenFactory.CreateToken(new UserDTO { userId = (Guid)doctor.id, role = UserRole.DOCTOR });
+                    RefreshToken refreshToken = (RefreshToken)refreshTokenFactory.CreateToken(new UserDTO { userId = (Guid)doctor.id, role = UserRole.DOCTOR });
                     string accessTokenS=accessToken.ToString();
                     string refreshTokenS=refreshToken.ToString();
                     TokenOperator.AddLegitAccessToken(doctor.id,accessTokenS,DateTime.Now.AddSeconds(TokenConfig.ACCESS_TOKEN_EXPIRATION_IN_SECONDS));
@@ -53,7 +53,7 @@ public class DoctorService : IOperation
             throw;
         }
     }
-    public async Task Logout(Guid userId)
+    public void Logout(Guid userId)
     {
         TokenOperator.RemoveAccessToken(userId);
         TokenOperator.RemoveRefreshToken(userId);

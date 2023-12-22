@@ -48,12 +48,12 @@ public class PatientsController : ControllerBase
     }
 
     [HttpPost("logout")]
-    public async Task<ActionResult<BaseResponseDTO>> Logout()
+    public ActionResult<BaseResponseDTO> Logout()
     {
 
         PatientService service = new PatientService();
         UserDTO user = this.ConvertAccessTokenToUserDTO();
-        await service.Logout(user.userId);
+         service.Logout(user.userId);
 
         return Ok(new ContainMessageResponseDTO { message = this.LOGOUT_SUCCESSFULLY });
     }

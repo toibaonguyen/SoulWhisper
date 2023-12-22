@@ -47,12 +47,12 @@ private UserDTO ConvertAccessTokenToUserDTO()
     }
 
     [HttpPost("logout")]
-    public async Task<ActionResult<BaseResponseDTO>> Logout()
+    public  ActionResult<BaseResponseDTO> Logout()
     {
 
         DoctorService service = new DoctorService();
         UserDTO user = this.ConvertAccessTokenToUserDTO();
-        await service.Logout(user.userId);
+         service.Logout(user.userId);
 
         return Ok(new ContainMessageResponseDTO { message = this.LOGOUT_SUCCESSFULLY });
     }

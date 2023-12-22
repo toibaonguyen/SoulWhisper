@@ -47,6 +47,9 @@ public class GlobalErrorHandlerMiddleware
             case ArgumentException _:
                 statusCode = StatusCodes.Status403Forbidden;
                 break;
+            case BadHttpRequestException _:
+            statusCode=StatusCodes.Status400BadRequest;
+            break;
             case TargetException _:
              statusCode = StatusCodes.Status404NotFound;
                 break;

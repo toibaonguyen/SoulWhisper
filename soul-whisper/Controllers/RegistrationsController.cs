@@ -26,6 +26,11 @@ public class RegistrationsController : ControllerBase
     {
         _logger = logger;
     }
+     // [HttpGet("achievements/{registrationId}")]
+    // public async Task<ActionResult<BaseResponseDTO>> GetAchievementRegistrationById(Guid registrationId)
+    // {
+
+    // }
     // [HttpGet("doctorships/{registrationId}")]
     // public async Task<ActionResult<BaseResponseDTO>> GetDoctorshipRegistrationById(Guid registrationId)
     // {

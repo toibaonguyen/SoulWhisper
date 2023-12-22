@@ -5,5 +5,5 @@ namespace soul_whisper.Service;
 
 interface IOperation{
     public  Task<AccessRightDTO> Login(string email,string password); 
-    public  Task Logout(Guid userId);
+    public  void Logout(Guid userId);
 }

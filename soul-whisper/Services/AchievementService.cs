@@ -1,39 +1,19 @@
 
 using System.Reflection;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 using soul_whisper.Data;
 using soul_whisper.Models.Private.Data;
 using soul_whisper.Models.Public;
+using soul_whisper.Helpers;
+using soul_whisper.Models.Private.Enum;
 
 namespace soul_whisper.Service;
 
 public class AchievementService
 {
     private string DOCTOR_NOT_EXIST = "This doctor is not exist";
-    private string ACHIEVEMENT_NOT_EXIST="This achievement is not exist";
-    private AchievementDTO ConvertAchievementToAchievementDTO(Achievement achievement)
-    {
+    private string ACHIEVEMENT_NOT_EXIST = "This achievement is not exist";
 
-        List<Achievement_Image> achievementImages = achievement.images.ToList();
-        List<string> achievementImageMatchDatas = [];
-        foreach (var image in achievementImages)
-        {
-            achievementImageMatchDatas.Add(image.image);
-        }
-
-        return new AchievementDTO
-        {
-            id = achievement.id,
-            images = achievementImageMatchDatas,
-            type = achievement.type.ToString(),
-            title = achievement.title,
-            description = achievement.description,
-            dateEarned = achievement.dateEarned,
-            activationStatus = achievement.activationStatus.ToString()
-        };
-
-    }
     public async Task<List<AchievementDTO>> GetAchievementDTOsWithDoctorId(Guid doctorId)
     {
         try
@@ -49,7 +29,7 @@ public class AchievementService
                 List<AchievementDTO> publicStandardAchievements = [];
                 foreach (var a in achievements)
                 {
-                    publicStandardAchievements.Add(ConvertAchievementToAchievementDTO(a));
+                    publicStandardAchievements.Add(ModelsConverterMachine.ConvertAchievementToAchievementDTO(a));
                 }
                 return publicStandardAchievements;
             }
@@ -70,9 +50,69 @@ public class AchievementService
                 {
                     throw new TargetException(ACHIEVEMENT_NOT_EXIST);
                 }
-                AchievementDTO publicStandardAchievement = ConvertAchievementToAchievementDTO(achievement);
-                
+                AchievementDTO publicStandardAchievement = ModelsConverterMachine.ConvertAchievementToAchievementDTO(achievement);
+
                 return publicStandardAchievement;
+            }
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public async Task UpdateAchievement(Guid achievementId, UpdateAchievementDTO update)
+    {
+        try
+        {
+            using (FlatformContext context = new FlatformContext())
+            {
+                var achievement = await context.achievements.FirstOrDefaultAsync(a => a.id == achievementId);
+                if (achievement == null)
+                {
+                    throw new TargetException(ACHIEVEMENT_NOT_EXIST);
+                }
+                achievement.dateEarned = (DateTime)(update.dateEarned != null ? update.dateEarned : achievement.dateEarned);
+                achievement.description = update.description != null ? update.description : achievement.description;
+                achievement.title = update.title != null ? update.title : achievement.title;
+                achievement.type = update.type != null ? (AchievementType)Enum.Parse(typeof(AchievementType), update.type) : achievement.type;
+                achievement.activationStatus = update.activationStatus != null ? (ActivationStatus)Enum.Parse(typeof(ActivationStatus), update.activationStatus) : achievement.activationStatus;
+                if (update.images != null)
+                {
+                    var achievementImages = context.achievement_images.Where(i => i.belongTo == achievement).ToList();
+                    achievementImages.ForEach(i => context.achievement_images.Remove(i));
+                    update.images.ForEach(i =>
+                    {
+                        var image = new Achievement_Image { image = i, belongTo = achievement };
+                        context.achievement_images.Add(image);
+                    });
+                }
+                context.SaveChanges();
+
+            }
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public void DeleteAchievement(Guid achievementId)
+    {
+        try
+        {
+            using (FlatformContext context = new FlatformContext())
+            {
+                var entityToDelete = context.achievements.FirstOrDefault(e => e.id == achievementId); // Tìm bản ghi dựa trên điều kiện
+
+                if (entityToDelete != null)
+                {
+                    context.achievements.Remove(entityToDelete); // Xóa bản ghi từ DbSet
+                    context.SaveChanges(); // Lưu thay đổi vào cơ sở dữ liệu
+                }
+                else
+                {
+                    throw new TargetException(ACHIEVEMENT_NOT_EXIST);
+                }
+
             }
         }
         catch (Exception)

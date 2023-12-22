@@ -9,7 +9,7 @@ public class Receipt
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Key]
-    public required Guid id{get;set;}
+    public Guid? id{get;set;}
     public required ReceiptType type {get;set;}
     public Doctor? doctor{get;set;}
     public Patient? patient{get;set;}

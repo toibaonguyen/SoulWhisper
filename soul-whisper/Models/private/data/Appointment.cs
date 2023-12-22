@@ -9,7 +9,7 @@ public class Appointment
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Key]
-    public required Guid id { get; set; }
+    public Guid? id { get; set; }
     public required AppointmentType type { get; set; }
     public required DateTime startTime { get; set; }
     public required DateTime endTime { get; set; }

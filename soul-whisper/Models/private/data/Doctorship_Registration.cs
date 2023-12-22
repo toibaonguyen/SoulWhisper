@@ -12,7 +12,7 @@ public class Doctorship_Registration
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Key]
-    public required Guid id { get; set; }
+    public Guid? id { get; set; }
     [ForeignKey("id")]
     public required Doctor registrant { get; set; }
         [DefaultValue(RegistrationStatus.PENDING)]

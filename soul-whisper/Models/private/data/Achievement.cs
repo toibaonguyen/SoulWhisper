@@ -11,7 +11,7 @@ public class Achievement
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Key]
-    public required Guid id { get; set; }
+    public Guid? id { get; set; }
     public required Doctor doctor { get; set; }
     public required ICollection<Achievement_Image> images { get; set; }
     public required AchievementType type { get; set; }
