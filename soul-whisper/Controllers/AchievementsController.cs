@@ -64,7 +64,7 @@ public class AchievementsController : ControllerBase
         AchievementDTO achievement = await service.GetAchievementDTOById(achievementId);
         return Ok(new ContainDataResponseDTO { data = achievement });
     }
-    //DO NOT USE THIS CREATE VIA REGISTERCONTROLLER
+    //DO NOT USE THIS -> CREATE VIA REGISTERCONTROLLER
     // [HttpPost]
     // public async Task<ActionResult<BaseResponseDTO>> CreateAppointment(AchievementDTO achievement)
     // {

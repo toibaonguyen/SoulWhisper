@@ -32,7 +32,37 @@ public static class ModelsConverterMachine
     }
     static public AdminDTO ConvertAdminToAdminDTO(Admin admin)
     {
-        return new AdminDTO{id=admin.id,email=admin.email,password=admin.password,name=admin.name,birthday=admin.birthday,gender=admin.gender.ToString()};
+        return new AdminDTO { id = admin.id, email = admin.email, password = admin.password, name = admin.name, birthday = admin.birthday, gender = admin.gender.ToString() };
     }
-
+    static public AppointmentDTO ConvertAppointmentToAppointmentDTO(Appointment appointment)
+    {
+        return new AppointmentDTO
+        {
+            id = appointment.id,
+            type = appointment.type.ToString(),
+            startTime = appointment.startTime,
+            endTime = appointment.endTime,
+            diagnosis = appointment.diagnosis,
+            prescription=appointment.prescription,
+            notes=appointment.notes,
+            doctorId= (Guid)appointment.doctor.id,
+            patientId=(Guid)appointment.patient.id,
+            status=appointment.status.ToString()
+        };
+    }
+    static public DoctorDTO ConvertDoctorToDoctorDTO(Doctor d)
+    {
+        return new DoctorDTO
+        {
+            id=d.id,
+            email=d.email,
+            password=d.password,
+            name=d.name,
+            avatar=d.avatar,
+            birthday=d.birthday,
+            gender=d.gender.ToString(),
+            activationStatus=d.activationStatus.ToString(),
+            specialty=d.specialty.ToString()
+        };
+    }
 }

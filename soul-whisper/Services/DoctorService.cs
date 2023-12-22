@@ -8,7 +8,7 @@ using soul_whisper.Models.Private.Business.Token;
 using soul_whisper.Models.Private.Enum;
 using soul_whisper.Models.Public;
 using soul_whisper.Models.Public.Enum;
-using soul_whisper.Models.Private.Business.Doctor;
+using soul_whisper.Models.Private.Data;
 
 namespace soul_whisper.Service;
 public class DoctorService : IOperation
@@ -39,10 +39,10 @@ public class DoctorService : IOperation
                     RefreshTokenFactory refreshTokenFactory = new RefreshTokenFactory();
                     AccessToken accessToken = (AccessToken)accessTokenFactory.CreateToken(new UserDTO { userId = (Guid)doctor.id, role = UserRole.DOCTOR });
                     RefreshToken refreshToken = (RefreshToken)refreshTokenFactory.CreateToken(new UserDTO { userId = (Guid)doctor.id, role = UserRole.DOCTOR });
-                    string accessTokenS=accessToken.ToString();
-                    string refreshTokenS=refreshToken.ToString();
-                    TokenOperator.AddLegitAccessToken(doctor.id,accessTokenS,DateTime.Now.AddSeconds(TokenConfig.ACCESS_TOKEN_EXPIRATION_IN_SECONDS));
-                    TokenOperator.AddLegitRefreshToken(doctor.id,refreshTokenS,DateTime.Now.AddSeconds(TokenConfig.REFRESH_TOKEN_EXPIRATION_IN_SECONDS));
+                    string accessTokenS = accessToken.ToString();
+                    string refreshTokenS = refreshToken.ToString();
+                    TokenOperator.AddLegitAccessToken(doctor.id, accessTokenS, DateTime.Now.AddSeconds(TokenConfig.ACCESS_TOKEN_EXPIRATION_IN_SECONDS));
+                    TokenOperator.AddLegitRefreshToken(doctor.id, refreshTokenS, DateTime.Now.AddSeconds(TokenConfig.REFRESH_TOKEN_EXPIRATION_IN_SECONDS));
                     return new AccessRightDTO { accessToken = accessTokenS, accessTokenExpiredAt = DateTime.Now.AddSeconds(TokenConfig.ACCESS_TOKEN_EXPIRATION_IN_SECONDS), refreshToken = refreshTokenS, refreshTokenExpiredAt = DateTime.Now.AddSeconds(TokenConfig.REFRESH_TOKEN_EXPIRATION_IN_SECONDS) };
                 }
 
@@ -58,9 +58,53 @@ public class DoctorService : IOperation
         TokenOperator.RemoveAccessToken(userId);
         TokenOperator.RemoveRefreshToken(userId);
     }
-    public async Task Register(Doctor doctor)
+    public async Task Register(DoctorDTO doctor)
     {
+        try
+        {
+            using (FlatformContext context = new FlatformContext())
+            {
 
+                await context.doctors.AddAsync(new Doctor
+                {
+                    email = doctor.email,
+                    password = doctor.password,
+                    name = doctor.name,
+                    avatar = doctor.avatar,
+                    birthday = doctor.birthday,
+                    gender = (Gender)Enum.Parse(typeof(Gender), doctor.gender),
+                    activationStatus=ActivationStatus.PENDING,
+                    specialty=(MedicalSpecialty)Enum.Parse(typeof(MedicalSpecialty), doctor.specialty),
+                    achievements=[],
+                    moneyInWallet=0
+                });
+                context.SaveChanges();
+            }
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public async Task<List<DoctorDTO>> GetDoctorDTOs()
+    {
+        try
+        {
+            using (FlatformContext context = new FlatformContext())
+            {
+                var ds = await context.doctors.ToListAsync();
+                List<DoctorDTO> publicStandardDs = [];
+                ds.ForEach(a =>
+                {
+                    publicStandardDs.Add(ModelsConverterMachine.ConvertDoctorToDoctorDTO(a));
+                });
+                return publicStandardDs;
+            }
+        }
+        catch (Exception)
+        {
+            throw;
+        }
     }
 
 }

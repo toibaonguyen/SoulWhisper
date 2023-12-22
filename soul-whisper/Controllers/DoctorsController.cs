@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using soul_whisper.Helpers;
+using soul_whisper.Models.Private.Enum;
 using soul_whisper.Models.Public;
+using soul_whisper.Models.Public.Enum;
 using soul_whisper.Service;
 
 namespace soul_whisper.Controllers;
@@ -11,12 +13,12 @@ namespace soul_whisper.Controllers;
 public class DoctorsController : ControllerBase
 {
     private readonly ILogger<DoctorsController> _logger;
-        private readonly string MISSING_TOKEN = "Missing token!";
+    private readonly string MISSING_TOKEN = "Missing token!";
     private readonly string LOGOUT_SUCCESSFULLY = "Logout fully!";
     private readonly string LOGOUT_FAILLY = "Logout fully!";
-private UserDTO ConvertAccessTokenToUserDTO()
+    private UserDTO ConvertAccessTokenToUserDTO()
     {
-       string? authHeaderValue = HttpContext.Request.Headers["Authorization"];
+        string? authHeaderValue = HttpContext.Request.Headers["Authorization"];
         if (String.IsNullOrEmpty(authHeaderValue))
         {
             throw new UnauthorizedAccessException(this.MISSING_TOKEN);
@@ -47,25 +49,54 @@ private UserDTO ConvertAccessTokenToUserDTO()
     }
 
     [HttpPost("logout")]
-    public  ActionResult<BaseResponseDTO> Logout()
+    public ActionResult<BaseResponseDTO> Logout()
     {
 
         DoctorService service = new DoctorService();
         UserDTO user = this.ConvertAccessTokenToUserDTO();
-         service.Logout(user.userId);
+        service.Logout(user.userId);
 
         return Ok(new ContainMessageResponseDTO { message = this.LOGOUT_SUCCESSFULLY });
     }
-    // [HttpGet]
-    // public async Task<ActionResult<BaseResponseDTO>> GetDoctors()
-    // {
-    //     string? limit = HttpContext.Request.Query["limit"];
-    // }
-    // [HttpPost]
-    // public async Task<ActionResult<BaseResponseDTO>> CreateDoctor(DoctorDTO doctor)
-    // {
+    [HttpGet]
+    public async Task<ActionResult<BaseResponseDTO>> GetDoctors()
+    {
+        string? limit = HttpContext.Request.Query["limit"];
+        UserDTO user = this.ConvertAccessTokenToUserDTO();
+        var service = new DoctorService();
+        List<DoctorDTO> doctors = await service.GetDoctorDTOs();
+        if (user.role == UserRole.ADMIN)
+        {
+            if (limit != null)
+            {
+                return Ok(new ContainDataResponseDTO { data = doctors.Take(Int32.Parse(limit)) });
+            }
+            return Ok(new ContainDataResponseDTO { data = doctors });
+        }
+        else
+        {
+            if (limit != null)
+            {
+                return Ok(new ContainDataResponseDTO { data = doctors.Where(a => a.activationStatus == ActivationStatus.ACTIVE.ToString()).Take(Int32.Parse(limit)) });
+            }
+            return Ok(new ContainDataResponseDTO { data = doctors.Where(a => a.activationStatus == ActivationStatus.ACTIVE.ToString()) });
+        }
 
-    // }
+    }
+    [HttpPost]
+    public async Task<ActionResult<BaseResponseDTO>> CreateDoctor(DoctorDTO doctor)
+    {
+        try{
+
+        var service = new DoctorService();
+        await service.Register(doctor);
+        return Ok(new ContainMessageResponseDTO{message="Created successfully"});
+        }
+        catch(Exception)
+        {
+            throw;
+        }
+    }
     // [HttpGet("{doctorId}")]
     // public async Task<ActionResult<BaseResponseDTO>> GetDoctorByDoctorId(Guid doctorId)
     // {
