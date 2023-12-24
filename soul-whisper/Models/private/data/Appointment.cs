@@ -19,4 +19,9 @@ public class Appointment
     public required Doctor doctor { get; set; }
     public required Patient patient { get; set; }
     public required AppoinmentStatus status { get; set; }
+
+    public static implicit operator Appointment(Appointment v)
+    {
+        throw new NotImplementedException();
+    }
 }

@@ -15,10 +15,10 @@ public class Appointment_Registration
     public required Patient patient { get; set; }
 
     public required Doctor doctor { get; set; }
-    public required ICollection<Appointment> appointments { get; set; }
-        [DefaultValue(RegistrationStatus.PENDING)]
-    public required RegistrationStatus status { get; set; }
+    public required Appointment appointment { get; set; }
+    [DefaultValue(RegistrationStatus.PENDING)]
+    public RegistrationStatus? status { get; set; }
     [DefaultValue("GETDATE()")]
-    public required DateTime createdAt { get; set; }
-    public required DateTime modifiedAt { get; set; }
+    public DateTime? createdAt { get; set; }
+    public DateTime? modifiedAt { get; set; }
 }

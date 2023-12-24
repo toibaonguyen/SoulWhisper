@@ -8,6 +8,36 @@ namespace soul_whisper.Helpers;
 
 public static class ModelsConverterMachine
 {
+    static public PatientDTO ConvertPatientToPatientDTO(Patient patient)
+    {
+        return new PatientDTO
+        {
+            id = patient.id,
+            name = patient.name,
+            email = patient.email,
+            password = patient.password,
+            birthday = patient.birthday,
+            gender = patient.gender.ToString(),
+            activationStatus = patient.activationStatus.ToString(),
+            bloodType = patient.bloodType
+
+        };
+    }
+    static public HabitDTO ConvertHabitToHabitDTO(Habit habit)
+    {
+        if (habit.patient.id == null)
+        {
+            throw new Exception("BAD BOYY");
+        }
+        return new HabitDTO
+        {
+            id = habit.id,
+            type = habit.type.ToString(),
+            name = habit.name,
+            description = habit.description,
+            patientId = (Guid)habit.patient.id
+        };
+    }
     static public AchievementDTO ConvertAchievementToAchievementDTO(Achievement achievement)
     {
 
@@ -74,6 +104,19 @@ public static class ModelsConverterMachine
             name = exercise.name,
             description = exercise.description,
             duration = exercise.duration
+        };
+    }
+    static public RatingDTO ConvertRatingToRatingDTO(Rating rating)
+    {
+        return new RatingDTO
+        {
+            id = rating.id,
+            patientId = (Guid)rating.patient.id,
+            doctorId = (Guid)rating.doctor.id,
+            value = rating.value,
+            comment = rating.comment,
+            createAt = rating.createAt,
+            modifiedAt = rating.modifiedAt
         };
     }
 }

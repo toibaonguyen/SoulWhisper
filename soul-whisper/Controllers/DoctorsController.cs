@@ -83,21 +83,22 @@ public class DoctorsController : ControllerBase
         }
 
     }
-    [HttpPost]
-    public async Task<ActionResult<BaseResponseDTO>> CreateDoctor(DoctorDTO doctor)
-    {
-        try
-        {
+    //PHONG ẤN
+    // [HttpPost]
+    // public async Task<ActionResult<BaseResponseDTO>> CreateDoctor(DoctorDTO doctor)
+    // {
+    //     try
+    //     {
 
-            var service = new DoctorService();
-            await service.Register(doctor);
-            return Ok(new ContainMessageResponseDTO { message = "Created successfully" });
-        }
-        catch (Exception e)
-        {
-            throw;
-        }
-    }
+    //         var service = new DoctorService();
+    //         await service.Register(doctor);
+    //         return Ok(new ContainMessageResponseDTO { message = "Created successfully" });
+    //     }
+    //     catch (Exception e)
+    //     {
+    //         return BadRequest(new ContainMessageResponseDTO{message=e.Message});
+    //     }
+    // }
     [HttpGet("{doctorId}")]
     public async Task<ActionResult<BaseResponseDTO>> GetDoctorByDoctorId(Guid doctorId)
     {

@@ -5,7 +5,6 @@ using soul_whisper.Data;
 using soul_whisper.Helpers.TokenFactory;
 using soul_whisper.Helpers;
 using soul_whisper.Models.Private.Business.Token;
-using soul_whisper.Models.Private.Business.User;
 using soul_whisper.Models.Private.Enum;
 using soul_whisper.Models.Public;
 using soul_whisper.Models.Public.Enum;

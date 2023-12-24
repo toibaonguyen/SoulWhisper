@@ -49,33 +49,65 @@ public class ExercisesController : ControllerBase
         UserDTO user = this.ConvertAccessTokenToUserDTO();
         var service = new ExerciseService();
         List<ExerciseDTO> exercises = await service.GetExerciseDTOs();
-        ExerciseDTO? exercise=exercises.FirstOrDefault(e=>e.id==exerciseId);
-        if(exercise==null)
+        ExerciseDTO? exercise = exercises.FirstOrDefault(e => e.id == exerciseId);
+        if (exercise == null)
         {
-            return BadRequest(new ContainMessageResponseDTO{message="Exercise is not exist"});
+            return BadRequest(new ContainMessageResponseDTO { message = "Exercise is not exist" });
         }
         return Ok(new ContainDataResponseDTO { data = exercise });
     }
     [HttpPatch("{exerciseId}")]
-    public async Task<ActionResult<BaseResponseDTO>> UpdateExercise(Guid exerciseId,UpdateExerciseDTO updateExercise)
+    public async Task<ActionResult<BaseResponseDTO>> UpdateExercise(Guid exerciseId, UpdateExerciseDTO updateExercise)
     {
-        try{
+        try
+        {
 
-        UserDTO user = this.ConvertAccessTokenToUserDTO();
-        
-        var service = new ExerciseService();
-        await service.UpdateExercise(exerciseId,updateExercise);
-        return Ok(new ContainMessageResponseDTO{message="Updated successfully"});
+            UserDTO user = this.ConvertAccessTokenToUserDTO();
+
+            var service = new ExerciseService();
+            await service.UpdateExercise(exerciseId, updateExercise);
+            return Ok(new ContainMessageResponseDTO { message = "Updated successfully" });
         }
-        catch(Exception)
+        catch (Exception)
         {
             throw;
         }
     }
-    // [HttpPost]
-    // public async Task<ActionResult<BaseResponseDTO>> CreateExercise(ExerciseDTO exercise)
-    // {
+    [HttpPost]
+    public async Task<ActionResult<BaseResponseDTO>> CreateExercise(ExerciseDTO exercise)
+    {
+        try
+        {
+            UserDTO user = this.ConvertAccessTokenToUserDTO();
+            var service = new ExerciseService();
+            await service.CreateExercise(exercise);
+            return Ok(new ContainMessageResponseDTO { message = "Created successfully" });
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    [HttpDelete("{exerciseId}")]
+    public async Task<ActionResult<BaseResponseDTO>> DeleteExercise(Guid exerexerciseId)
+    {
+        try
+        {
+            UserDTO user = this.ConvertAccessTokenToUserDTO();
+            if(user.role!=UserRole.ADMIN)
+            {
+                throw new InvalidOperationException("Do not have permission");
+            }
+            
+            var service = new ExerciseService();
+            await service.DeleteExercise(exerexerciseId);
+            return Ok(new ContainMessageResponseDTO { message = "Deleted successfully" });
 
-    // }
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
 }
 

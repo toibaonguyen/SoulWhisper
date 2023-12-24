@@ -14,6 +14,7 @@ public class Receipt
     public Doctor? doctor{get;set;}
     public Patient? patient{get;set;}
     [Column(TypeName ="Money")]
-    public required decimal Amount {get;set;}
-    public required string Details{get;set;}
+    public required decimal amount {get;set;}
+    public required string details{get;set;}
+    public DateTime? createAt {get;set;}
 }

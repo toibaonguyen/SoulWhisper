@@ -8,13 +8,38 @@ using soul_whisper.Models.Private.Business.Token;
 using soul_whisper.Models.Private.Enum;
 using soul_whisper.Models.Public;
 using soul_whisper.Models.Public.Enum;
-using soul_whisper.Models.Private.Business.Patient;
+using soul_whisper.Models.Private.Data;
 
 namespace soul_whisper.Service;
 public class PatientService : IOperation
 {
     private const string WRONG_EMAIL_OR_PASSWORD = "Wrong email or password";
     private const string ACCOUNT_IS_NOT_ACTIVE = "This account is not in active right now";
+    public async Task UpdatePatient(Guid patientId, UpdatePatientDTO update)
+    {
+        try
+        {
+            using (FlatformContext context = new FlatformContext())
+            {
+
+                var patient=await context.patients.FirstOrDefaultAsync(p=> p.id == patientId);
+                if (patient!=null)
+                {
+                    patient.password=update.password??patient.password;
+                    patient.gender = update.gender!=null? (Gender)Enum.Parse(typeof(Gender), update.gender) : patient.gender;
+                    patient.name=update.name??patient.name;
+                    patient.birthday=update.birthday??patient.birthday;
+                    patient.activationStatus=update.activationStatus!=null?(ActivationStatus)Enum.Parse(typeof(ActivationStatus),update.activationStatus):patient.activationStatus;
+                    patient.bloodType=update.bloodType??patient.bloodType;
+                    context.SaveChanges();
+                }
+            }
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
     public async Task<AccessRightDTO> Login(string email, string password)
     {
         try
@@ -48,9 +73,9 @@ public class PatientService : IOperation
 
             }
         }
-        catch (Exception )
+        catch (Exception)
         {
-            throw ;
+            throw;
         }
     }
     public void Logout(Guid userId)
@@ -58,8 +83,49 @@ public class PatientService : IOperation
         TokenOperator.RemoveAccessToken(userId);
         TokenOperator.RemoveRefreshToken(userId);
     }
-    public async Task Register(Patient patient)
+    public async Task Register(PatientDTO patient)
     {
+        try
+        {
+            using (FlatformContext context = new FlatformContext())
+            {
 
+                await context.patients.AddAsync(new Patient
+                {
+                    email = patient.email,
+                    password = patient.password,
+                    name = patient.name,
+                    birthday = patient.birthday,
+                    gender = (Gender)Enum.Parse(typeof(Gender), patient.gender),
+                    activationStatus = ActivationStatus.PENDING,
+                    bloodType = patient.bloodType
+                });
+                context.SaveChanges();
+            }
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public async Task<List<PatientDTO>> GetPatientDTOs()
+    {
+        try
+        {
+            using (FlatformContext context = new FlatformContext())
+            {
+                var ds = await context.patients.ToListAsync();
+                List<PatientDTO> publicStandardDs = [];
+                ds.ForEach(a =>
+                {
+                    publicStandardDs.Add(ModelsConverterMachine.ConvertPatientToPatientDTO(a));
+                });
+                return publicStandardDs;
+            }
+        }
+        catch (Exception)
+        {
+            throw;
+        }
     }
 }

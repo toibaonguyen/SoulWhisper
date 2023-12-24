@@ -14,6 +14,26 @@ using System.Reflection;
 namespace soul_whisper.Service;
 public class ExerciseService
 {
+    public async Task DeleteExercise(Guid exerciseId)
+    {
+try
+        {
+            using (FlatformContext context = new FlatformContext())
+            {
+                var ex=await context.exercises.FirstOrDefaultAsync(e=>e.id==exerciseId);
+                if(ex==null)
+                {
+                    throw new BadHttpRequestException("Exercises is not exist!");
+                }
+                  context.exercises.Remove(ex);
+                  context.SaveChanges();
+            }
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
     public async Task<List<ExerciseDTO>> GetExerciseDTOs()
     {
         try
@@ -47,6 +67,7 @@ public class ExerciseService
                     exercise.type = update.type != null ? (ExerciseType)Enum.Parse(typeof(ExerciseType), update.type) : exercise.type;
                     exercise.description = update.description ?? exercise.description;
                     exercise.duration = update.duration ?? exercise.duration;
+                    context.SaveChanges();
                 }
                 else
                 {
@@ -59,4 +80,26 @@ public class ExerciseService
             throw;
         }
     }
+    public async Task CreateExercise(ExerciseDTO exercise)
+    {
+        try
+        {
+            using (FlatformContext context = new FlatformContext())
+            {
+                await context.exercises.AddAsync(new Exercise
+                {
+                    name = exercise.name,
+                    type = (ExerciseType)Enum.Parse(typeof(ExerciseType), exercise.type),
+                    description = exercise.description,
+                    duration = exercise.duration
+                });
+                context.SaveChanges();
+            }
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
 }

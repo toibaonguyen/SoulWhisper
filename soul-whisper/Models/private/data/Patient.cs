@@ -15,7 +15,7 @@ public class Patient
     public required string password { get; set; }
     public required string name { get; set; }
     public required string bloodType {get;set;}
-    public required DateTime birthday { get; set; }
+    public required DateOnly birthday { get; set; }
     public required Gender gender { get; set; }
     public required ActivationStatus activationStatus { get; set; }
     public ICollection<Habit>? habits { get; set; }

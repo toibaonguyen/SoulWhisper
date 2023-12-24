@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using soul_whisper.Models.Private.Enum;
@@ -17,6 +18,7 @@ public class Doctor
     public required string avatar { get; set; }
     public required DateOnly birthday { get; set; }
     public required Gender gender { get; set; }
+    [DefaultValue(ActivationStatus.PENDING)]
     public required ActivationStatus activationStatus { get; set; }
     public required MedicalSpecialty specialty { get; set; }
     public required ICollection<Achievement> achievements { get; set; }
@@ -26,4 +28,9 @@ public class Doctor
     public ICollection<Appointment>? appointments { get; set; }
     public ICollection<Appointment_Registration>? appointmentRegistrations { get; set; }
     public ICollection<Receipt>? receipts { get; set; }
+
+    public static implicit operator Doctor(Doctor v)
+    {
+        throw new NotImplementedException();
+    }
 }
