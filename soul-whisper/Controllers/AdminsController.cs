@@ -50,6 +50,14 @@ public class AdminsController : ControllerBase
             throw;
         }
     }
+    // [HttpPost("refreshToken")]
+    // public ActionResult<BaseResponseDTO> refreshToken()
+    // {
+    //     UserDTO user = this.ConvertAccessTokenToUserDTO();
+    //     var adminService = new AdminService();
+    //     adminService.Logout(user.userId);
+    //     return Ok(new ContainMessageResponseDTO { message = this.LOGOUT_SUCCESSFULLY });
+    // }
     [HttpPost("logout")]
     public ActionResult<BaseResponseDTO> Logout()
     {

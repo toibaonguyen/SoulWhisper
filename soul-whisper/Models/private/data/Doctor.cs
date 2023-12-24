@@ -29,8 +29,4 @@ public class Doctor
     public ICollection<Appointment_Registration>? appointmentRegistrations { get; set; }
     public ICollection<Receipt>? receipts { get; set; }
 
-    public static implicit operator Doctor(Doctor v)
-    {
-        throw new NotImplementedException();
-    }
 }
