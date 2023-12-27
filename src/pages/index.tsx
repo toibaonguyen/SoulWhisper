@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import styles from './index.module.css';
 import React from 'react';
+import Link from 'next/link';
 
 
 const LandingPage:NextPage = () => {
@@ -304,10 +305,10 @@ const LandingPage:NextPage = () => {
             						</div>
           					</div>
           					<div className={styles.signInParent}>
-            						<div className={styles.contactUs}>Sign In</div>
-            						<div className={styles.signUpWrapper}>
+            						<Link href={"#"} className={styles.contactUs}>Sign In</Link>
+            						<Link href={"#"} className={styles.signUpWrapper}>
               							<div className={styles.contactUs}>Sign Up</div>
-            						</div>
+            						</Link>
           					</div>
         				</div>
       			</div></div>

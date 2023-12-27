@@ -1,0 +1,36 @@
+/* Define the primary color and white */
+:root {
+    --primary-color: #4d77ff;
+    --white-color: #ffffff;
+  }
+  
+  /* Apply the primary color to different elements */
+  body {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    font-family: Arial, sans-serif;
+  }
+  
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: darken(var(--primary-color), 10%);
+  }
+  
+  /* Example button styles */
+  .button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: darken(var(--primary-color), 10%);
+  }
+  
