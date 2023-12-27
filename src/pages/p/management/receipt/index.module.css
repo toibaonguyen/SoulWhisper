@@ -1,0 +1,11 @@
+
+.myBody {
+    margin: 0; line-height: normal;
+}
+.rectangleDiv {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 597px;
+}
+

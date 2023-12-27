@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/p/dashboards/messenger/index.jsx", "src/pages/p/meeting/App.js", "src/pages/p/meeting/index.tsx", "src/pages/p/dashboards/messenger/SendMessage.jsx", "src/pages/p/dashboards/messenger/ChatBox.jsx", "src/pages/p/dashboards/messenger/Message.jsx", "src/pages/p/sign-in/index.tsx"],
+  "exclude": ["node_modules"]
+}

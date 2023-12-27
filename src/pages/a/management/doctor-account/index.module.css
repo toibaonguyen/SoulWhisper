@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Font+Awesome+6+Pro:wght@400&display=swap');
+.myBody {
+  	margin: 0; line-height: normal;
+}
+.bgcircle {
+    position: absolute;
+    top: -350px;
+    left: calc(50% - 366px);
+    border-radius: 50%;
+    background-color: #9c6fff;
+    filter: blur(400px);
+    width: 733px;
+    height: 733px;
+    opacity: 0.1;
+}
+.noiseTexture1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1440px;
+    height: 1024px;
+    object-fit: cover;
+    opacity: 0.35;
+    mix-blend-mode: overlay;
+}
+.formboxChild {
+    position: absolute;
+    top: 6px;
+    left: calc(50% - 198px);
+    width: 397px;
+    height: 115px;
+    overflow: hidden;
+    object-fit: cover;
+    opacity: 0.2;
+}
+.createAccount {
+    position: absolute;
+    top: 60px;
+    left: calc(50% - 84px);
+    font-size: 24px;
+    font-weight: 600;
+    text-align: left;
+}
+.startYour301 {
+    position: absolute;
+    top: 94px;
+    left: calc(50% - 146px);
+    font-family: Inter;
+    color: #404040;
+    opacity: 0.5;
+}
+.signUpWith2 {
+    position: relative;
+    font-weight: 500;
+    z-index: 0;
+}
+.icongoogle {
+    position: absolute;
+    margin: 0 !important;
+    top: 15px;
+    left: 16px;
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+    z-index: 1;
+}
+.signupwaybutton {
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid #e7e7e7;
+    box-sizing: border-box;
+    height: 48px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 16px;
+}
+.signupbuttons {
+    position: absolute;
+    top: 135px;
+    left: calc(50% - 150px);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    font-size: 16px;
+}
+.border2 {
+    flex: 1;
+    position: relative;
+    background-color: #000;
+    height: 1px;
+    opacity: 0.2;
+}
+.or {
+    position: relative;
+    font-weight: 500;
+}
+.ordivider {
+    position: absolute;
+    top: 263px;
+    left: calc(50% - 150px);
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    opacity: 0.5;
+    font-family: Inter;
+}
+.createAccount1 {
+    position: relative;
+    font-weight: 600;
+}
+.button {
+    position: absolute;
+    top: 476px;
+    left: calc(50% - 150px);
+    border-radius: 8px;
+    background-color: #000;
+    width: 300px;
+    height: 48px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 32px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #fff;
+}
+.logIn {
+    text-decoration: underline;
+    font-weight: 600;
+    color: #9c6fff;
+}
+.alreadyHaveAnContainer {
+    position: absolute;
+    bottom: 60px;
+    left: calc(50% - 102px);
+    color: #808080;
+}
+.johndoemailcom {
+    position: absolute;
+    top: calc(50% - 9px);
+    left: 16px;
+    opacity: 0.75;
+}
+.input1 {
+    align-self: stretch;
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid #e7e7e7;
+    box-sizing: border-box;
+    height: 44px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.input {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+}
+.eye {
+    position: absolute;
+    top: calc(50% - 7px);
+    right: 16px;
+    opacity: 0.5;
+}
+.passwordtextChild {
+    position: relative;
+    border-radius: 50%;
+    background-color: #000;
+    width: 6px;
+    height: 6px;
+}
+.passwordtext {
+    position: absolute;
+    top: 19px;
+    left: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+    opacity: 0.75;
+}
+.input3 {
+    align-self: stretch;
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid #e7e7e7;
+    box-sizing: border-box;
+    height: 44px;
+    overflow: hidden;
+    flex-shrink: 0;
+    color: #808080;
+    font-family: 'Font Awesome 6 Pro';
+}
+.signupforms {
+    position: absolute;
+    top: 296px;
+    left: calc(50% - 150px);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+    text-align: left;
+}
+.formbox {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #fbfafb, #fff);
+    box-shadow: 0px 0px 30px rgba(205, 198, 219, 0.3);
+    border: 6px solid #fff;
+    box-sizing: border-box;
+    height: 618px;
+}
+.logoIcon {
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 55px);
+    width: 110px;
+    height: 91px;
+    object-fit: cover;
+}
+.formboxwrapper {
+    position: absolute;
+    top: 202px;
+    left: 425px;
+    border-radius: 16px;
+    border: 1px solid rgba(205, 198, 219, 0.2);
+    box-sizing: border-box;
+    width: 590px;
+    height: 620px;
+}
+.allRightsReserved1 {
+    position: absolute;
+    top: 861px;
+    left: calc(50% - 72px);
+    font-size: 12px;
+    color: #808080;
+    white-space: pre-wrap;
+}
+.desktop {
+    position: relative;
+    background-color: #f5f4f7;
+    width: 100%;
+    height: 1024px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 14px;
+    color: #000;
+    font-family: Outfit;
+}
+

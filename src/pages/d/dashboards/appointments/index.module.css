@@ -1,0 +1,648 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+.myBody {
+  	margin: 0; line-height: normal;
+}
+.frameChild {
+    position: absolute;
+    top: 52px;
+    left: 33px;
+    border-radius: 9px;
+    background-color: #fff;
+    width: 1132px;
+    height: 492px;
+}
+.frameItem {
+    position: absolute;
+    height: 8.09%;
+    width: 16.71%;
+    top: 84.01%;
+    right: 5.85%;
+    bottom: 7.9%;
+    left: 77.44%;
+    border-radius: 24px;
+    background-color: #46bcff;
+}
+.frameInner {
+    position: absolute;
+    height: 8.09%;
+    width: 16.71%;
+    top: 84.01%;
+    right: 23.64%;
+    bottom: 7.9%;
+    left: 59.65%;
+    border-radius: 24px;
+    border: 2px solid #6b6767;
+    box-sizing: border-box;
+}
+.confirm {
+    position: absolute;
+    height: 4.04%;
+    width: 7.35%;
+    top: 85.29%;
+    left: 82.37%;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+}
+.cancel {
+    position: absolute;
+    height: 4.04%;
+    width: 7.35%;
+    top: 85.29%;
+    left: 64.49%;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+}
+.rectangleDiv {
+    position: absolute;
+    height: 8.64%;
+    width: 42.27%;
+    top: 52.21%;
+    right: 50.88%;
+    bottom: 39.15%;
+    left: 6.85%;
+    border-radius: 4px;
+    background-color: #e2e2e2;
+}
+.frameChild1 {
+    position: absolute;
+    height: 8.64%;
+    width: 42.27%;
+    top: 68.2%;
+    right: 50.88%;
+    bottom: 23.16%;
+    left: 6.85%;
+    border-radius: 4px;
+    background-color: #e2e2e2;
+}
+.frameChild2 {
+    position: absolute;
+    height: 8.64%;
+    width: 42.27%;
+    top: 68.2%;
+    right: 5.85%;
+    bottom: 23.16%;
+    left: 51.88%;
+    border-radius: 4px;
+    background-color: #e2e2e2;
+}
+.vuesaxlineardirectInboxIcon1 {
+    position: absolute;
+    height: 4.94%;
+    width: 2.25%;
+    top: 69.85%;
+    right: 7.44%;
+    bottom: 25.2%;
+    left: 90.31%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.frameChild3 {
+    position: absolute;
+    height: 8.64%;
+    width: 42.27%;
+    top: 36.4%;
+    right: 50.88%;
+    bottom: 54.96%;
+    left: 6.85%;
+    border-radius: 4px;
+    background-color: #e2e2e2;
+}
+.frameChild4 {
+    position: absolute;
+    height: 8.64%;
+    width: 42.27%;
+    top: 36.4%;
+    right: 5.76%;
+    bottom: 54.96%;
+    left: 51.96%;
+    border-radius: 4px;
+    background-color: #e2e2e2;
+}
+.vuesaxlineararrowCircleDowIcon3 {
+    position: absolute;
+    top: 201px;
+    right: 616px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+.vuesaxlineararrowCircleDowIcon4 {
+    position: absolute;
+    top: 374px;
+    right: 616px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+.vuesaxlineararrowCircleDowIcon5 {
+    position: absolute;
+    top: 201px;
+    right: 76px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+.iconCalendar1 {
+    position: absolute;
+    height: 3.92%;
+    width: 1.69%;
+    top: 54.41%;
+    right: 52.28%;
+    bottom: 41.67%;
+    left: 46.03%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.frameChild5 {
+    position: absolute;
+    height: 8.64%;
+    width: 42.27%;
+    top: 52.21%;
+    right: 5.85%;
+    bottom: 39.15%;
+    left: 51.88%;
+    border-radius: 4px;
+    background-color: #e2e2e2;
+}
+.groupChild {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+.groupItem {
+    position: absolute;
+    height: 34.04%;
+    width: 99.6%;
+    top: 0%;
+    right: 0.4%;
+    bottom: 65.96%;
+    left: 0%;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+.selectTime {
+    position: absolute;
+    height: 12.06%;
+    width: 28.69%;
+    top: 11.35%;
+    left: 35.46%;
+    display: inline-block;
+}
+.groupInner {
+    position: absolute;
+    height: 30.5%;
+    width: 33.86%;
+    top: 48.94%;
+    right: 12.75%;
+    bottom: 20.57%;
+    left: 53.39%;
+    border-radius: 2px;
+    background-color: #fff;
+    border: 1px solid #a4a4a4;
+    box-sizing: border-box;
+}
+.groupChild1 {
+    position: absolute;
+    height: 7.09%;
+    width: 6.37%;
+    top: 59.57%;
+    right: 19.92%;
+    bottom: 33.33%;
+    left: 73.71%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: contain;
+}
+.groupChild2 {
+    position: absolute;
+    height: 28.37%;
+    width: 33.86%;
+    top: 48.94%;
+    right: 55.38%;
+    bottom: 22.7%;
+    left: 10.76%;
+    border-radius: 2px;
+    background-color: #fff;
+    border: 1px solid #a4a4a4;
+    box-sizing: border-box;
+}
+.groupChild3 {
+    position: absolute;
+    height: 6.38%;
+    width: 6.37%;
+    top: 58.87%;
+    right: 67.33%;
+    bottom: 34.75%;
+    left: 26.29%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: contain;
+}
+.div {
+    position: absolute;
+    top: 80px;
+    left: 58px;
+}
+.am {
+    position: absolute;
+    top: 80px;
+    left: 163px;
+}
+.am1 {
+    position: absolute;
+    top: 108px;
+    left: 164px;
+    color: #fff;
+}
+.rectangleGroup {
+    position: absolute;
+    height: 25.92%;
+    width: 20.97%;
+    top: 52.57%;
+    right: 5.76%;
+    bottom: 21.51%;
+    left: 73.27%;
+    font-size: 12px;
+    color: #000;
+}
+.reason {
+    position: absolute;
+    height: 4.09%;
+    width: 8.27%;
+    top: 31.99%;
+    left: 6.85%;
+    color: #000;
+    display: inline-block;
+}
+.medium {
+    position: absolute;
+    height: 4.09%;
+    width: 8.27%;
+    top: 31.99%;
+    left: 51.96%;
+    color: #000;
+    display: inline-block;
+}
+.date {
+    position: absolute;
+    height: 4.09%;
+    width: 8.27%;
+    top: 47.79%;
+    left: 6.85%;
+    color: #000;
+    display: inline-block;
+}
+.occupation {
+    position: absolute;
+    height: 4.09%;
+    width: 8.27%;
+    top: 63.79%;
+    left: 6.85%;
+    color: #000;
+    display: inline-block;
+}
+.resume {
+    position: absolute;
+    height: 4.09%;
+    width: 8.27%;
+    top: 63.79%;
+    left: 51.88%;
+    color: #000;
+    display: inline-block;
+}
+.time {
+    position: absolute;
+    height: 4.04%;
+    width: 14.45%;
+    top: 47.61%;
+    left: 51.96%;
+    color: #000;
+    display: inline-block;
+}
+.pm {
+    position: absolute;
+    height: 4.04%;
+    width: 14.45%;
+    top: 54.78%;
+    left: 53.13%;
+    display: inline-block;
+}
+.studentVisa {
+    position: absolute;
+    height: 4.04%;
+    width: 14.45%;
+    top: 38.97%;
+    left: 7.69%;
+    display: inline-block;
+}
+.online {
+    position: absolute;
+    height: 4.04%;
+    width: 14.45%;
+    top: 38.97%;
+    left: 52.8%;
+    display: inline-block;
+}
+.december2019 {
+    position: absolute;
+    height: 4.04%;
+    width: 14.45%;
+    top: 54.6%;
+    left: 7.85%;
+    display: inline-block;
+}
+.student {
+    position: absolute;
+    height: 4.04%;
+    width: 14.45%;
+    top: 70.59%;
+    left: 7.85%;
+    display: inline-block;
+}
+.uploadResumeDocspdf1 {
+    position: absolute;
+    height: 4.04%;
+    width: 17.54%;
+    top: 70.59%;
+    left: 52.88%;
+    display: inline-block;
+}
+.vectorIcon15 {
+    position: absolute;
+    height: 0.53%;
+    width: 0.23%;
+    top: 46.12%;
+    right: 74.71%;
+    bottom: 53.35%;
+    left: 25.06%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+    opacity: 0.48;
+}
+.vectorIcon16 {
+    position: absolute;
+    height: 0.5%;
+    width: 0.24%;
+    top: 47.01%;
+    right: 74.7%;
+    bottom: 52.49%;
+    left: 25.06%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+    opacity: 0.48;
+}
+.vectorIcon17 {
+    position: absolute;
+    height: 0.59%;
+    width: 0.18%;
+    top: 45.13%;
+    right: 74.75%;
+    bottom: 54.28%;
+    left: 25.06%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+    opacity: 0.48;
+}
+.vectorIcon18 {
+    position: absolute;
+    height: 0.57%;
+    width: 0.2%;
+    top: 45.53%;
+    right: 74.74%;
+    bottom: 53.9%;
+    left: 25.06%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+    opacity: 0.48;
+}
+.vectorIcon19 {
+    position: absolute;
+    height: 0.55%;
+    width: 0.22%;
+    top: 44.53%;
+    right: 74.72%;
+    bottom: 54.92%;
+    left: 25.06%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+    opacity: 0.48;
+}
+.vectorIcon20 {
+    position: absolute;
+    height: 0.52%;
+    width: 0.23%;
+    top: 44.15%;
+    right: 74.71%;
+    bottom: 55.33%;
+    left: 25.06%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+    opacity: 0.48;
+}
+.vectorIcon21 {
+    position: absolute;
+    height: 0.49%;
+    width: 0.24%;
+    top: 43.31%;
+    right: 74.69%;
+    bottom: 56.2%;
+    left: 25.06%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+    opacity: 0.48;
+}
+.vectorIcon22 {
+    position: absolute;
+    height: 0.46%;
+    width: 0.25%;
+    top: 42.55%;
+    right: 74.77%;
+    bottom: 56.99%;
+    left: 24.98%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+    opacity: 0.48;
+}
+.vectorIcon23 {
+    position: absolute;
+    height: 0.43%;
+    width: 0.26%;
+    top: 41.87%;
+    right: 74.76%;
+    bottom: 57.7%;
+    left: 24.98%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+    opacity: 0.48;
+}
+.vectorIcon24 {
+    position: absolute;
+    height: 0.4%;
+    width: 0.27%;
+    top: 41.28%;
+    right: 74.75%;
+    bottom: 58.32%;
+    left: 24.98%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+    opacity: 0.48;
+}
+.vectorIcon25 {
+    position: absolute;
+    height: 0.37%;
+    width: 0.28%;
+    top: 40.8%;
+    right: 74.74%;
+    bottom: 58.84%;
+    left: 24.98%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+    opacity: 0.48;
+}
+.vectorIcon26 {
+    position: absolute;
+    height: 0.33%;
+    width: 0.28%;
+    top: 40.41%;
+    right: 74.74%;
+    bottom: 59.26%;
+    left: 24.98%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+    opacity: 0.48;
+}
+.vectorIcon27 {
+    position: absolute;
+    height: 0.29%;
+    width: 0.29%;
+    top: 40.12%;
+    right: 74.73%;
+    bottom: 59.59%;
+    left: 24.98%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+    opacity: 0.48;
+}
+.vectorIcon28 {
+    position: absolute;
+    height: 0.26%;
+    width: 0.29%;
+    top: 39.94%;
+    right: 74.73%;
+    bottom: 59.8%;
+    left: 24.98%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+    opacity: 0.48;
+}
+.vectorIcon29 {
+    position: absolute;
+    height: 0.22%;
+    width: 0.29%;
+    top: 39.87%;
+    right: 74.73%;
+    bottom: 59.91%;
+    left: 24.98%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+    opacity: 0.48;
+}
+.frameChild6 {
+    position: absolute;
+    top: 52px;
+    left: 33px;
+    border-radius: 9px 9px 0px 0px;
+    background-color: #46bcff;
+    width: 1132px;
+    height: 95px;
+}
+.addAppointment {
+    position: absolute;
+    top: 87px;
+    left: 80px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+.close {
+    position: absolute;
+    top: 88px;
+    left: 1043px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+.iconCancel1 {
+    position: absolute;
+    height: 2.78%;
+    width: 1.27%;
+    top: 17.25%;
+    right: 6.77%;
+    bottom: 79.96%;
+    left: 91.97%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.rectangleParent {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 544px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 14px;
+    color: #6b6767;
+    font-family: Poppins;
+}
+

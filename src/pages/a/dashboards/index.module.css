@@ -1,0 +1,1167 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap');
+.myBody {
+  	margin: 0; line-height: normal;
+}
+.bezierAdminDashboardChild {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #f2f2f2;
+    width: 240px;
+    height: 982px;
+}
+.vuesaxlinearsetting2Icon1 {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+.settings {
+    position: relative;
+    line-height: 24px;
+}
+.vuesaxlinearsetting2Parent {
+    border-radius: 4px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 24px 8px 16px;
+    gap: 12px;
+}
+.vuesaxlinearlogoutParent {
+    align-self: stretch;
+    border-radius: 4px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 24px 8px 16px;
+    gap: 12px;
+    color: #a65959;
+}
+.frameParent {
+    position: absolute;
+    top: 564px;
+    left: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+    font-size: 16px;
+}
+.dashboard {
+    position: relative;
+    line-height: 24px;
+    font-weight: 500;
+}
+.vuesaxlinearcategoryParent {
+    border-radius: 4px;
+    background-color: #b4cd93;
+    width: 167px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 24px 8px 16px;
+    box-sizing: border-box;
+    gap: 12px;
+    color: #4c4c4c;
+}
+.vuesaxlinearprofileParent {
+    align-self: stretch;
+    border-radius: 4px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 8px 24px 8px 16px;
+    gap: 12px;
+}
+.vuesaxlineargalleryParent {
+    align-self: stretch;
+    border-radius: 4px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 24px 8px 16px;
+    gap: 12px;
+}
+.frameGroup {
+    position: absolute;
+    top: 212px;
+    left: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+    font-size: 16px;
+    color: #808080;
+}
+.vuesaxlinearbezierIcon1 {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+.bezier {
+    position: relative;
+    line-height: 32px;
+    font-weight: 600;
+    background: linear-gradient(99.32deg, #b4cd93, #427a5b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.vuesaxlinearbezierParent {
+    position: absolute;
+    top: 60px;
+    left: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 24px;
+}
+.groupChild {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 4px;
+    background-color: #fafafa;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    width: 741px;
+    height: 48px;
+}
+.vuesaxlinearsearchNormalIcon2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 24.08px;
+    height: 24px;
+    object-fit: cover;
+}
+.searchArtistsProjects1 {
+    position: absolute;
+    top: 0px;
+    left: 36.11px;
+    line-height: 24px;
+    display: inline-block;
+    width: 173.54px;
+}
+.vuesaxlinearsearchNormalParent {
+    position: absolute;
+    top: 12px;
+    left: 16.05px;
+    width: 209.65px;
+    height: 24px;
+}
+.rectangleParent {
+    position: absolute;
+    top: 60px;
+    left: 272px;
+    width: 741px;
+    height: 48px;
+    font-size: 16px;
+}
+.frameChild {
+    position: relative;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+.karimBenzema {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    line-height: 16px;
+    font-weight: 600;
+}
+.admin {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    line-height: 16px;
+    font-weight: 500;
+    color: #b3b3b3;
+}
+.karimBenzemaParent {
+    position: relative;
+    width: 102px;
+    height: 36px;
+}
+.ellipseParent {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.vuesaxlinearnotificationWrapper {
+    border-radius: 50px;
+    background-color: #f2f2f2;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 8px;
+}
+.frameDiv {
+    position: absolute;
+    top: 60px;
+    left: 1205px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 40px;
+    font-size: 14px;
+}
+.bezierAdminDashboardItem {
+    position: absolute;
+    top: 491px;
+    left: 271px;
+    border-radius: 4px;
+    background-color: #fcfcfc;
+    width: 741px;
+    height: 451px;
+}
+.bezierAdminDashboardInner {
+    position: absolute;
+    top: 878px;
+    left: 271px;
+    border-radius: 0px 0px 4px 4px;
+    background-color: #f7f7f7;
+    width: 741px;
+    height: 64px;
+}
+.rectangleDiv {
+    position: absolute;
+    top: 188px;
+    left: 1081px;
+    border-radius: 4px;
+    background-color: #fcfcfc;
+    width: 351px;
+    height: 290px;
+}
+.bezierAdminDashboardChild1 {
+    position: absolute;
+    top: 510px;
+    left: 1081px;
+    border-radius: 4px;
+    background-color: #fcfcfc;
+    width: 351px;
+    height: 290px;
+}
+.bestSellingArtists {
+    position: absolute;
+    top: 220px;
+    left: 1188px;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 600;
+    color: #000;
+}
+.bestSellingProjects {
+    position: absolute;
+    top: 542px;
+    left: 1188px;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 600;
+    color: #000;
+}
+.inTheLast1 {
+    position: absolute;
+    top: 188px;
+    left: 272px;
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 600;
+}
+.allArtists {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    line-height: 32px;
+    font-weight: 600;
+}
+.monitorArtistSales1 {
+    position: absolute;
+    top: 40px;
+    left: 1px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #b3b3b3;
+}
+.allArtistsParent {
+    position: relative;
+    width: 182px;
+    height: 56px;
+}
+.groupItem {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 4px;
+    background-color: #fafafa;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    width: 240px;
+    height: 32px;
+}
+.vuesaxlinearsearchNormalIcon3 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+}
+.searchArtists {
+    position: absolute;
+    top: 0px;
+    left: 32px;
+    line-height: 16px;
+}
+.vuesaxlinearsearchNormalGroup {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    width: 110px;
+    height: 16px;
+}
+.rectangleGroup {
+    position: relative;
+    width: 240px;
+    height: 32px;
+}
+.filter {
+    position: relative;
+    line-height: 16px;
+    transform:  rotate(180deg);
+}
+.vuesaxlinearfilterSearchIcon1 {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    transform:  rotate(-180deg);
+}
+.filterParent {
+    border-radius: 4px;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    width: 59px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    gap: 6px;
+    transform:  rotate(180deg);
+}
+.groupParent1 {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    font-size: 12px;
+}
+.groupParent {
+    position: absolute;
+    top: 404px;
+    left: 271px;
+    width: 741px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-size: 18px;
+}
+.bezierAdminDashboardChild2 {
+    position: absolute;
+    top: 491px;
+    left: 271px;
+    border-radius: 4px 4px 0px 0px;
+    background-color: #f7f7f7;
+    width: 741px;
+    height: 40px;
+}
+.artist {
+    position: absolute;
+    top: 503px;
+    left: 295px;
+    line-height: 16px;
+    font-weight: 600;
+}
+.status {
+    position: absolute;
+    top: 503px;
+    left: 436px;
+    line-height: 16px;
+    font-weight: 600;
+}
+.ratings {
+    position: absolute;
+    top: 503px;
+    left: 543px;
+    line-height: 16px;
+    font-weight: 600;
+}
+.projectsSold {
+    position: absolute;
+    top: 503px;
+    left: 777px;
+    line-height: 16px;
+    font-weight: 600;
+}
+.highestSale {
+    position: absolute;
+    top: 503px;
+    left: 908px;
+    line-height: 16px;
+    font-weight: 600;
+}
+.image12Icon2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+.div {
+    position: relative;
+    border-radius: 50px;
+    background-color: #fff;
+    border: 5px solid #ececec;
+    box-sizing: border-box;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.bluenose {
+    position: relative;
+    line-height: 16px;
+    font-weight: 600;
+}
+.parent {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.verified {
+    position: relative;
+    line-height: 16px;
+}
+.verifiedWrapper {
+    position: absolute;
+    top: 4px;
+    left: 141px;
+    border-radius: 4px;
+    background-color: #deede5;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 4px;
+    color: #427a5b;
+}
+.div1 {
+    position: absolute;
+    top: 0px;
+    left: 106px;
+    line-height: 24px;
+}
+.groupInner {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    width: 100px;
+    height: 4px;
+}
+.groupChild1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 4px;
+    background-color: #4c4c4c;
+    width: 40px;
+    height: 4px;
+}
+.rectangleContainer {
+    position: absolute;
+    top: 12px;
+    left: 0px;
+    width: 100px;
+    height: 4px;
+}
+.vuesaxlineararrowUpIcon5 {
+    position: relative;
+    width: 12px;
+    height: 12px;
+    object-fit: cover;
+}
+.vuesaxlineararrowUpParent {
+    position: absolute;
+    top: 0px;
+    left: 138px;
+    border-radius: 4px;
+    background-color: #deede5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    gap: 2px;
+    color: #427a5b;
+}
+.group {
+    position: absolute;
+    top: 4px;
+    left: 248px;
+    width: 178px;
+    height: 24px;
+    color: #4c4c4c;
+}
+.div3 {
+    position: absolute;
+    top: 8px;
+    left: 482px;
+    line-height: 16px;
+}
+.div4 {
+    position: absolute;
+    top: 10px;
+    left: 613px;
+    line-height: 16px;
+}
+.groupDiv {
+    position: absolute;
+    top: 548px;
+    left: 295px;
+    width: 667px;
+    height: 32px;
+    color: #808080;
+}
+.frameItem {
+    position: relative;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+.pendingWrapper {
+    position: absolute;
+    top: 0px;
+    left: 141px;
+    border-radius: 4px;
+    background-color: #fdf8ce;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 4px;
+    color: #938406;
+}
+.groupChild3 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 4px;
+    background-color: #4c4c4c;
+    width: 57px;
+    height: 4px;
+}
+.vuesaxlineararrowUpIcon6 {
+    position: relative;
+    width: 12px;
+    height: 12px;
+    object-fit: contain;
+}
+.vuesaxlineararrowUpGroup {
+    position: absolute;
+    top: 0px;
+    left: 138px;
+    border-radius: 4px;
+    background-color: #eddede;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    gap: 2px;
+    color: #a65959;
+}
+.parent1 {
+    position: absolute;
+    top: 0px;
+    left: 248px;
+    width: 178px;
+    height: 24px;
+    color: #4c4c4c;
+}
+.div7 {
+    position: absolute;
+    top: 4px;
+    left: 482px;
+    line-height: 16px;
+}
+.div8 {
+    position: absolute;
+    top: 6px;
+    left: 613px;
+    line-height: 16px;
+}
+.frameParent1 {
+    position: absolute;
+    top: 608px;
+    left: 295px;
+    width: 667px;
+    height: 32px;
+    color: #808080;
+}
+.verifiedContainer {
+    position: absolute;
+    top: 0px;
+    left: 141px;
+    border-radius: 4px;
+    background-color: #deede5;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 4px;
+    color: #427a5b;
+}
+.groupChild5 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 4px;
+    background-color: #4c4c4c;
+    width: 89px;
+    height: 4px;
+}
+.parent3 {
+    position: absolute;
+    top: 0px;
+    left: 248px;
+    width: 183px;
+    height: 24px;
+}
+.frameParent2 {
+    position: absolute;
+    top: 664px;
+    left: 295px;
+    width: 675px;
+    height: 32px;
+    color: #808080;
+}
+.unverifiedWrapper {
+    position: absolute;
+    top: 0px;
+    left: 141px;
+    border-radius: 4px;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 4px;
+    color: #999;
+}
+.frameParent3 {
+    position: absolute;
+    top: 720px;
+    left: 295px;
+    width: 628px;
+    height: 32px;
+    color: #808080;
+}
+.groupChild7 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 4px;
+    background-color: #4c4c4c;
+    width: 50px;
+    height: 4px;
+}
+.parent4 {
+    position: absolute;
+    top: 0px;
+    left: 248px;
+    width: 179px;
+    height: 24px;
+    color: #4c4c4c;
+}
+.frameParent4 {
+    position: absolute;
+    top: 776px;
+    left: 295px;
+    width: 659px;
+    height: 32px;
+    color: #808080;
+}
+.indianManIcon2 {
+    position: relative;
+    border-radius: 50px;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+.div20 {
+    position: absolute;
+    top: 0px;
+    left: 104px;
+    line-height: 24px;
+}
+.groupChild9 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 4px;
+    background-color: #4c4c4c;
+    width: 64px;
+    height: 4px;
+}
+.parent5 {
+    position: absolute;
+    top: 0px;
+    left: 248px;
+    width: 177px;
+    height: 24px;
+}
+.frameParent5 {
+    position: absolute;
+    top: 832px;
+    left: 295px;
+    width: 667px;
+    height: 32px;
+    color: #808080;
+}
+.noRatingsAvailable1 {
+    position: absolute;
+    top: 720px;
+    left: 543px;
+    line-height: 24px;
+    color: #808080;
+}
+.previousPage {
+    position: relative;
+    line-height: 16px;
+    font-weight: 600;
+    color: #9f9f9f;
+}
+.ellipseDiv {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    border-radius: 50%;
+    background-color: #e6e6e6;
+}
+.div24 {
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    line-height: 16px;
+    font-weight: 600;
+}
+.ellipseParent2 {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+.component1 {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.component1Parent {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.previousPageParent {
+    position: absolute;
+    top: 900px;
+    left: 295px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+}
+.frameParent6 {
+    position: absolute;
+    top: 276px;
+    left: 1099px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    color: #808080;
+}
+.frameChild2 {
+    position: relative;
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+.frameParent7 {
+    position: absolute;
+    top: 598px;
+    left: 1099px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    color: #808080;
+}
+.vectaryTextureParent {
+    width: 86px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #4c4c4c;
+}
+.frameParent8 {
+    position: absolute;
+    top: 650px;
+    left: 1099px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    color: #808080;
+}
+.frameParent9 {
+    position: absolute;
+    top: 702px;
+    left: 1099px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    color: #808080;
+}
+.indianManGroup {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #4c4c4c;
+}
+.frameParent10 {
+    position: absolute;
+    top: 328px;
+    left: 1099px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    color: #808080;
+}
+.frameParent11 {
+    position: absolute;
+    top: 380px;
+    left: 1099px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 38px;
+    color: #808080;
+}
+.viewAllArtistsWrapper {
+    position: absolute;
+    top: 436px;
+    left: 1207px;
+    border-radius: 4px;
+    background-color: #b4cd93;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+.viewAllProjectsWrapper {
+    position: absolute;
+    top: 758px;
+    left: 1207px;
+    border-radius: 4px;
+    background-color: #b4cd93;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+.lineDiv {
+    position: absolute;
+    top: 592.02px;
+    left: 270.5px;
+    border-top: 1px solid #f2f2f2;
+    box-sizing: border-box;
+    width: 742px;
+    height: 1px;
+}
+.bezierAdminDashboardChild3 {
+    position: absolute;
+    top: 647.02px;
+    left: 270.5px;
+    border-top: 1px solid #f2f2f2;
+    box-sizing: border-box;
+    width: 742px;
+    height: 1px;
+}
+.bezierAdminDashboardChild4 {
+    position: absolute;
+    top: 702.02px;
+    left: 270.5px;
+    border-top: 1px solid #f2f2f2;
+    box-sizing: border-box;
+    width: 742px;
+    height: 1px;
+}
+.bezierAdminDashboardChild5 {
+    position: absolute;
+    top: 757.02px;
+    left: 270.5px;
+    border-top: 1px solid #f2f2f2;
+    box-sizing: border-box;
+    width: 742px;
+    height: 1px;
+}
+.bezierAdminDashboardChild6 {
+    position: absolute;
+    top: 812.02px;
+    left: 270.5px;
+    border-top: 1px solid #f2f2f2;
+    box-sizing: border-box;
+    width: 742px;
+    height: 1px;
+}
+.pattern17AthleticsIcon {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 4px;
+    width: 227px;
+    height: 80px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.groupChild16 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 4px;
+    background-color: #212121;
+    width: 227px;
+    height: 80px;
+    opacity: 0.5;
+}
+.groupChild17 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 4px;
+    background-color: #212121;
+    width: 227px;
+    height: 80px;
+    opacity: 0.2;
+}
+.div33 {
+    position: absolute;
+    top: 19px;
+    left: 11px;
+    line-height: 24px;
+    font-weight: 600;
+}
+.artSales {
+    position: absolute;
+    top: 54px;
+    left: 11px;
+    font-size: 12px;
+    line-height: 16px;
+}
+.pattern17AthleticsParent {
+    position: relative;
+    width: 227px;
+    height: 80px;
+}
+.groupParent2 {
+    position: absolute;
+    top: 252px;
+    left: 272px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 32px;
+    font-size: 24px;
+    color: #fff;
+}
+.bezierAdminDashboardChild7 {
+    position: absolute;
+    top: 832px;
+    left: 1081px;
+    border-radius: 4px;
+    background-color: #fcfcfc;
+    width: 351px;
+    height: 110px;
+}
+.groupChild20 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 4px;
+    background-color: #fcfcfc;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+}
+.div36 {
+    position: absolute;
+    top: 12px;
+    left: 14px;
+    line-height: 16px;
+    font-weight: 600;
+}
+.rectangleParent6 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 40px;
+    height: 40px;
+}
+.div37 {
+    position: absolute;
+    top: 12px;
+    left: 13px;
+    line-height: 16px;
+    font-weight: 600;
+}
+.rectangleParent7 {
+    position: absolute;
+    top: 0px;
+    left: 60px;
+    width: 40px;
+    height: 40px;
+}
+.groupChild22 {
+    position: absolute;
+    top: 14px;
+    left: 48px;
+    border-radius: 50%;
+    background-color: #4c4c4c;
+    width: 2px;
+    height: 2px;
+}
+.groupChild23 {
+    position: absolute;
+    top: 24px;
+    left: 48px;
+    border-radius: 50%;
+    background-color: #4c4c4c;
+    width: 2px;
+    height: 2px;
+}
+.groupChild24 {
+    position: absolute;
+    top: 0px;
+    left: 110px;
+    border-radius: 4px;
+    background-color: #b4cd93;
+    width: 40px;
+    height: 40px;
+}
+.pm {
+    position: absolute;
+    top: 14px;
+    left: 121px;
+    line-height: 12px;
+    font-weight: 600;
+}
+.groupParent4 {
+    position: relative;
+    width: 150px;
+    height: 40px;
+}
+.div38 {
+    position: relative;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 600;
+}
+.groupParent3 {
+    position: absolute;
+    top: 867px;
+    left: 1111px;
+    width: 291px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.bezierAdminDashboard1 {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 982px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 12px;
+    color: #4c4c4c;
+    font-family: Manrope;
+}
+

@@ -1,0 +1,2186 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600&display=swap');
+.myBody {
+  	margin: 0; line-height: normal;
+}
+.dashboardChild {
+    position: absolute;
+    top: 294px;
+    left: 10px;
+    border-radius: 30px 0px 0px 0px;
+    background-color: #fff;
+    width: 269px;
+    height: 823px;
+}
+.calendar1Icon1 {
+    position: absolute;
+    top: 626px;
+    left: 39px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.stethoscope1Icon1 {
+    position: absolute;
+    top: 574px;
+    left: 39px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.drugs1Icon1 {
+    position: absolute;
+    top: 522px;
+    left: 39px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.heartBeat1Icon1 {
+    position: absolute;
+    top: 366px;
+    left: 39px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.dashboardItem {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    border-radius: 0px 0px 0px 30px;
+    background-color: #fff;
+    width: 269px;
+    height: 257px;
+}
+.dashboardInner {
+    position: absolute;
+    top: 52px;
+    left: 69px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.adam {
+    position: absolute;
+    top: 202px;
+    left: 66px;
+    font-size: 32px;
+    font-weight: 500;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 157px;
+    height: 47px;
+}
+.rectangleDiv {
+    position: absolute;
+    top: 257px;
+    left: 194px;
+    background-color: #fff;
+    width: 85px;
+    height: 37px;
+}
+.dashboardChild1 {
+    position: absolute;
+    top: 257px;
+    left: 35px;
+    border-radius: 30px;
+    background-color: #3377dd;
+    width: 195px;
+    height: 37px;
+}
+.myIndicators {
+    position: absolute;
+    top: 264px;
+    left: 79px;
+    color: #fff;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    width: 157px;
+    height: 22px;
+}
+.dianogsis {
+    position: absolute;
+    top: 318px;
+    left: 79px;
+    color: #9ea2ac;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    width: 157px;
+    height: 22px;
+}
+.physicalIndicators {
+    position: absolute;
+    top: 370px;
+    left: 79px;
+    color: #909498;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    width: 157px;
+    height: 22px;
+}
+.allegeries {
+    position: absolute;
+    top: 422px;
+    left: 79px;
+    color: #909498;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    width: 157px;
+    height: 22px;
+}
+.perniciousHabits {
+    position: absolute;
+    top: 474px;
+    left: 79px;
+    color: #909498;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    width: 157px;
+    height: 22px;
+}
+.medicalSupplies {
+    position: absolute;
+    top: 526px;
+    left: 79px;
+    color: #909498;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    width: 157px;
+    height: 22px;
+}
+.doctors {
+    position: absolute;
+    top: 578px;
+    left: 79px;
+    color: #909498;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    width: 157px;
+    height: 22px;
+}
+.appointments {
+    position: absolute;
+    top: 630px;
+    left: 79px;
+    color: #909498;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    width: 157px;
+    height: 22px;
+}
+.insurance {
+    position: absolute;
+    top: 682px;
+    left: 79px;
+    color: #909498;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    width: 157px;
+    height: 22px;
+}
+.information {
+    position: absolute;
+    top: 734px;
+    left: 79px;
+    color: #909498;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    width: 157px;
+    height: 22px;
+}
+.logout {
+    position: absolute;
+    top: 1046px;
+    left: 79px;
+    color: #909498;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    width: 157px;
+    height: 22px;
+}
+.info1Icon1 {
+    position: absolute;
+    top: 730px;
+    left: 39px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.healthInsurance1Icon1 {
+    position: absolute;
+    top: 678px;
+    left: 39px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.medicalPrescription1Icon1 {
+    position: absolute;
+    top: 470px;
+    left: 39px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.clipboardIcon2 {
+    position: absolute;
+    top: 260px;
+    left: 39px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.ellipseDiv {
+    position: absolute;
+    top: 279px;
+    left: 58px;
+    border-radius: 50%;
+    background-color: #0353cb;
+    border: 1px solid #3377dd;
+    box-sizing: border-box;
+    width: 10px;
+    height: 10px;
+}
+.doneIcon3 {
+    position: absolute;
+    top: 277px;
+    left: 58px;
+    width: 12px;
+    height: 12px;
+    object-fit: cover;
+}
+.dashboardChild2 {
+    position: absolute;
+    top: 305px;
+    left: 29px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.allergies1Icon1 {
+    position: absolute;
+    top: 418px;
+    left: 39px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.exit1Icon1 {
+    position: absolute;
+    top: 1042px;
+    left: 39px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.dashboardChild3 {
+    position: absolute;
+    top: 0px;
+    left: 279px;
+    border-radius: 0px 30px 0px 0px;
+    background-color: #f5faff;
+    width: 1449px;
+    height: 1117px;
+}
+.span {
+    font-size: 32px;
+}
+.goodMorningAdamContainer {
+    position: absolute;
+    top: 30px;
+    left: 342px;
+    font-weight: 500;
+    color: #000;
+    font-size: 36px;
+}
+.happinessIsNothing1 {
+    position: absolute;
+    top: 75px;
+    left: 346px;
+    font-size: 12px;
+    color: #909498;
+}
+.lineIcon {
+    position: absolute;
+    top: 106px;
+    left: 317px;
+    width: 1367px;
+    height: 2px;
+    object-fit: contain;
+}
+.dashboardChild4 {
+    position: absolute;
+    top: 36px;
+    left: 817px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 10px 10px rgba(158, 162, 172, 0.3);
+    width: 684px;
+    height: 33px;
+}
+.searchForDoctor1 {
+    position: absolute;
+    top: 45px;
+    left: 825px;
+    font-size: 12px;
+    color: #909498;
+}
+.dashboardChild5 {
+    position: absolute;
+    top: 59.37px;
+    left: 1485px;
+    border-radius: 30px;
+    background-color: #000;
+    width: 2px;
+    height: 6.84px;
+    transform:  rotate(-43.05deg);
+    transform-origin: 0 0;
+}
+.dashboardChild6 {
+    position: absolute;
+    top: 64.45px;
+    left: 1472.85px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    width: 21px;
+    height: 21px;
+    transform:  rotate(-111.58deg);
+    transform-origin: 0 0;
+}
+.dashboardChild7 {
+    position: absolute;
+    top: 33px;
+    left: 1547px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 10px 10px rgba(158, 162, 172, 0.3);
+    width: 40px;
+    height: 40px;
+}
+.dashboardChild8 {
+    position: absolute;
+    top: 33px;
+    left: 1611px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 10px 10px rgba(158, 162, 172, 0.3);
+    width: 40px;
+    height: 40px;
+}
+.wrenchIcon1 {
+    position: absolute;
+    top: 36px;
+    left: 1552px;
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}
+.bellIcon2 {
+    position: absolute;
+    top: 36px;
+    left: 1613px;
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}
+.dashboardChild9 {
+    position: absolute;
+    top: 41px;
+    left: 1635px;
+    border-radius: 50%;
+    background-color: #3377dd;
+    width: 8px;
+    height: 8px;
+}
+.dashboardChild10 {
+    position: absolute;
+    top: 154px;
+    left: 723px;
+    width: 197px;
+    height: 50px;
+    object-fit: cover;
+}
+.dashboardChild11 {
+    position: absolute;
+    top: 154px;
+    left: 534px;
+    width: 197px;
+    height: 50px;
+    object-fit: cover;
+}
+.dashboardChild12 {
+    position: absolute;
+    top: 154px;
+    left: 346px;
+    width: 197px;
+    height: 50px;
+    object-fit: cover;
+}
+.dashboardChild13 {
+    position: absolute;
+    top: 200px;
+    left: 317px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 10px 10px 40px rgba(196, 196, 196, 0.3);
+    width: 916px;
+    height: 545px;
+}
+.glucose {
+    position: absolute;
+    top: 167px;
+    left: 385px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+.normal {
+    position: absolute;
+    top: 216px;
+    left: 358px;
+    font-weight: 500;
+    color: #000;
+}
+.march2720221 {
+    position: absolute;
+    top: 564px;
+    left: 402px;
+    font-weight: 500;
+    color: #000;
+}
+.mmoll {
+    position: absolute;
+    top: 564px;
+    left: 1128px;
+    font-weight: 500;
+    color: #000;
+}
+.activityGraph {
+    position: absolute;
+    top: 259px;
+    left: 346px;
+    font-weight: 500;
+    color: #c4c4c4;
+}
+.div {
+    position: absolute;
+    top: 496px;
+    left: 388px;
+    color: #c4c4c4;
+}
+.div1 {
+    position: absolute;
+    top: 521px;
+    left: 476px;
+    color: #c4c4c4;
+}
+.div2 {
+    position: absolute;
+    top: 521px;
+    left: 412px;
+    color: #c4c4c4;
+}
+.div3 {
+    position: absolute;
+    top: 521px;
+    left: 560px;
+    color: #c4c4c4;
+}
+.div4 {
+    position: absolute;
+    top: 521px;
+    left: 634px;
+    color: #c4c4c4;
+}
+.div5 {
+    position: absolute;
+    top: 521px;
+    left: 708px;
+    color: #c4c4c4;
+}
+.div6 {
+    position: absolute;
+    top: 521px;
+    left: 782px;
+    color: #c4c4c4;
+}
+.div7 {
+    position: absolute;
+    top: 521px;
+    left: 856px;
+    color: #c4c4c4;
+}
+.div8 {
+    position: absolute;
+    top: 521px;
+    left: 930px;
+    color: #c4c4c4;
+}
+.div9 {
+    position: absolute;
+    top: 521px;
+    left: 1014px;
+    color: #c4c4c4;
+}
+.div10 {
+    position: absolute;
+    top: 521px;
+    left: 1098px;
+    color: #c4c4c4;
+}
+.div11 {
+    position: absolute;
+    top: 521px;
+    left: 1181px;
+    color: #c4c4c4;
+}
+.div12 {
+    position: absolute;
+    top: 463px;
+    left: 388px;
+    color: #c4c4c4;
+}
+.div13 {
+    position: absolute;
+    top: 430px;
+    left: 388px;
+    color: #c4c4c4;
+}
+.div14 {
+    position: absolute;
+    top: 397px;
+    left: 388px;
+    color: #c4c4c4;
+}
+.div15 {
+    position: absolute;
+    top: 364px;
+    left: 388px;
+    color: #c4c4c4;
+}
+.betweenMarch271 {
+    position: absolute;
+    top: 261px;
+    left: 990px;
+    font-weight: 500;
+    color: #c4c4c4;
+    white-space: pre-wrap;
+}
+.mmoll1 {
+    position: absolute;
+    top: 216px;
+    left: 436px;
+    font-weight: 500;
+    color: #000;
+}
+.abnormalities {
+    position: absolute;
+    top: 216px;
+    left: 630px;
+    font-weight: 500;
+    color: #000;
+}
+.mmoll2 {
+    position: absolute;
+    top: 216px;
+    left: 765px;
+    font-weight: 500;
+    color: #000;
+}
+.electrocardigram {
+    position: absolute;
+    top: 167px;
+    left: 554px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #dadada;
+}
+.ctScan {
+    position: absolute;
+    top: 167px;
+    left: 766px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #dadada;
+}
+.dashboardChild14 {
+    position: absolute;
+    top: 219px;
+    left: 340px;
+    border-radius: 50%;
+    background-color: #40dc82;
+    width: 15px;
+    height: 15px;
+}
+.dashboardChild15 {
+    position: absolute;
+    top: 566px;
+    left: 385px;
+    border-radius: 50%;
+    background-color: #40dc82;
+    width: 15px;
+    height: 15px;
+}
+.dashboardChild16 {
+    position: absolute;
+    top: 481px;
+    left: 425px;
+    border-radius: 50%;
+    background-color: #40dc82;
+    width: 15px;
+    height: 15px;
+}
+.dashboardChild17 {
+    position: absolute;
+    top: 441px;
+    left: 735px;
+    border-radius: 50%;
+    background-color: #40dc82;
+    width: 15px;
+    height: 15px;
+}
+.may520221 {
+    position: absolute;
+    top: 613px;
+    left: 402px;
+    font-weight: 500;
+    color: #000;
+}
+.mmoll3 {
+    position: absolute;
+    top: 613px;
+    left: 1128px;
+    font-weight: 500;
+    color: #000;
+}
+.dashboardChild18 {
+    position: absolute;
+    top: 615px;
+    left: 385px;
+    border-radius: 50%;
+    background-color: #40dc82;
+    width: 15px;
+    height: 15px;
+}
+.may1520221 {
+    position: absolute;
+    top: 657px;
+    left: 402px;
+    font-weight: 500;
+    color: #000;
+}
+.mmoll4 {
+    position: absolute;
+    top: 657px;
+    left: 1128px;
+    font-weight: 500;
+    color: #000;
+}
+.dashboardChild19 {
+    position: absolute;
+    top: 222px;
+    left: 616px;
+    width: 10px;
+    height: 10px;
+    object-fit: cover;
+}
+.dashboardChild20 {
+    position: absolute;
+    top: 659px;
+    left: 385px;
+    width: 15px;
+    height: 15px;
+    object-fit: cover;
+}
+.groupIcon {
+    position: absolute;
+    top: 370.86px;
+    left: 421.5px;
+    width: 769.5px;
+    height: 149.64px;
+    object-fit: cover;
+}
+.lineDiv {
+    position: absolute;
+    top: 472.75px;
+    left: 421.75px;
+    border-top: 0.5px solid #dadada;
+    box-sizing: border-box;
+    width: 769.51px;
+    height: 0.5px;
+}
+.dashboardChild21 {
+    position: absolute;
+    top: 439.75px;
+    left: 421.75px;
+    border-top: 0.5px solid #dadada;
+    box-sizing: border-box;
+    width: 769.51px;
+    height: 0.5px;
+}
+.dashboardChild22 {
+    position: absolute;
+    top: 406.75px;
+    left: 421.75px;
+    border-top: 0.5px solid #dadada;
+    box-sizing: border-box;
+    width: 769.51px;
+    height: 0.5px;
+}
+.dashboardChild23 {
+    position: absolute;
+    top: 373.75px;
+    left: 421.75px;
+    border-top: 0.5px solid #dadada;
+    box-sizing: border-box;
+    width: 769.51px;
+    height: 0.5px;
+}
+.dashboardChild24 {
+    position: absolute;
+    top: 392px;
+    left: 1091px;
+    width: 33px;
+    height: 30px;
+    object-fit: cover;
+}
+.dashboardChild25 {
+    position: absolute;
+    top: 413.5px;
+    left: 1107.5px;
+    border-right: 1px solid #6d6af5;
+    box-sizing: border-box;
+    width: 1px;
+    height: 94px;
+}
+.dashboardChild26 {
+    position: absolute;
+    top: 359px;
+    left: 1071px;
+    border-radius: 5px;
+    background-color: #3377dd;
+    width: 74px;
+    height: 26px;
+}
+.dashboardChild27 {
+    position: absolute;
+    top: 382px;
+    left: 1101px;
+    width: 13px;
+    height: 10px;
+    object-fit: contain;
+}
+.mmoll5 {
+    position: absolute;
+    top: 366px;
+    left: 1082px;
+    font-size: 10px;
+    color: #fff;
+}
+.dashboardChild28 {
+    position: absolute;
+    top: 599.5px;
+    left: 387.5px;
+    border-top: 1px solid #c4c4c4;
+    box-sizing: border-box;
+    width: 828.01px;
+    height: 1px;
+}
+.dashboardChild29 {
+    position: absolute;
+    top: 645.5px;
+    left: 387.5px;
+    border-top: 1px solid #c4c4c4;
+    box-sizing: border-box;
+    width: 828.01px;
+    height: 1px;
+}
+.dashboardChild30 {
+    position: absolute;
+    top: 686.5px;
+    left: 387.5px;
+    border-top: 1px solid #c4c4c4;
+    box-sizing: border-box;
+    width: 828.01px;
+    height: 1px;
+}
+.dashboardChild31 {
+    position: absolute;
+    top: 698px;
+    left: 386px;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #3377dd;
+    box-sizing: border-box;
+    width: 829px;
+    height: 35px;
+}
+.checkWhatYour1 {
+    position: absolute;
+    top: 718px;
+    left: 411px;
+    font-size: 10px;
+    color: #c4c4c4;
+}
+.molecularAndPathogenicity1 {
+    position: absolute;
+    top: 701px;
+    left: 411px;
+    font-weight: 500;
+    color: #000;
+}
+.dashboardChild32 {
+    position: absolute;
+    top: 703px;
+    left: 1126px;
+    border-radius: 5px;
+    background-color: #3377dd;
+    box-shadow: 0px 10px 50px 5px rgba(51, 119, 221, 0.3);
+    width: 72px;
+    height: 25px;
+}
+.see {
+    position: absolute;
+    top: 706px;
+    left: 1151px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+}
+.dashboardChild33 {
+    position: absolute;
+    top: 142px;
+    left: 1283px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #3377dd;
+    box-shadow: 10px 10px 20px 5px rgba(102, 102, 102, 0.1);
+    width: 401px;
+    height: 62px;
+}
+.todayIsSaturday1 {
+    position: absolute;
+    top: 161px;
+    left: 1400px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+}
+.dashboardChild34 {
+    position: absolute;
+    top: 204px;
+    left: 1283px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: #fff;
+    box-shadow: 10px 10px 20px 5px rgba(102, 102, 102, 0.1);
+    width: 401px;
+    height: 62px;
+}
+.dashboardChild35 {
+    position: absolute;
+    top: 281px;
+    left: 1283px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 10px 10px 20px 5px rgba(102, 102, 102, 0.1);
+    width: 401px;
+    height: 461px;
+}
+.dashboardChild36 {
+    position: absolute;
+    top: 775px;
+    left: 317px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 10px 10px 20px 5px rgba(102, 102, 102, 0.1);
+    width: 717px;
+    height: 318px;
+}
+.upcomingAppointments {
+    position: absolute;
+    top: 810px;
+    left: 403px;
+    font-weight: 500;
+    color: #000;
+}
+.x4 {
+    position: absolute;
+    top: 810px;
+    left: 598px;
+    font-weight: 500;
+    color: #5096ff;
+}
+.dashboardChild37 {
+    position: absolute;
+    top: 774px;
+    left: 1062px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 10px 10px 20px 5px rgba(102, 102, 102, 0.1);
+    width: 622px;
+    height: 318px;
+}
+.medicalSuppliesFor1 {
+    position: absolute;
+    top: 810px;
+    left: 1135px;
+    font-weight: 500;
+    color: #000;
+}
+.may2020221 {
+    position: absolute;
+    top: 227px;
+    left: 1361px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.am {
+    position: absolute;
+    top: 227px;
+    left: 1589px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.calendarIcon1 {
+    position: absolute;
+    top: 223px;
+    left: 1325px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.clockIcon2 {
+    position: absolute;
+    top: 223px;
+    left: 1553px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.dashboardChild38 {
+    position: absolute;
+    top: 306px;
+    left: 1309px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 10px 10px 30px 10px rgba(158, 162, 172, 0.3);
+    width: 40px;
+    height: 40px;
+}
+.dashboardChild39 {
+    position: absolute;
+    top: 800px;
+    left: 345px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 10px 10px 30px 10px rgba(158, 162, 172, 0.3);
+    width: 40px;
+    height: 40px;
+}
+.dashboardChild40 {
+    position: absolute;
+    top: 800px;
+    left: 1082px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 10px 10px 30px 10px rgba(158, 162, 172, 0.3);
+    width: 40px;
+    height: 40px;
+}
+.medicine1Icon1 {
+    position: absolute;
+    top: 805px;
+    left: 1087px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.dashboardChild41 {
+    position: absolute;
+    top: 800px;
+    left: 974px;
+    border-radius: 8px;
+    background-color: #3377dd;
+    box-shadow: 10px 10px 30px 10px rgba(158, 162, 172, 0.3);
+    width: 40px;
+    height: 40px;
+}
+.clockIcon3 {
+    position: absolute;
+    top: 808px;
+    left: 353px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.clipboardIcon3 {
+    position: absolute;
+    top: 311px;
+    left: 1314px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.dashboardChild42 {
+    position: absolute;
+    top: 329px;
+    left: 1333px;
+    border-radius: 50%;
+    background-color: #0353cb;
+    border: 1px solid #3377dd;
+    box-sizing: border-box;
+    width: 10px;
+    height: 10px;
+}
+.doneIcon4 {
+    position: absolute;
+    top: 327px;
+    left: 1333px;
+    width: 12px;
+    height: 12px;
+    object-fit: cover;
+}
+.indicators {
+    position: absolute;
+    top: 313px;
+    left: 1361px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+.edit {
+    position: absolute;
+    top: 318px;
+    left: 1621px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #5096ff;
+}
+.edit3Icon1 {
+    position: absolute;
+    top: 322px;
+    left: 1650px;
+    width: 10px;
+    height: 10px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.dashboardChild43 {
+    position: absolute;
+    top: 385px;
+    left: 1298px;
+    border-radius: 10px;
+    background-color: rgba(198, 223, 255, 0.5);
+    width: 181px;
+    height: 163px;
+}
+.dashboardChild44 {
+    position: absolute;
+    top: 385px;
+    left: 1489px;
+    border-radius: 10px;
+    background-color: rgba(198, 223, 255, 0.5);
+    width: 181px;
+    height: 163px;
+}
+.dashboardChild45 {
+    position: absolute;
+    top: 569px;
+    left: 1298px;
+    border-radius: 10px;
+    background-color: rgba(198, 223, 255, 0.7);
+    width: 372px;
+    height: 152px;
+}
+.vectorIcon {
+    position: absolute;
+    top: 650.5px;
+    left: 1298px;
+    width: 371.5px;
+    height: 65px;
+    object-fit: cover;
+}
+.kg {
+    position: absolute;
+    top: 391px;
+    left: 1312px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+.mm {
+    position: absolute;
+    top: 579px;
+    left: 1312px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+.weight {
+    position: absolute;
+    top: 392px;
+    left: 1420px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.kg1 {
+    position: absolute;
+    top: 421px;
+    left: 1343px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.mmHgArt2 {
+    position: absolute;
+    top: 611px;
+    left: 1345px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.mmHgArt3 {
+    position: absolute;
+    top: 611px;
+    left: 1491px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.div16 {
+    position: absolute;
+    top: 505px;
+    left: 1307px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.div17 {
+    position: absolute;
+    top: 517px;
+    left: 1318px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.div18 {
+    position: absolute;
+    top: 517px;
+    left: 1457px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.div19 {
+    position: absolute;
+    top: 517px;
+    left: 1428px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.div20 {
+    position: absolute;
+    top: 517px;
+    left: 1406px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.div21 {
+    position: absolute;
+    top: 517px;
+    left: 1384px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.div22 {
+    position: absolute;
+    top: 517px;
+    left: 1362px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.div23 {
+    position: absolute;
+    top: 517px;
+    left: 1340px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.div24 {
+    position: absolute;
+    top: 479px;
+    left: 1304px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.div25 {
+    position: absolute;
+    top: 453px;
+    left: 1304px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.projectIcon4 {
+    position: absolute;
+    top: 415px;
+    left: 1312px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.projectIcon5 {
+    position: absolute;
+    top: 603px;
+    left: 1312px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.div26 {
+    position: absolute;
+    top: 391px;
+    left: 1515px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+.div27 {
+    position: absolute;
+    top: 483px;
+    left: 1604px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #000;
+}
+.bloodSugar {
+    position: absolute;
+    top: 392px;
+    left: 1581px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.bloodPressure {
+    position: absolute;
+    top: 579px;
+    left: 1562px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.div28 {
+    position: absolute;
+    top: 421px;
+    left: 1541px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.mmoll6 {
+    position: absolute;
+    top: 454px;
+    left: 1536px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.div29 {
+    position: absolute;
+    top: 452px;
+    left: 1507px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.mmoll7 {
+    position: absolute;
+    top: 486px;
+    left: 1534px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.div30 {
+    position: absolute;
+    top: 484px;
+    left: 1505px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.mmoll8 {
+    position: absolute;
+    top: 516px;
+    left: 1534px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.div31 {
+    position: absolute;
+    top: 514px;
+    left: 1505px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.projectIcon6 {
+    position: absolute;
+    top: 415px;
+    left: 1502px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.dashboardChild46 {
+    position: absolute;
+    top: 512.85px;
+    left: 1321.85px;
+    border-top: 0.3px solid #c4c4c4;
+    box-sizing: border-box;
+    width: 150.3px;
+    height: 0.3px;
+}
+.dashboardChild47 {
+    position: absolute;
+    top: 486.85px;
+    left: 1321.85px;
+    border-top: 0.3px solid #c4c4c4;
+    box-sizing: border-box;
+    width: 150.3px;
+    height: 0.3px;
+}
+.dashboardChild48 {
+    position: absolute;
+    top: 460.85px;
+    left: 1321.85px;
+    border-top: 0.3px solid #c4c4c4;
+    box-sizing: border-box;
+    width: 150.3px;
+    height: 0.3px;
+}
+.dashboardChild49 {
+    position: absolute;
+    top: 500px;
+    left: 1322px;
+    border-radius: 5px 5px 0px 0px;
+    background: linear-gradient(180deg, #ffa900 47.4%, rgba(254, 183, 43, 0));
+    width: 6px;
+    height: 13px;
+}
+.dashboardChild50 {
+    position: absolute;
+    top: 487px;
+    left: 1330px;
+    border-radius: 5px 5px 0px 0px;
+    background: linear-gradient(180deg, #ffa900 47.4%, rgba(254, 183, 43, 0));
+    width: 6px;
+    height: 26px;
+}
+.dashboardChild51 {
+    position: absolute;
+    top: 494px;
+    left: 1338px;
+    border-radius: 5px 5px 0px 0px;
+    background: linear-gradient(180deg, #ffa900 47.4%, rgba(254, 183, 43, 0));
+    width: 6px;
+    height: 19px;
+}
+.dashboardChild52 {
+    position: absolute;
+    top: 499px;
+    left: 1346px;
+    border-radius: 5px 5px 0px 0px;
+    background: linear-gradient(180deg, #ffa900 47.4%, rgba(254, 183, 43, 0));
+    width: 6px;
+    height: 14px;
+}
+.dashboardChild53 {
+    position: absolute;
+    top: 486px;
+    left: 1354px;
+    border-radius: 5px 5px 0px 0px;
+    background: linear-gradient(180deg, #ffa900 47.4%, rgba(254, 183, 43, 0));
+    width: 6px;
+    height: 27px;
+}
+.dashboardChild54 {
+    position: absolute;
+    top: 479px;
+    left: 1362px;
+    border-radius: 5px 5px 0px 0px;
+    background: linear-gradient(180deg, #ffa900 47.4%, rgba(254, 183, 43, 0));
+    width: 6px;
+    height: 34px;
+}
+.dashboardChild55 {
+    position: absolute;
+    top: 470px;
+    left: 1370px;
+    border-radius: 5px 5px 0px 0px;
+    background: linear-gradient(180deg, #ffa900 47.4%, rgba(254, 183, 43, 0));
+    width: 6px;
+    height: 43px;
+}
+.dashboardChild56 {
+    position: absolute;
+    top: 499px;
+    left: 1378px;
+    border-radius: 5px 5px 0px 0px;
+    background: linear-gradient(180deg, #ffa900 47.4%, rgba(254, 183, 43, 0));
+    width: 6px;
+    height: 14px;
+}
+.dashboardChild57 {
+    position: absolute;
+    top: 494px;
+    left: 1386px;
+    border-radius: 5px 5px 0px 0px;
+    background: linear-gradient(180deg, #ffa900 47.4%, rgba(254, 183, 43, 0));
+    width: 6px;
+    height: 19px;
+}
+.dashboardChild58 {
+    position: absolute;
+    top: 491px;
+    left: 1394px;
+    border-radius: 5px 5px 0px 0px;
+    background: linear-gradient(180deg, #ffa900 47.4%, rgba(254, 183, 43, 0));
+    width: 6px;
+    height: 22px;
+}
+.dashboardChild59 {
+    position: absolute;
+    top: 487px;
+    left: 1402px;
+    border-radius: 5px 5px 0px 0px;
+    background: linear-gradient(180deg, #ffa900 47.4%, rgba(254, 183, 43, 0));
+    width: 6px;
+    height: 26px;
+}
+.dashboardChild60 {
+    position: absolute;
+    top: 470px;
+    left: 1410px;
+    border-radius: 5px 5px 0px 0px;
+    background: linear-gradient(180deg, #ffa900 47.4%, rgba(254, 183, 43, 0));
+    width: 6px;
+    height: 43px;
+}
+.dashboardChild61 {
+    position: absolute;
+    top: 465px;
+    left: 1418px;
+    border-radius: 5px 5px 0px 0px;
+    background: linear-gradient(180deg, #ffa900 47.4%, rgba(254, 183, 43, 0));
+    width: 6px;
+    height: 48px;
+}
+.dashboardChild62 {
+    position: absolute;
+    top: 470px;
+    left: 1426px;
+    border-radius: 5px 5px 0px 0px;
+    background: linear-gradient(180deg, #ffa900 47.4%, rgba(254, 183, 43, 0));
+    width: 6px;
+    height: 43px;
+}
+.dashboardChild63 {
+    position: absolute;
+    top: 456px;
+    left: 1434px;
+    border-radius: 5px 5px 0px 0px;
+    background: linear-gradient(180deg, #ffa900 47.4%, rgba(254, 183, 43, 0));
+    width: 6px;
+    height: 57px;
+}
+.dashboardChild64 {
+    position: absolute;
+    top: 451px;
+    left: 1442px;
+    border-radius: 5px 5px 0px 0px;
+    background: linear-gradient(180deg, #ffa900 47.4%, rgba(254, 183, 43, 0));
+    width: 6px;
+    height: 62px;
+}
+.dashboardChild65 {
+    position: absolute;
+    top: 459px;
+    left: 1450px;
+    border-radius: 5px 5px 0px 0px;
+    background: linear-gradient(180deg, #ffa900 47.4%, rgba(254, 183, 43, 0));
+    width: 6px;
+    height: 54px;
+}
+.dashboardChild66 {
+    position: absolute;
+    top: 486px;
+    left: 1458px;
+    border-radius: 5px 5px 0px 0px;
+    background: linear-gradient(180deg, #ffa900 47.4%, rgba(254, 183, 43, 0));
+    width: 6px;
+    height: 27px;
+}
+.dashboardChild67 {
+    position: absolute;
+    top: 493px;
+    left: 1466px;
+    border-radius: 5px 5px 0px 0px;
+    background: linear-gradient(180deg, #ffa900 47.4%, rgba(254, 183, 43, 0));
+    width: 6px;
+    height: 20px;
+}
+.dashboardChild68 {
+    position: absolute;
+    top: 526px;
+    left: 1586px;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 70px;
+    height: 70px;
+    transform:  rotate(-90deg);
+    transform-origin: 0 0;
+}
+.dashboardChild69 {
+    position: absolute;
+    top: 456px;
+    left: 1586px;
+    border-radius: 50%;
+    background-color: #302cf2;
+    width: 70px;
+    height: 70px;
+}
+.projectIcon7 {
+    position: absolute;
+    top: 605px;
+    left: 1459px;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+.dashboardChild70 {
+    position: absolute;
+    top: 650.85px;
+    left: 1297.85px;
+    border-top: 0.3px solid #c4c4c4;
+    box-sizing: border-box;
+    width: 372.3px;
+    height: 0.3px;
+}
+.dashboardChild71 {
+    position: absolute;
+    top: 664.86px;
+    left: 1297.85px;
+    border-top: 0.3px solid #c4c4c4;
+    box-sizing: border-box;
+    width: 372.3px;
+    height: 0.3px;
+}
+.dashboardChild72 {
+    position: absolute;
+    top: 678.86px;
+    left: 1297.85px;
+    border-top: 0.3px solid #c4c4c4;
+    box-sizing: border-box;
+    width: 372.3px;
+    height: 0.3px;
+}
+.dashboardChild73 {
+    position: absolute;
+    top: 692.86px;
+    left: 1297.85px;
+    border-top: 0.3px solid #c4c4c4;
+    box-sizing: border-box;
+    width: 372.3px;
+    height: 0.3px;
+}
+.dashboardChild74 {
+    position: absolute;
+    top: 706.86px;
+    left: 1297.85px;
+    border-top: 0.3px solid #c4c4c4;
+    box-sizing: border-box;
+    width: 372.3px;
+    height: 0.3px;
+}
+.plusMathIcon2 {
+    position: absolute;
+    top: 810px;
+    left: 984px;
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+.dashboardChild75 {
+    position: absolute;
+    top: 800px;
+    left: 1624px;
+    border-radius: 8px;
+    background-color: #3377dd;
+    box-shadow: 10px 10px 30px 10px rgba(158, 162, 172, 0.3);
+    width: 40px;
+    height: 40px;
+}
+.plusMathIcon3 {
+    position: absolute;
+    top: 810px;
+    left: 1634px;
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+.doctor {
+    position: absolute;
+    top: 863px;
+    left: 346px;
+    font-size: 12px;
+    color: #999;
+}
+.date {
+    position: absolute;
+    top: 863px;
+    left: 690px;
+    font-size: 12px;
+    color: #999;
+}
+.time {
+    position: absolute;
+    top: 863px;
+    left: 875px;
+    font-size: 12px;
+    color: #999;
+}
+.medicines {
+    position: absolute;
+    top: 872px;
+    left: 1078px;
+    font-size: 12px;
+    color: #999;
+}
+.amount {
+    position: absolute;
+    top: 872px;
+    left: 1364px;
+    font-size: 12px;
+    color: #999;
+}
+.time1 {
+    position: absolute;
+    top: 872px;
+    left: 1517px;
+    font-size: 12px;
+    color: #999;
+}
+.fredericaZegna {
+    position: absolute;
+    top: 9px;
+    left: 63px;
+    font-weight: 500;
+}
+.div32 {
+    position: absolute;
+    top: 15px;
+    left: 312px;
+    font-weight: 500;
+}
+.pm {
+    position: absolute;
+    top: 15px;
+    left: 521px;
+    font-weight: 500;
+}
+.am1 {
+    position: absolute;
+    top: 74px;
+    left: 521px;
+    font-weight: 500;
+}
+.pm1 {
+    position: absolute;
+    top: 148px;
+    left: 521px;
+    font-weight: 500;
+}
+.div33 {
+    position: absolute;
+    top: 78px;
+    left: 312px;
+    font-weight: 500;
+}
+.div34 {
+    position: absolute;
+    top: 151px;
+    left: 312px;
+    font-weight: 500;
+}
+.doctorCardiologist {
+    position: absolute;
+    top: 29px;
+    left: 63px;
+    font-size: 12px;
+    color: #999;
+}
+.rosaMann {
+    position: absolute;
+    top: 70px;
+    left: 63px;
+    font-weight: 500;
+}
+.simonSparcs {
+    position: absolute;
+    top: 135px;
+    left: 63px;
+    font-weight: 500;
+}
+.doctorNeurologist {
+    position: absolute;
+    top: 90px;
+    left: 63px;
+    font-size: 12px;
+    color: #999;
+}
+.doctorOrthologist {
+    position: absolute;
+    top: 155px;
+    left: 63px;
+    font-size: 12px;
+    color: #999;
+}
+.groupChild {
+    position: absolute;
+    top: 0px;
+    left: 2px;
+    border-radius: 50%;
+    width: 53px;
+    height: 50px;
+    object-fit: cover;
+}
+.groupItem {
+    position: absolute;
+    top: 63px;
+    left: 2px;
+    border-radius: 50%;
+    width: 53px;
+    height: 50px;
+    object-fit: cover;
+}
+.groupInner {
+    position: absolute;
+    top: 126px;
+    left: 2px;
+    border-radius: 50%;
+    width: 53px;
+    height: 50px;
+    object-fit: cover;
+}
+.moreIcon6 {
+    position: absolute;
+    top: 15px;
+    left: 636px;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+.moreIcon7 {
+    position: absolute;
+    top: 148px;
+    left: 636px;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+.moreIcon8 {
+    position: absolute;
+    top: 78px;
+    left: 636px;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+.moreIcon9 {
+    position: absolute;
+    top: 205px;
+    left: 635px;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+.moreIcon10 {
+    position: absolute;
+    top: 338px;
+    left: 635px;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+.moreIcon11 {
+    position: absolute;
+    top: 268px;
+    left: 635px;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+.pm2 {
+    position: absolute;
+    top: 205px;
+    left: 516px;
+    font-weight: 500;
+}
+.am2 {
+    position: absolute;
+    top: 264px;
+    left: 516px;
+    font-weight: 500;
+}
+.pm3 {
+    position: absolute;
+    top: 338px;
+    left: 516px;
+    font-weight: 500;
+}
+.div35 {
+    position: absolute;
+    top: 200px;
+    left: 310px;
+    font-weight: 500;
+}
+.div36 {
+    position: absolute;
+    top: 263px;
+    left: 310px;
+    font-weight: 500;
+}
+.div37 {
+    position: absolute;
+    top: 336px;
+    left: 310px;
+    font-weight: 500;
+}
+.fredericaZegna1 {
+    position: absolute;
+    top: 195px;
+    left: 61px;
+    font-weight: 500;
+}
+.doctorCardiologist1 {
+    position: absolute;
+    top: 215px;
+    left: 61px;
+    font-size: 12px;
+    color: #999;
+}
+.rosaMann1 {
+    position: absolute;
+    top: 256px;
+    left: 61px;
+    font-weight: 500;
+}
+.simonSparcs1 {
+    position: absolute;
+    top: 321px;
+    left: 61px;
+    font-weight: 500;
+}
+.doctorNeurologist1 {
+    position: absolute;
+    top: 276px;
+    left: 61px;
+    font-size: 12px;
+    color: #999;
+}
+.doctorOrthologist1 {
+    position: absolute;
+    top: 341px;
+    left: 61px;
+    font-size: 12px;
+    color: #999;
+}
+.ellipseIcon {
+    position: absolute;
+    top: 186px;
+    left: 0px;
+    border-radius: 50%;
+    width: 53px;
+    height: 50px;
+    object-fit: cover;
+}
+.groupChild1 {
+    position: absolute;
+    top: 249px;
+    left: 0px;
+    border-radius: 50%;
+    width: 53px;
+    height: 50px;
+    object-fit: cover;
+}
+.groupChild2 {
+    position: absolute;
+    top: 312px;
+    left: 0px;
+    border-radius: 50%;
+    width: 53px;
+    height: 50px;
+    object-fit: cover;
+}
+.fredericaZegnaParent {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 656px;
+    height: 362px;
+}
+.frameDiv {
+    position: absolute;
+    top: 900px;
+    left: 348px;
+    width: 656px;
+    height: 186px;
+    overflow-y: auto;
+    color: #000;
+}
+.ultravitOmega {
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    font-weight: 500;
+}
+.x2 {
+    position: absolute;
+    top: 2px;
+    left: 297px;
+    font-weight: 500;
+}
+.beforeEating {
+    position: absolute;
+    top: 2px;
+    left: 416px;
+    font-weight: 500;
+}
+.heart {
+    position: absolute;
+    top: 17px;
+    left: 0px;
+    color: #999;
+}
+.clopidogrel {
+    position: absolute;
+    top: 71px;
+    left: 0px;
+    font-weight: 500;
+}
+.x1 {
+    position: absolute;
+    top: 72px;
+    left: 297px;
+    font-weight: 500;
+}
+.afterEating {
+    position: absolute;
+    top: 72px;
+    left: 421px;
+    font-weight: 500;
+}
+.heart1 {
+    position: absolute;
+    top: 87px;
+    left: 0px;
+    color: #999;
+}
+.ticagrelor {
+    position: absolute;
+    top: 142px;
+    left: 0px;
+    font-weight: 500;
+}
+.x3 {
+    position: absolute;
+    top: 142px;
+    left: 297px;
+    font-weight: 500;
+}
+.afterEating1 {
+    position: absolute;
+    top: 142px;
+    left: 421px;
+    font-weight: 500;
+}
+.heart2 {
+    position: absolute;
+    top: 157px;
+    left: 0px;
+    color: #999;
+}
+.groupChild3 {
+    position: absolute;
+    top: 0px;
+    left: 556px;
+    border-radius: 5px;
+    background-color: #3377dd;
+    border: 1px solid #3377dd;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+}
+.groupChild4 {
+    position: absolute;
+    top: 70px;
+    left: 556px;
+    border-radius: 5px;
+    border: 1px solid #3377dd;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+}
+.groupChild5 {
+    position: absolute;
+    top: 140px;
+    left: 556px;
+    border-radius: 5px;
+    border: 1px solid #3377dd;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+}
+.doneIcon5 {
+    position: absolute;
+    top: 4px;
+    left: 560px;
+    width: 12px;
+    height: 12px;
+    object-fit: cover;
+}
+.groupChild6 {
+    position: absolute;
+    top: 194px;
+    left: 556px;
+    border-radius: 5px;
+    border: 1px solid #3377dd;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+}
+.ultravitOmega1 {
+    position: absolute;
+    top: 193px;
+    left: 0px;
+    font-weight: 500;
+}
+.x21 {
+    position: absolute;
+    top: 193px;
+    left: 297px;
+    font-weight: 500;
+}
+.beforeEating1 {
+    position: absolute;
+    top: 193px;
+    left: 416px;
+    font-weight: 500;
+}
+.heart3 {
+    position: absolute;
+    top: 208px;
+    left: 0px;
+    color: #999;
+}
+.clopidogrel1 {
+    position: absolute;
+    top: 262px;
+    left: 0px;
+    font-weight: 500;
+}
+.x11 {
+    position: absolute;
+    top: 263px;
+    left: 297px;
+    font-weight: 500;
+}
+.afterEating2 {
+    position: absolute;
+    top: 263px;
+    left: 421px;
+    font-weight: 500;
+}
+.heart4 {
+    position: absolute;
+    top: 278px;
+    left: 0px;
+    color: #999;
+}
+.ticagrelor1 {
+    position: absolute;
+    top: 333px;
+    left: 0px;
+    font-weight: 500;
+}
+.x31 {
+    position: absolute;
+    top: 333px;
+    left: 297px;
+    font-weight: 500;
+}
+.afterEating3 {
+    position: absolute;
+    top: 333px;
+    left: 421px;
+    font-weight: 500;
+}
+.heart5 {
+    position: absolute;
+    top: 348px;
+    left: 0px;
+    color: #999;
+}
+.groupChild7 {
+    position: absolute;
+    top: 261px;
+    left: 556px;
+    border-radius: 5px;
+    border: 1px solid #3377dd;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+}
+.groupChild8 {
+    position: absolute;
+    top: 331px;
+    left: 556px;
+    border-radius: 5px;
+    border: 1px solid #3377dd;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+}
+.ultravitOmegaDhaParent {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 576px;
+    height: 363px;
+}
+.dashboardInner1 {
+    position: absolute;
+    top: 901px;
+    left: 1078px;
+    width: 576px;
+    height: 185px;
+    overflow-y: auto;
+    font-size: 12px;
+    color: #000;
+}
+.dashboard {
+    position: relative;
+    border-radius: 30px;
+    background-color: #3377dd;
+    width: 100%;
+    height: 1117px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    font-family: Mulish;
+}
+

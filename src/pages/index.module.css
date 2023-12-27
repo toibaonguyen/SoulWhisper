@@ -1,0 +1,775 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+.myBody {
+  	margin: 0; line-height: normal;
+}
+.carely {
+    color: #4d77ff;
+}
+.healhtycarely {
+    position: relative;
+    letter-spacing: 0.03em;
+}
+.youAOneStop {
+    margin: 0;
+}
+.thisFreeAppContainer {
+    position: relative;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    line-height: 20px;
+}
+.healhtycarelyParent {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px;
+}
+.overview {
+    position: relative;
+    letter-spacing: 0.03em;
+    line-height: 28px;
+}
+.checkingHealth {
+    position: relative;
+    letter-spacing: 0.02em;
+    line-height: 20px;
+}
+.checkingHealthParent {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: 14px;
+}
+.overviewParent {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+}
+.brandFacebook1 {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+.brandFacebookParent {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.frameParent {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 70px;
+    font-size: 20px;
+}
+.footer {
+    position: absolute;
+    top: 3946px;
+    left: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 150px;
+    font-size: 24px;
+}
+.testimonialChild {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #edf1ff;
+    width: 1340px;
+    height: 350px;
+}
+.healthycarelyIsAnContainer {
+    position: absolute;
+    top: 100px;
+    left: 728px;
+    letter-spacing: 0.03em;
+    line-height: 40px;
+}
+.naufalHidayat {
+    position: absolute;
+    top: 394px;
+    left: 728px;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    line-height: 20px;
+}
+.studentAtTelkom1 {
+    position: absolute;
+    top: 428px;
+    left: 728px;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    line-height: 14px;
+    color: #696969;
+}
+.testimonialItem {
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    width: 433px;
+    height: 372px;
+    object-fit: cover;
+}
+.arrowLongRight2 {
+    position: absolute;
+    top: 390px;
+    left: 1300px;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.arrowLongRight3 {
+    position: absolute;
+    top: 390px;
+    left: 1244px;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    object-fit: contain;
+}
+.testimonial1 {
+    position: absolute;
+    top: 121px;
+    left: 0px;
+    width: 1340px;
+    height: 452px;
+}
+.theirImpressionAfter1 {
+    position: absolute;
+    top: 51px;
+    left: 106px;
+    letter-spacing: 0.02em;
+    line-height: 20px;
+}
+.ourPatientsFeedback1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 32px;
+    letter-spacing: 0.02em;
+    line-height: 40px;
+    color: #121212;
+    text-align: center;
+}
+.title {
+    position: absolute;
+    top: 0px;
+    left: 470px;
+    width: 500px;
+    height: 71px;
+    font-size: 14px;
+    color: #696969;
+}
+.testimonial {
+    position: absolute;
+    top: 3123px;
+    left: 0px;
+    width: 1340px;
+    height: 573px;
+    font-size: 25px;
+}
+.b {
+    position: relative;
+    letter-spacing: 0.03em;
+    line-height: 40px;
+}
+.highlyVerified {
+    position: relative;
+    font-size: 12px;
+    letter-spacing: 0.03em;
+    line-height: 16px;
+    color: #696969;
+    text-align: center;
+}
+.verifiedSpecialistParent {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+.parent {
+    position: absolute;
+    top: 50px;
+    left: 78px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+.cardInner {
+    position: absolute;
+    top: 3px;
+    left: 0px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: #fff;
+    box-shadow: 0px 10px 40px rgba(18, 18, 18, 0.1);
+    width: 287px;
+    height: 190px;
+    overflow: hidden;
+}
+.cardChild {
+    position: absolute;
+    top: 3px;
+    left: 0px;
+    background-color: #4d77ff;
+    width: 287px;
+    height: 3px;
+}
+.card {
+    position: relative;
+    width: 287px;
+    height: 193px;
+}
+.group {
+    position: absolute;
+    top: 50px;
+    left: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+.container {
+    position: absolute;
+    top: 50px;
+    left: 79px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+.cardParent {
+    position: absolute;
+    top: 160px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+}
+.wereEmployeeBenefitContainer {
+    position: relative;
+    font-size: 32px;
+    letter-spacing: 0.02em;
+    line-height: 40px;
+    color: #121212;
+    text-align: center;
+}
+.ourRatingParent {
+    position: absolute;
+    top: 0px;
+    left: 252px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: #4d77ff;
+}
+.ourRating {
+    position: absolute;
+    top: 2620px;
+    left: 259px;
+    width: 921px;
+    height: 353px;
+    font-size: 32px;
+}
+.makeAScheduleContainer {
+    position: relative;
+    font-size: 32px;
+    letter-spacing: 0.02em;
+    line-height: 40px;
+    color: #121212;
+}
+.makeASheduleParent {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.healthcareIsAContainer {
+    position: relative;
+    letter-spacing: 0.02em;
+    line-height: 20px;
+    color: #696969;
+}
+.frameChild {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+.makeASchedule7 {
+    position: relative;
+    letter-spacing: 0.02em;
+    line-height: 20px;
+    font-weight: 600;
+}
+.groupParent {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+.frameParent1 {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 14px;
+    color: #121212;
+}
+.makeScheduleNowWrapper {
+    border-radius: 10px;
+    background-color: #4d77ff;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 36px;
+    font-size: 16px;
+    color: #fff;
+}
+.frameGroup {
+    position: absolute;
+    top: 0px;
+    left: 687px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 26px;
+}
+.scheduleSectionChild {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 626px;
+    height: 401px;
+    object-fit: cover;
+}
+.scheduleSection {
+    position: absolute;
+    top: 2069px;
+    left: 102px;
+    width: 1159px;
+    height: 401px;
+    color: #4d77ff;
+}
+.findDoctor {
+    position: relative;
+    letter-spacing: 0.03em;
+    line-height: 20px;
+}
+.text4 {
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 26px;
+}
+.findDoctorSectionChild {
+    position: absolute;
+    top: 216px;
+    left: 764px;
+    border-radius: 50%;
+    background-color: #4d77ff;
+    width: 803px;
+    height: 803px;
+}
+.femaleDoctorFococlippingRemIcon {
+    position: absolute;
+    top: 81px;
+    left: 865px;
+    width: 516px;
+    height: 609px;
+    object-fit: cover;
+}
+.selectDoctors {
+    position: relative;
+    font-size: 12px;
+    letter-spacing: 0.03em;
+    line-height: 16px;
+    color: #696969;
+}
+.availableDoctorsParent {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.maskGroupIcon2 {
+    position: relative;
+    width: 46px;
+    height: 46px;
+    object-fit: cover;
+}
+.maskGroupParent {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+.frameParent3 {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.findDoctor1 {
+    position: relative;
+    letter-spacing: 0.03em;
+    line-height: 16px;
+    font-weight: 500;
+}
+.findDoctorWrapper {
+    border-radius: 10px;
+    background-color: #edf1ff;
+    width: 142px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: #4d77ff;
+}
+.availDoctor {
+    position: absolute;
+    top: 116px;
+    left: 764px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: -4px -10px 50px rgba(18, 18, 18, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 18px 30px;
+    gap: 20px;
+    color: #121212;
+}
+.findDoctorSection1 {
+    position: absolute;
+    top: 1249px;
+    left: 0px;
+    width: 1440px;
+    height: 670px;
+    overflow: hidden;
+    color: #4d77ff;
+}
+.checkHealthComplaints1 {
+    position: absolute;
+    top: 46.02%;
+    left: 13.94%;
+    letter-spacing: 0.03em;
+    line-height: 28px;
+}
+.checkTheDiseaseContainer {
+    position: absolute;
+    top: 63.72%;
+    left: 13.94%;
+    font-size: 12px;
+    letter-spacing: 0.03em;
+    line-height: 16px;
+    color: #696969;
+}
+.iconlybulksearch {
+    position: absolute;
+    height: 17.7%;
+    width: 13.94%;
+    top: 22.12%;
+    right: 72.13%;
+    bottom: 60.18%;
+    left: 13.94%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.checkHealthComplaintsParent {
+    position: absolute;
+    top: 3px;
+    left: 0px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: #fff;
+    box-shadow: 0px 10px 40px rgba(18, 18, 18, 0.1);
+    width: 287px;
+    height: 226px;
+    overflow: hidden;
+}
+.card3 {
+    position: absolute;
+    top: 121px;
+    left: 0px;
+    width: 287px;
+    height: 229px;
+}
+.card4 {
+    position: absolute;
+    top: 120px;
+    left: 317px;
+    width: 287px;
+    height: 229px;
+}
+.card5 {
+    position: absolute;
+    top: 121px;
+    left: 634px;
+    width: 287px;
+    height: 229px;
+}
+.getYourSolutions1 {
+    position: absolute;
+    top: 46.02%;
+    left: 13.94%;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    line-height: 28px;
+    color: #121212;
+}
+.afterConductingAnContainer {
+    position: absolute;
+    top: 63.72%;
+    left: 13.94%;
+    letter-spacing: 0.03em;
+    line-height: 16px;
+}
+.card6 {
+    position: absolute;
+    top: 121px;
+    left: 951px;
+    width: 287px;
+    height: 229px;
+    font-size: 12px;
+    color: #696969;
+}
+.title1 {
+    position: absolute;
+    top: 0px;
+    left: 355px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    color: #4d77ff;
+}
+.stepSection {
+    position: absolute;
+    top: 799px;
+    left: 100px;
+    width: 1238px;
+    height: 350px;
+}
+.headerChild {
+    position: absolute;
+    top: 308px;
+    left: 607px;
+    border-radius: 50%;
+    background-color: #4d77ff;
+    width: 1240px;
+    height: 1240px;
+}
+.cardProfileDoctorChild {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.drShimantaParent {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+.makeSchedule {
+    position: relative;
+    letter-spacing: 0.03em;
+    line-height: 16px;
+    font-weight: 600;
+}
+.makeScheduleWrapper {
+    border-radius: 10px;
+    background-color: #4d77ff;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px;
+    font-size: 12px;
+    color: #fff;
+}
+.cardProfileDoctor1 {
+    position: absolute;
+    top: 436px;
+    left: 734px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px -24px 34px rgba(199, 201, 217, 0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    gap: 10px;
+}
+.femaleDoctorFococlippingRemIcon1 {
+    position: absolute;
+    top: 109px;
+    left: 702px;
+    width: 885px;
+    height: 590px;
+    object-fit: cover;
+}
+.medicalCareNowContainer {
+    position: absolute;
+    top: 184px;
+    left: 100px;
+    font-size: 54px;
+    letter-spacing: 0.02em;
+    line-height: 70px;
+}
+.healthCarelyIsContainer {
+    position: absolute;
+    top: 350px;
+    left: 101px;
+    letter-spacing: 0.03em;
+    line-height: 20px;
+    color: #696969;
+}
+.contactUs {
+    position: relative;
+    letter-spacing: 0.03em;
+    line-height: 20px;
+    font-weight: 500;
+}
+.btnPrimary {
+    position: absolute;
+    top: 436px;
+    left: 100px;
+    border-radius: 10px;
+    background-color: #4d77ff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 36px;
+    font-size: 16px;
+    color: #fff;
+}
+.homeGroup {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    font-size: 14px;
+}
+.healhtycarelyGroup {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.signUpWrapper {
+    border-radius: 10px;
+    background-color: #4d77ff;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 22px;
+    color: #fff;
+}
+.signInParent {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 14px;
+}
+.navbar {
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    width: 1240px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 24px;
+}
+.header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1440px;
+    height: 699px;
+    overflow: hidden;
+}
+.landingPage {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 4175px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 14px;
+    color: #121212;
+    font-family: Manrope;
+}
+

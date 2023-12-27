@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+.myBody {
+  	margin: 0; line-height: normal;
+}
+
+.loginPageDefaultStatesChild {
+    position: absolute;
+    top: 0.35px;
+    left: 0.67px;
+    background-color: #fff;
+    box-shadow: 0px 48px 128px rgba(0, 0, 0, 0.4);
+    width: 1353.41px;
+    height: 675.65px;
+}
+.downloadBadgeGooglePlayB1 {
+    position: relative;
+    width: 95.26px;
+    height: 28.22px;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+.buttns {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8.47px;
+}
+.getTheApp1 {
+    position: absolute;
+    top: 580px;
+    left: 0px;
+    width: 198.98px;
+    height: 28.22px;
+}
+.logIn {
+    color: #007aff;
+}
+.dontHaveAnContainer {
+    position: absolute;
+    top: 485.45px;
+    left: 191.92px;
+    letter-spacing: -0.02em;
+    line-height: 140%;
+}
+.googleButtonChild {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    border-radius: 3.53px;
+    background-color: #2d3748;
+}
+.signInWithGoogle1 {
+    position: absolute;
+    top: calc(50% - 7.7px);
+    left: calc(50% - 37.71px);
+    letter-spacing: -0.02em;
+    font-weight: 600;
+}
+.iconfinderGoogle129874511 {
+    position: absolute;
+    top: calc(50% - 6.99px);
+    left: calc(50% - 60.28px);
+    width: 14.11px;
+    height: 14.11px;
+    object-fit: cover;
+}
+.googleButton {
+    position: absolute;
+    width: 47.86%;
+    top: 265.3px;
+    right: 0%;
+    left: 52.14%;
+    height: 33.87px;
+    color: #fff;
+}
+.loginButtonChild {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    border-radius: 3.53px;
+    background-color: #007aff;
+}
+.createAccount {
+    position: absolute;
+    width: 31.7%;
+    top: 25%;
+    left: 34.08%;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    display: inline-block;
+}
+.loginButton {
+    position: absolute;
+    top: 265.3px;
+    left: 0px;
+    width: 252.6px;
+    height: 33.87px;
+    color: #fff;
+}
+.forgotPassword {
+    position: absolute;
+    top: 67.92%;
+    left: 83.69%;
+    letter-spacing: -0.02em;
+    line-height: 140%;
+    color: #007aff;
+    text-align: right;
+}
+.termsAndPrivacyPolicyChild {
+    position: relative;
+    border-radius: 1.41px;
+    border: 0.7px solid #d1d1d1;
+    box-sizing: border-box;
+    width: 14.11px;
+    height: 14.11px;
+}
+.iAgreeToContainer {
+    position: relative;
+    letter-spacing: -0.02em;
+    line-height: 140%;
+}
+.termsAndPrivacyPolicy1 {
+    position: absolute;
+    top: 228.61px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8.47px;
+}
+.rememberMe {
+    position: absolute;
+    top: 203.21px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8.47px;
+}
+.groupChild {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    border-radius: 3.53px;
+    border: 0.7px solid #d1d1d1;
+    box-sizing: border-box;
+}
+.entryFieldInner {
+    position: relative;
+    width: 252.6px;
+    height: 33.87px;
+}
+.entryField1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2.82px;
+}
+.entryField2 {
+    position: absolute;
+    top: 67.74px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2.82px;
+}
+.entryField3 {
+    position: absolute;
+    top: 135.47px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2.82px;
+}
+.entryField4 {
+    position: absolute;
+    top: 135.47px;
+    left: 275.18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2.82px;
+}
+.mmddyy {
+    font-size: 7.1px;
+}
+.entryField5 {
+    position: absolute;
+    top: 67.74px;
+    left: 275.18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2.82px;
+    font-size: 9.9px;
+}
+.entryField6 {
+    position: absolute;
+    top: 2.12px;
+    left: 275.18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2.82px;
+}
+.calendarMonthOutlineIcon1 {
+    position: absolute;
+    top: 94.55px;
+    left: 502.39px;
+    width: 14.11px;
+    height: 14.11px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.entryField {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 527.79px;
+    height: 186.17px;
+}
+.form {
+    position: absolute;
+    width: 100%;
+    top: 163.7px;
+    right: 0%;
+    left: 0%;
+    height: 299.17px;
+}
+.createAccount1 {
+    position: relative;
+    letter-spacing: -0.02em;
+    line-height: 140%;
+    font-weight: 600;
+}
+.forBusinessBand1 {
+    position: relative;
+    font-size: 9.88px;
+    letter-spacing: -0.02em;
+    line-height: 140%;
+    color: #2d3748;
+}
+.text {
+    position: absolute;
+    top: 76.91px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5.64px;
+    font-size: 19.76px;
+    color: #1d1d1d;
+}
+.capzul {
+    position: absolute;
+    top: 9.17px;
+    left: 36.58px;
+    letter-spacing: -0.02em;
+    line-height: 120%;
+    font-weight: 600;
+    display: inline-block;
+    width: 44.45px;
+    height: 15.35px;
+}
+.imgNewLogoLowQualityIcon1 {
+    position: absolute;
+    height: 100%;
+    width: 36.43%;
+    top: 0%;
+    right: 63.57%;
+    bottom: 0%;
+    left: 0%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.logo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 81.03px;
+    height: 33.87px;
+    text-align: center;
+    font-size: 12.7px;
+    color: #1d1d1d;
+}
+.right {
+    position: absolute;
+    top: 45.16px;
+    left: 688.66px;
+    width: 527.79px;
+    height: 608.23px;
+}
+.bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(-35.07deg, #007aff, #0f70da);
+    width: 574.36px;
+    height: 675.96px;
+}
+.sliderDotsChild {
+    position: relative;
+    border-radius: 50%;
+    border: 0.7px solid #fff;
+    box-sizing: border-box;
+    width: 7.06px;
+    height: 7.06px;
+}
+.sliderDotsItem {
+    position: relative;
+    width: 10.58px;
+    height: 14.11px;
+    object-fit: cover;
+}
+.sliderDots {
+    position: absolute;
+    top: 622.34px;
+    left: 262.48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 11.29px;
+}
+.leftChild {
+    position: absolute;
+    top: 162.91px;
+    left: 78.32px;
+    border-radius: 50%;
+    background: linear-gradient(-35.07deg, #0f70da, #007aff);
+    width: 418.42px;
+    height: 418.42px;
+}
+.imgfeaturesArchive4Icon {
+    position: absolute;
+    top: 51.19px;
+    left: 0px;
+    width: 180.27px;
+    height: 342.17px;
+    object-fit: cover;
+}
+.imgfeaturesArchive5Icon {
+    position: absolute;
+    top: 51.19px;
+    left: 130.19px;
+    width: 180.27px;
+    height: 342.17px;
+    object-fit: cover;
+}
+.imgfeaturesArchive6Icon {
+    position: absolute;
+    top: 0px;
+    left: 37.83px;
+    width: 234.79px;
+    height: 444.55px;
+    object-fit: cover;
+}
+.imgs {
+    position: absolute;
+    top: 148.13px;
+    left: 131.86px;
+    width: 310.46px;
+    height: 444.55px;
+}
+.socialMediaShared1 {
+    position: absolute;
+    width: 68.06%;
+    top: 6.68%;
+    left: 15.97%;
+    letter-spacing: -0.02em;
+    line-height: 150%;
+    font-weight: 600;
+    display: inline-block;
+}
+.left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 574.36px;
+    height: 675.96px;
+    text-align: center;
+    font-size: 19.76px;
+    color: #fff;
+}
+.loginPageDefaultStates1 {
+    position: relative;
+    width: 100%;
+    height: 676px;
+    text-align: left;
+    font-size: 9.88px;
+    color: #2d3748;
+    font-family: Poppins;
+}
+

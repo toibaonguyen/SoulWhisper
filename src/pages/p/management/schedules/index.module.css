@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
+.myBody {
+  	margin: 0; line-height: normal;
+}
+.m {
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: 64px;
+    height: 24px;
+    flex-shrink: 0;
+}
+.w {
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: 62px;
+    height: 24px;
+    flex-shrink: 0;
+}
+.t1 {
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: 63px;
+    height: 24px;
+    flex-shrink: 0;
+}
+.mParent {
+    position: absolute;
+    top: 116px;
+    left: 49px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 108px;
+    color: #333;
+}
+.frameChild {
+    position: relative;
+    border: 1px dashed #e0e0e0;
+    box-sizing: border-box;
+    width: 157px;
+    height: 131px;
+}
+.instanceWrapper {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.div {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    font-weight: 500;
+}
+.div2 {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    font-weight: 500;
+    opacity: 0.7;
+}
+.frame {
+    position: absolute;
+    height: 100.77%;
+    width: 100.64%;
+    top: -0.38%;
+    right: -0.32%;
+    bottom: -0.38%;
+    left: -0.32%;
+    background-color: #219653;
+    border: 1px dashed #e0e0e0;
+    box-sizing: border-box;
+}
+.basicPresentation3 {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+.frameDiv {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+}
+.frameWrapper {
+    position: absolute;
+    top: 41.88px;
+    left: 11px;
+    width: 138px;
+    height: 47px;
+    text-align: center;
+}
+.instanceParent {
+    position: relative;
+    width: 156px;
+    height: 130px;
+    color: #fff;
+}
+.frameGroup {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.symbolsSlack2 {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+.symbolsYammerParent {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.groupDiv {
+    position: relative;
+    width: 156px;
+    height: 130px;
+}
+.wrapper4 {
+    position: relative;
+    border: 1px dashed #e0e0e0;
+    box-sizing: border-box;
+    width: 157px;
+    height: 131px;
+    color: #a1a1a1;
+}
+.wrapper5 {
+    position: absolute;
+    height: 100.77%;
+    width: 100.64%;
+    top: -0.38%;
+    right: -0.32%;
+    bottom: -0.38%;
+    left: -0.32%;
+    background-color: #2d9cdb;
+    border: 1px dashed #e0e0e0;
+    box-sizing: border-box;
+}
+.frameWrapper2 {
+    position: absolute;
+    top: 41.88px;
+    left: 11px;
+    width: 138px;
+    height: 64px;
+    text-align: center;
+}
+.wrapper8 {
+    position: absolute;
+    height: 100.77%;
+    width: 100.64%;
+    top: -0.38%;
+    right: -0.32%;
+    bottom: -0.38%;
+    left: -0.32%;
+    background-color: #828282;
+    border: 1px dashed #e0e0e0;
+    box-sizing: border-box;
+}
+.instanceGroup {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    color: #fff;
+}
+.wrapper15 {
+    position: absolute;
+    height: 100.77%;
+    width: 100.64%;
+    top: -0.38%;
+    right: -0.32%;
+    bottom: -0.38%;
+    left: -0.32%;
+    background-color: #9b51e0;
+    border: 1px dashed #e0e0e0;
+    box-sizing: border-box;
+}
+.karthikProject {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 138px;
+}
+.wrapper19 {
+    position: absolute;
+    height: 100.77%;
+    width: 100.64%;
+    top: -0.38%;
+    right: -0.32%;
+    bottom: -0.38%;
+    left: -0.32%;
+    background-color: #f2994a;
+    border: 1px dashed #e0e0e0;
+    box-sizing: border-box;
+}
+.frameWrapper7 {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.frameParent {
+    position: absolute;
+    top: calc(50% - 455.38px);
+    left: calc(50% - 546px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: #a1a1a1;
+}
+.july2020 {
+    position: absolute;
+    top: 48px;
+    left: 49px;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #333;
+}
+.medium1 {
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    color: #eb5757;
+}
+.basicPresentation5 {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+}
+.designClinic {
+    position: relative;
+    font-weight: 500;
+}
+.basicPresentationParent {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.medium {
+    position: absolute;
+    top: 806px;
+    left: 601px;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 30px;
+}
+.iconfinderSlack469134611 {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+.comms {
+    position: absolute;
+    top: 806px;
+    left: 360px;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 30px;
+}
+.projectsProgress {
+    margin: 0;
+}
+.content {
+    position: absolute;
+    top: 806px;
+    left: 49px;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 30px;
+}
+.month {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 1199px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 14px;
+    color: #4f4f4f;
+    font-family: Inter;
+}
+

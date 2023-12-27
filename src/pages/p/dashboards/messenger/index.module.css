@@ -1,0 +1,1112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arial:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+.myBody {
+  	margin: 0; line-height: normal;
+}
+
+.notificationIcon1 {
+    position: absolute;
+    top: 7px;
+    right: 274.95px;
+    width: 22.53px;
+    height: 31.72px;
+    object-fit: cover;
+}
+.notificationProfileChild {
+    position: absolute;
+    top: 0px;
+    left: 54px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+}
+.johnmarkNanzing {
+    position: absolute;
+    top: 13px;
+    left: 109px;
+}
+.dropDownIcon1 {
+    position: absolute;
+    height: 13.55%;
+    width: 2.85%;
+    top: 51.54%;
+    right: 0%;
+    bottom: 34.91%;
+    left: 97.15%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.notificationProfile {
+    position: absolute;
+    top: 3px;
+    right: 88.51px;
+    width: 297.49px;
+    height: 45px;
+}
+.searchIcon1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+.searchForActivities1 {
+    position: absolute;
+    top: 2px;
+    left: 34px;
+}
+.searchArea {
+    position: absolute;
+    top: 15px;
+    left: 200px;
+    width: 305px;
+    height: 24px;
+    color: #474b54;
+}
+.logosearchnotificationBarChild {
+    position: absolute;
+    top: 71px;
+    left: 0px;
+    width: 1728px;
+    height: 0px;
+    object-fit: contain;
+}
+.span {
+    color: #25d366;
+}
+.jo {
+    position: absolute;
+    top: 0px;
+    left: 22px;
+    font-size: 45px;
+    color: #fff;
+}
+.logosearchnotificationBar {
+    position: absolute;
+    top: 18px;
+    right: 0px;
+    width: 1728px;
+    height: 71px;
+}
+.sidebarNavigationBar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 126px;
+    height: 1204px;
+    object-fit: cover;
+}
+.messagesInfoBarChild {
+    position: absolute;
+    top: 0px;
+    left: 126px;
+    background-color: #1c1d26;
+    width: 437px;
+    height: 1117px;
+}
+.messagesInfoBarItem {
+    position: absolute;
+    top: 383px;
+    left: 126px;
+    width: 437px;
+    height: 0px;
+    object-fit: contain;
+}
+.messagesInfoBarInner {
+    position: absolute;
+    top: 135px;
+    left: 0px;
+    width: 1728px;
+    height: 0px;
+    object-fit: contain;
+}
+.messagesInfoBarChild1 {
+    position: absolute;
+    top: 259px;
+    left: 126px;
+    width: 437px;
+    height: 0px;
+    object-fit: contain;
+}
+.messagesInfoBarChild2 {
+    position: absolute;
+    top: 507px;
+    left: 126px;
+    width: 437px;
+    height: 0px;
+    object-fit: contain;
+}
+.messagesInfoBarChild3 {
+    position: absolute;
+    top: 1003px;
+    left: 126px;
+    max-height: 100%;
+    width: 437px;
+    object-fit: contain;
+}
+.messagesInfoBarChild4 {
+    position: absolute;
+    top: 631px;
+    left: 126px;
+    width: 437px;
+    height: 0px;
+    object-fit: contain;
+}
+.starusBarChild {
+    position: absolute;
+    top: 0px;
+    left: 85px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+.starusBarItem {
+    position: absolute;
+    top: 0px;
+    left: 170px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+.starusBarInner {
+    position: absolute;
+    top: 0px;
+    left: 255px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+.starusBarChild1 {
+    position: absolute;
+    top: 0px;
+    left: 340px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+.addIcon {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+.starusBar {
+    position: absolute;
+    top: 31px;
+    left: 146px;
+    width: 410px;
+    height: 70px;
+}
+.messageSenderProfileChild {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+.mumcy {
+    position: absolute;
+    top: 10px;
+    left: 82px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.div {
+    position: absolute;
+    top: 11px;
+    right: 0px;
+    font-weight: 500;
+    color: #25d366;
+    text-align: right;
+}
+.happyBirthdaySon1 {
+    position: absolute;
+    top: 40px;
+    left: 85px;
+    color: #474b54;
+}
+.groupChild {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    background-color: #25d366;
+    width: 20px;
+    height: 20px;
+}
+.div1 {
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    display: inline-block;
+    width: 9px;
+    height: 16px;
+}
+.ellipseParent {
+    position: absolute;
+    top: 38px;
+    left: 367px;
+    width: 20px;
+    height: 20px;
+    color: #171821;
+    font-family: Arial;
+}
+.messageSenderProfile7 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 390px;
+    height: 70px;
+}
+.messages {
+    position: absolute;
+    top: 906px;
+    left: 146px;
+    width: 390px;
+    height: 70px;
+}
+.messages1 {
+    position: absolute;
+    top: 1030px;
+    left: 146px;
+    width: 390px;
+    height: 70px;
+}
+.emmanuelYello {
+    position: absolute;
+    top: 10px;
+    left: 82px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+}
+.pm {
+    position: absolute;
+    top: 11px;
+    right: 0px;
+    font-weight: 500;
+    text-align: right;
+}
+.div4 {
+    position: absolute;
+    top: 38px;
+    left: 104px;
+}
+.audioIcon2 {
+    position: absolute;
+    top: 41px;
+    left: 93px;
+    width: 7.58px;
+    height: 10.93px;
+    object-fit: cover;
+}
+.blueMessageReadThickIcon1 {
+    position: absolute;
+    top: 42px;
+    left: 82px;
+    width: 8px;
+    height: 8.5px;
+    object-fit: cover;
+}
+.messageSenderProfile9 {
+    position: absolute;
+    top: 410px;
+    left: 146px;
+    width: 390px;
+    height: 70px;
+    color: #474b54;
+}
+.messageSenderProfile10 {
+    position: absolute;
+    top: 658px;
+    left: 146px;
+    width: 390px;
+    height: 70px;
+}
+.pm2 {
+    position: absolute;
+    top: 11px;
+    left: 334px;
+    font-weight: 500;
+    color: #25d366;
+    text-align: right;
+}
+.yourStatusIs1 {
+    position: absolute;
+    top: 40px;
+    left: 155px;
+    color: #474b54;
+}
+.laughEmojisIcon {
+    position: absolute;
+    top: 39px;
+    left: 85px;
+    width: 66px;
+    height: 20px;
+    object-fit: cover;
+}
+.messageSenderProfile11 {
+    position: absolute;
+    top: 162px;
+    left: 146px;
+    width: 390px;
+    height: 70px;
+}
+.am {
+    position: absolute;
+    top: 11px;
+    left: 331px;
+    font-weight: 500;
+    text-align: right;
+}
+.missedVoiceCall1 {
+    position: absolute;
+    top: 40px;
+    left: 110px;
+}
+.missCallIcon1 {
+    position: absolute;
+    top: 42px;
+    left: 85px;
+    width: 20px;
+    height: 12px;
+    object-fit: cover;
+}
+.messageSenderProfile12 {
+    position: absolute;
+    top: 286px;
+    left: 146px;
+    width: 390px;
+    height: 70px;
+    color: #474b54;
+}
+.rectangleDiv {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(180deg, rgba(122, 124, 141, 0.06), rgba(122, 124, 141, 0.12));
+    width: 437px;
+    height: 124px;
+}
+.messageSenderProfileChild4 {
+    position: absolute;
+    top: 27px;
+    left: 20px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+.pm3 {
+    position: absolute;
+    top: 38px;
+    right: 27px;
+    font-weight: 500;
+    text-align: right;
+}
+.victorJohnmark {
+    position: absolute;
+    top: 37px;
+    left: 102px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+}
+.victorJohnmarkIs2 {
+    position: absolute;
+    top: 67px;
+    left: 105px;
+}
+.messageSenderProfile13 {
+    position: absolute;
+    top: 755px;
+    left: 126px;
+    width: 437px;
+    height: 124px;
+    color: #25d366;
+}
+.creativesConnect {
+    position: absolute;
+    top: 534px;
+    left: 146px;
+    width: 390px;
+    height: 70px;
+}
+.messagesInfoBarChild5 {
+    position: absolute;
+    top: 0px;
+    left: 563px;
+    max-width: 100%;
+    overflow: hidden;
+    height: 1115px;
+    object-fit: cover;
+}
+.messagesInfoBar {
+    position: absolute;
+    top: 89px;
+    left: 0px;
+    width: 1728px;
+    height: 1117px;
+    font-size: 14px;
+    color: #fff;
+}
+.linkMessageChild {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+.messageChild {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 0px 20px 20px 20px;
+    background-color: #1c1d26;
+    border: 1px solid rgba(181, 191, 214, 0.2);
+    box-sizing: border-box;
+    width: 324px;
+    height: 420px;
+}
+.httpsdribblecomshots1458 {
+    position: absolute;
+    top: 21px;
+    left: 27px;
+    text-decoration: underline;
+}
+.dribble {
+    position: absolute;
+    top: 52px;
+    left: 48px;
+    font-size: 16px;
+    letter-spacing: 0.07em;
+    color: #d8093b;
+}
+.pharmacyAppUiux2 {
+    position: absolute;
+    top: 78px;
+    left: 48px;
+    letter-spacing: 0.07em;
+    color: #fff;
+}
+.messageItem {
+    position: absolute;
+    top: 52px;
+    left: 27px;
+    max-width: 100%;
+    overflow: hidden;
+    height: 336px;
+    object-fit: cover;
+}
+.helloThisIs1 {
+    position: absolute;
+    top: 101px;
+    left: 48px;
+    font-size: 13px;
+    letter-spacing: 0.07em;
+    font-weight: 300;
+    font-family: Roboto;
+    display: inline-block;
+    width: 254px;
+    height: 83px;
+}
+.messageInner {
+    position: absolute;
+    top: 198px;
+    left: 48px;
+    width: 253.98px;
+    height: 190.03px;
+    object-fit: cover;
+}
+.message {
+    position: absolute;
+    top: 0px;
+    left: 55px;
+    width: 324px;
+    height: 420px;
+}
+.pm5 {
+    position: absolute;
+    top: 433px;
+    left: 319px;
+}
+.linkMessage {
+    position: absolute;
+    top: 171px;
+    left: 20px;
+    width: 379px;
+    height: 450px;
+}
+.groupChild2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 0px 20px 20px 20px;
+    background-color: #1c1d26;
+    border: 1px solid rgba(181, 191, 214, 0.2);
+    box-sizing: border-box;
+    width: 324px;
+    height: 96px;
+}
+.checkThisOut1 {
+    position: absolute;
+    top: 39px;
+    left: 20px;
+}
+.fireEmojiIcon1 {
+    position: absolute;
+    height: 15.87%;
+    width: 6.17%;
+    top: 30.16%;
+    right: 50.93%;
+    bottom: 53.97%;
+    left: 42.9%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.pm6 {
+    position: absolute;
+    top: 109px;
+    left: 264px;
+    font-size: 14px;
+    text-shadow: 1px 0 0 rgba(181, 191, 214, 0.2), 0 1px 0 rgba(181, 191, 214, 0.2), -1px 0 0 rgba(181, 191, 214, 0.2), 0 -1px 0 rgba(181, 191, 214, 0.2);
+}
+.rectangleParent {
+    position: absolute;
+    top: 0px;
+    left: 55px;
+    width: 324px;
+    height: 126px;
+}
+.groupParent {
+    position: absolute;
+    top: 651px;
+    left: 20px;
+    width: 379px;
+    height: 126px;
+    font-size: 16px;
+}
+.pm7 {
+    position: absolute;
+    top: 109px;
+    left: 264px;
+}
+.groupChild4 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 20px 0px 20px 20px;
+    background-color: #1c1d26;
+    border: 1px solid rgba(181, 191, 214, 0.2);
+    box-sizing: border-box;
+    width: 324px;
+    height: 96px;
+}
+.pmParent {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 324px;
+    height: 126px;
+}
+.thisIsBeautiful1 {
+    position: absolute;
+    top: 38px;
+    left: 30px;
+    font-size: 16px;
+}
+.loveEmojiIcon2 {
+    position: absolute;
+    height: 15.87%;
+    width: 6.17%;
+    top: 30.16%;
+    right: 25.62%;
+    bottom: 53.97%;
+    left: 68.21%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.loveEmojiIcon3 {
+    position: absolute;
+    height: 15.87%;
+    width: 6.17%;
+    top: 30.16%;
+    right: 18.52%;
+    bottom: 53.97%;
+    left: 75.31%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.messageReply {
+    position: absolute;
+    top: 807px;
+    left: 399px;
+    width: 324px;
+    height: 126px;
+}
+.typeYourMessage3 {
+    position: absolute;
+    top: 1px;
+    left: 27px;
+}
+.emojiIcon1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+.typeYourMessage2 {
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    width: 175px;
+    height: 20px;
+}
+.audioIcon3 {
+    position: absolute;
+    top: 0px;
+    left: 542px;
+    width: 19.65px;
+    height: 30.08px;
+    object-fit: cover;
+}
+.vectorIcon1 {
+    position: absolute;
+    height: 70.83%;
+    width: 3.05%;
+    top: 13.3%;
+    right: 30.36%;
+    bottom: 15.87%;
+    left: 66.59%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.typeYpurMessageattachaudioChild {
+    position: absolute;
+    top: 1.24px;
+    left: 629px;
+    border-radius: 1px;
+    width: 27.22px;
+    height: 27.22px;
+    object-fit: contain;
+}
+.typeYpurMessageattachaudio1 {
+    position: absolute;
+    top: 1044px;
+    left: 20px;
+    width: 656.22px;
+    height: 30.08px;
+    font-size: 16px;
+    color: #fff;
+}
+.conversationChild {
+    position: absolute;
+    top: 1003px;
+    left: 0px;
+    max-height: 100%;
+    width: 748px;
+    object-fit: cover;
+}
+.profilemessageBodyChild {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+}
+.victorJohnmark1 {
+    position: absolute;
+    top: 2px;
+    left: 95px;
+    font-weight: 500;
+}
+.victorJohnmarkIs3 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.victorJohnmarkIsTypingWrapper {
+    position: absolute;
+    top: 50px;
+    left: 95px;
+    width: 206px;
+    height: 19px;
+    font-size: 16px;
+    color: #474b54;
+}
+.profilemessageBody {
+    position: absolute;
+    top: 29px;
+    left: 20px;
+    width: 332px;
+    height: 75px;
+    font-size: 30px;
+}
+.videoIcon1 {
+    position: absolute;
+    top: 0px;
+    right: 180px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.callIcon1 {
+    position: absolute;
+    top: 0px;
+    right: 90px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.settingsIcon1 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.videocallsettingsIcon {
+    position: absolute;
+    top: 42px;
+    right: 61px;
+    width: 230px;
+    height: 50px;
+}
+.conversationItem {
+    position: absolute;
+    top: 1003px;
+    left: 602px;
+    max-width: 100%;
+    overflow: hidden;
+    height: 112px;
+    object-fit: cover;
+}
+.conversationInner {
+    position: absolute;
+    top: 0px;
+    left: 748px;
+    max-width: 100%;
+    overflow: hidden;
+    height: 1117px;
+    object-fit: cover;
+}
+.conversation {
+    position: absolute;
+    top: 89px;
+    left: 563px;
+    width: 748px;
+    height: 1117px;
+    font-size: 14px;
+}
+.sharedFiles {
+    position: absolute;
+    top: 147px;
+    left: 35px;
+    letter-spacing: 0.06em;
+    color: #fff;
+}
+.sharedLinks {
+    position: absolute;
+    top: 595px;
+    left: 35px;
+    letter-spacing: 0.06em;
+    color: #fff;
+}
+.showAll {
+    position: absolute;
+    top: 147px;
+    left: 326px;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    color: #25d366;
+}
+.showAll1 {
+    position: absolute;
+    top: 595px;
+    left: 326px;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    color: #25d366;
+}
+.mbApr {
+    position: absolute;
+    top: 43px;
+    left: 85px;
+    color: #474b54;
+}
+.sharedFileChild {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    border: 1px solid #b5bfd6;
+    box-sizing: border-box;
+    width: 75px;
+    height: 75px;
+}
+.sharedFile {
+    position: absolute;
+    top: 195px;
+    left: 35px;
+    width: 301px;
+    height: 75px;
+}
+.systemDocumentation {
+    position: absolute;
+    top: 12px;
+    left: 86px;
+    letter-spacing: 0.06em;
+}
+.sharedFile1 {
+    position: absolute;
+    top: 290px;
+    left: 35px;
+    width: 281px;
+    height: 75px;
+}
+.sharedFile2 {
+    position: absolute;
+    top: 385px;
+    left: 35px;
+    width: 321px;
+    height: 75px;
+}
+.sharedFile3 {
+    position: absolute;
+    top: 480px;
+    left: 35px;
+    width: 237px;
+    height: 75px;
+}
+.figmaLogoIcon2 {
+    position: absolute;
+    top: 213px;
+    left: 58px;
+    width: 30px;
+    height: 37.5px;
+    object-fit: cover;
+}
+.figmaLogoIcon3 {
+    position: absolute;
+    top: 409px;
+    left: 58px;
+    width: 30px;
+    height: 37.5px;
+    object-fit: cover;
+}
+.pdfLogoIcon1 {
+    position: absolute;
+    height: 2.85%;
+    width: 7.06%;
+    top: 29.6%;
+    right: 80.24%;
+    bottom: 67.55%;
+    left: 12.71%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.sharedMediaSideBarChild {
+    position: absolute;
+    height: 2.85%;
+    width: 7.06%;
+    top: 47.72%;
+    right: 80.24%;
+    bottom: 49.43%;
+    left: 12.71%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.pharmacyAppSharedLinkChild {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 126px;
+    height: 120px;
+    object-fit: cover;
+}
+.httpsdribblecomshots14581 {
+    position: absolute;
+    top: 59px;
+    left: 144px;
+    font-size: 14px;
+    color: #474b54;
+}
+.pharmacyAppSharedLink3 {
+    position: absolute;
+    top: 654px;
+    left: 35px;
+    width: 373px;
+    height: 120px;
+}
+.unsplashxvredUqjjuIcon {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 10px;
+    width: 126px;
+    height: 120px;
+    object-fit: cover;
+}
+.pharmacyAppSharedLink4 {
+    position: absolute;
+    top: 794px;
+    left: 35px;
+    width: 358px;
+    height: 120px;
+}
+.unsplashio0zlybu31sIcon {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 8px;
+    width: 126px;
+    height: 120px;
+    object-fit: cover;
+}
+.unsplashio0zlybu31sWrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 126px;
+    height: 120px;
+}
+.userResearch {
+    position: absolute;
+    top: 32px;
+    left: 145px;
+    letter-spacing: 0.06em;
+}
+.pharmacyAppSharedLink5 {
+    position: absolute;
+    top: 934px;
+    left: 35px;
+    width: 367px;
+    height: 120px;
+}
+.sharedMediaSideBarItem {
+    position: absolute;
+    top: 37px;
+    left: 0px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.sharedMedia1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    letter-spacing: 0.06em;
+}
+.showAll2 {
+    position: absolute;
+    top: 0px;
+    left: 291px;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    color: #25d366;
+}
+.unsplashmr4jg4syof8Icon {
+    position: absolute;
+    top: 38px;
+    left: 11px;
+    border-radius: 5px;
+    width: 71px;
+    height: 67px;
+    object-fit: cover;
+}
+.unsplash0vgg7cqtwcoIcon {
+    position: absolute;
+    top: 39px;
+    left: 88px;
+    border-radius: 5px;
+    width: 71px;
+    height: 67px;
+    object-fit: cover;
+}
+.unsplashcn2fepxerriIcon {
+    position: absolute;
+    top: 38px;
+    left: 165px;
+    border-radius: 5px;
+    width: 71px;
+    height: 67px;
+    object-fit: cover;
+}
+.unsplashbexwsdm5bcwIcon {
+    position: absolute;
+    top: 37px;
+    left: 242px;
+    border-radius: 5px;
+    width: 71px;
+    height: 67px;
+    object-fit: cover;
+}
+.unsplasheS7Xq0fakIcon {
+    position: absolute;
+    top: 37px;
+    left: 319px;
+    border-radius: 5px;
+    width: 71px;
+    height: 67px;
+    object-fit: cover;
+}
+.sharedMedia {
+    position: absolute;
+    top: 0px;
+    left: 35px;
+    width: 390px;
+    height: 106px;
+    color: #fff;
+}
+.sharedMediaSideBar {
+    position: absolute;
+    top: 107px;
+    left: 1296px;
+    width: 425px;
+    height: 1054px;
+}
+.messengerDashboard {
+    position: relative;
+    border-radius: 20px;
+    background-color: #171821;
+    width: 100%;
+    height: 1204px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 16px;
+    color: #b5bfd6;
+    font-family: Inter;
+}
+

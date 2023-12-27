@@ -1,0 +1,1195 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+.myBody {
+  	margin: 0; line-height: normal;
+}
+.sl04262030310101Icon {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1600px;
+    height: 1200px;
+    object-fit: cover;
+    opacity: 0.2;
+    mix-blend-mode: difference;
+}
+.maskGroupIcon1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+.profilePictureChild {
+    position: absolute;
+    height: 9.77%;
+    width: 12.47%;
+    top: 47.62%;
+    right: 0%;
+    bottom: 42.62%;
+    left: 87.53%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: contain;
+}
+.profilePicture {
+    position: absolute;
+    top: 0.5px;
+    left: 383.7px;
+    width: 55.19px;
+    height: 40px;
+}
+.notificationIcon1 {
+    position: absolute;
+    height: 75.31%;
+    width: 5.36%;
+    top: 7.4%;
+    right: 17.98%;
+    bottom: 17.28%;
+    left: 76.67%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.groupChild {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 8px;
+    background-color: #f5f5f7;
+    width: 310px;
+    height: 40px;
+}
+.searchBarChild {
+    position: absolute;
+    height: 51.29%;
+    width: 6.62%;
+    top: 28.11%;
+    right: 88.28%;
+    bottom: 20.61%;
+    left: 5.1%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.searchBar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 310px;
+    height: 40px;
+}
+.navigation {
+    position: absolute;
+    top: 54px;
+    left: 954px;
+    width: 438.9px;
+    height: 40.5px;
+}
+.menuChild {
+    position: absolute;
+    top: 49px;
+    left: 48px;
+    border-radius: 24px;
+    background-color: #0c0b0b;
+    filter: blur(60px);
+    width: 124px;
+    height: 804px;
+    opacity: 0.7;
+}
+.menuItem {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 24px;
+    background-color: #0c0b0b;
+    width: 220px;
+    height: 852px;
+}
+.tche {
+    position: absolute;
+    top: 32.67px;
+    left: 40px;
+    font-size: 48px;
+    font-family: 'Baloo Bhai';
+    color: #fff;
+}
+.dashboard {
+    position: absolute;
+    top: 3px;
+    left: 42px;
+    font-weight: 600;
+}
+.dashboardBlack24dp111 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 26px;
+    height: 26px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.dashboardParent {
+    position: absolute;
+    top: 180px;
+    left: 40px;
+    width: 122px;
+    height: 26px;
+    color: #fff;
+}
+.settings {
+    position: absolute;
+    top: 2px;
+    left: 42px;
+}
+.groupItem {
+    position: absolute;
+    height: 100%;
+    width: 26.26%;
+    top: 0%;
+    right: 73.74%;
+    bottom: 0%;
+    left: 0%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.settingsParent {
+    position: absolute;
+    top: 508px;
+    left: 40px;
+    width: 99px;
+    height: 26px;
+}
+.logout {
+    position: absolute;
+    top: 3px;
+    left: 42px;
+}
+.groupInner {
+    position: absolute;
+    height: 100%;
+    width: 28.89%;
+    top: 0%;
+    right: 71.11%;
+    bottom: 0%;
+    left: 0%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.logoutParent {
+    position: absolute;
+    top: 785px;
+    left: 40px;
+    width: 90px;
+    height: 26px;
+    color: #fff;
+}
+.vectorIcon4 {
+    position: absolute;
+    height: 87.94%;
+    width: 100%;
+    top: 7.69%;
+    right: 0%;
+    bottom: 4.37%;
+    left: 0%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.rectangleParent {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 26px;
+    height: 26px;
+}
+.inboxParent {
+    position: absolute;
+    top: 426px;
+    left: 40px;
+    width: 80px;
+    height: 26px;
+}
+.team {
+    position: absolute;
+    top: 3px;
+    left: 41.87px;
+}
+.teamParent {
+    position: absolute;
+    top: 344px;
+    left: 40.13px;
+    width: 82.87px;
+    height: 26px;
+}
+.statsIcon1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 26px;
+    height: 26px;
+    object-fit: cover;
+}
+.statisticsParent {
+    position: absolute;
+    top: 262px;
+    left: 40px;
+    width: 105px;
+    height: 26px;
+}
+.menu {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    width: 220px;
+    height: 853px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+.headerChild {
+    position: absolute;
+    top: 32.17px;
+    left: 0px;
+    border-radius: 14px;
+    background-color: #f5f5f7;
+    width: 620px;
+    height: 160px;
+}
+.headerItem {
+    position: absolute;
+    top: 0px;
+    left: 311px;
+    width: 303.01px;
+    height: 148.03px;
+    object-fit: cover;
+    opacity: 0.8;
+}
+.headerInner {
+    position: absolute;
+    top: 76.03px;
+    left: 311px;
+    width: 303.02px;
+    height: 148.02px;
+    object-fit: cover;
+    opacity: 0.8;
+}
+.helloMark1 {
+    position: absolute;
+    top: 78.59px;
+    left: 32.5px;
+    font-weight: 500;
+    white-space: pre-wrap;
+}
+.itsGoodTo1 {
+    position: absolute;
+    top: 128.06px;
+    left: 32.5px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5a5a5a;
+}
+.header {
+    position: absolute;
+    top: 23.08px;
+    left: 289px;
+    width: 620px;
+    height: 224.05px;
+}
+.statsBox2Child {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 14px;
+    background-color: #f5f5f7;
+    width: 208px;
+    height: 96.33px;
+}
+.courses {
+    margin: 0;
+}
+.coursesInProgress {
+    position: absolute;
+    top: 26px;
+    left: 53.67px;
+    line-height: 24px;
+}
+.div {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 64px;
+    font-family: 'Baloo Bhai';
+    display: inline-block;
+    width: 38.14px;
+    height: 70.72px;
+}
+.coursesInProgressParent {
+    position: absolute;
+    top: 4.05px;
+    left: 37.17px;
+    width: 133.67px;
+    height: 74px;
+}
+.statsBox2 {
+    position: absolute;
+    top: 0px;
+    left: 231.78px;
+    width: 208px;
+    height: 96.33px;
+}
+.coursesCompleted {
+    position: absolute;
+    top: 26px;
+    left: 62.15px;
+    line-height: 24px;
+}
+.div1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 64px;
+    font-family: 'Baloo Bhai';
+}
+.coursesCompletedParent {
+    position: absolute;
+    top: 4.05px;
+    left: 35.26px;
+    width: 138.15px;
+    height: 102px;
+}
+.statsBox1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 208px;
+    height: 106.05px;
+}
+.statsBoxes {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 439.78px;
+    height: 106.05px;
+    font-family: Roboto;
+}
+.groupChild1 {
+    position: absolute;
+    top: 0.08px;
+    left: 0.78px;
+    border-radius: 12px;
+    background: linear-gradient(230.04deg, #5b5b5b, #232323);
+    width: 439px;
+    height: 96px;
+}
+.maskGroupIcon2 {
+    position: absolute;
+    top: 0.08px;
+    left: 0.78px;
+    width: 439px;
+    height: 96px;
+    object-fit: cover;
+}
+.vectorIcon5 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.frameChild {
+    position: absolute;
+    height: 46.15%;
+    width: 5.77%;
+    top: 26.92%;
+    right: 47.12%;
+    bottom: 26.92%;
+    left: 47.12%;
+    border-radius: 8px;
+    background-color: #0c0b0b;
+}
+.frameItem {
+    position: absolute;
+    height: 46.15%;
+    width: 5.77%;
+    top: 47.12%;
+    right: 21.15%;
+    bottom: 6.73%;
+    left: 73.08%;
+    border-radius: 8px;
+    background-color: #0c0b0b;
+    transform:  rotate(90deg);
+    transform-origin: 0 0;
+}
+.frame {
+    position: absolute;
+    top: 21.09px;
+    left: 360.78px;
+    width: 52px;
+    height: 52px;
+    overflow: hidden;
+}
+.createTask {
+    position: absolute;
+    top: 22.08px;
+    left: 32.78px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    white-space: pre-wrap;
+}
+.createANew1 {
+    position: absolute;
+    top: 53.08px;
+    left: 32.78px;
+    font-size: 14px;
+    color: #c7c7c7;
+}
+.statsBoxesParent {
+    position: absolute;
+    top: 118.92px;
+    left: 952.22px;
+    width: 439.78px;
+    height: 106.05px;
+    font-size: 16px;
+}
+.april1120211 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-transform: capitalize;
+    font-weight: 500;
+    opacity: 0.7;
+}
+.today {
+    position: absolute;
+    top: 38.03px;
+    left: 0px;
+    font-size: 28px;
+    text-transform: capitalize;
+}
+.groupChild2 {
+    position: absolute;
+    height: 15.79%;
+    width: 21.82%;
+    top: 18%;
+    right: 6.14%;
+    bottom: 66.21%;
+    left: 72.05%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.sun {
+    position: relative;
+    font-size: 18px;
+}
+.div2 {
+    position: relative;
+    opacity: 0.3;
+}
+.sunParent {
+    height: 116px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+.b {
+    position: relative;
+}
+.frameParent {
+    position: absolute;
+    top: 104px;
+    left: 1px;
+    width: 439px;
+    height: 124px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 16px;
+    box-sizing: border-box;
+    gap: 28px;
+    text-align: center;
+}
+.april112021Parent {
+    position: absolute;
+    top: 246.97px;
+    left: 952px;
+    width: 440px;
+    height: 228px;
+    font-size: 20px;
+    color: #000;
+}
+.maskGroupIcon3 {
+    position: absolute;
+    top: -100.99px;
+    left: 119.66px;
+    width: 364.86px;
+    height: 358.15px;
+    object-fit: contain;
+}
+.dailyStandupCall1 {
+    position: absolute;
+    top: 26px;
+    left: 30px;
+    font-weight: 600;
+}
+.am {
+    position: absolute;
+    top: 30.46px;
+    right: 30.22px;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-block;
+    width: 67.78px;
+    height: 19.8px;
+}
+.discussTeamTasks1 {
+    position: absolute;
+    top: 58px;
+    left: 30px;
+    font-size: 14px;
+    display: inline-block;
+    width: 212px;
+    opacity: 0.8;
+}
+.frameInner {
+    position: absolute;
+    top: 109px;
+    left: 99.01px;
+    border-radius: 50%;
+    width: 36.56px;
+    height: 36.56px;
+    object-fit: cover;
+}
+.frameChild1 {
+    position: absolute;
+    top: 109.68px;
+    left: 76.16px;
+    border-radius: 50%;
+    width: 36.56px;
+    height: 36.56px;
+    object-fit: cover;
+}
+.frameChild2 {
+    position: absolute;
+    top: 109.68px;
+    left: 53.31px;
+    border-radius: 50%;
+    width: 36.56px;
+    height: 36.56px;
+    object-fit: cover;
+}
+.frameChild3 {
+    position: absolute;
+    top: 109.68px;
+    left: 30.47px;
+    border-radius: 50%;
+    width: 36.56px;
+    height: 36.56px;
+    object-fit: cover;
+}
+.groupChild3 {
+    position: absolute;
+    height: 35.85%;
+    width: 52.98%;
+    top: 31.31%;
+    right: 22.69%;
+    bottom: 32.85%;
+    left: 24.32%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: contain;
+}
+.group4 {
+    position: absolute;
+    height: 20.45%;
+    width: 9.16%;
+    top: 62.5%;
+    right: 7.63%;
+    bottom: 17.05%;
+    left: 83.21%;
+}
+.maskGroupParent {
+    position: absolute;
+    top: 507px;
+    left: 999px;
+    border-radius: 20px;
+    background-color: #3a3a3a;
+    width: 393px;
+    height: 176px;
+    overflow: hidden;
+    font-size: 18px;
+    color: #fff;
+}
+.brandIdentityMeeting1 {
+    position: absolute;
+    top: 24px;
+    left: 30px;
+    font-weight: 600;
+}
+.discussBrandIdentity1 {
+    position: absolute;
+    top: 55px;
+    left: 30px;
+    font-size: 14px;
+    display: inline-block;
+    width: 231px;
+    opacity: 0.8;
+}
+.groupChild5 {
+    position: absolute;
+    height: 45.49%;
+    width: 45.49%;
+    top: 25.99%;
+    right: 27.85%;
+    bottom: 28.53%;
+    left: 26.67%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: contain;
+}
+.group6 {
+    position: absolute;
+    height: 20.45%;
+    width: 9.16%;
+    top: 62.5%;
+    right: 19.85%;
+    bottom: 17.05%;
+    left: 70.99%;
+}
+.maskGroupGroup {
+    position: absolute;
+    top: 715px;
+    left: 999px;
+    border-radius: 20px;
+    background-color: #3a3a3a;
+    width: 393px;
+    height: 176px;
+    overflow: hidden;
+    font-size: 18px;
+    color: #fff;
+}
+.yourStatistics {
+    position: absolute;
+    top: 0px;
+    left: 4px;
+    font-weight: 500;
+}
+.workingHours {
+    position: absolute;
+    top: 9px;
+    left: 0px;
+    font-weight: 500;
+}
+.myCourses {
+    position: absolute;
+    top: 9px;
+    left: 165px;
+    font-weight: 500;
+    opacity: 0.3;
+}
+.groupChild6 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 11.37px;
+    background-color: #f5f5f7;
+    width: 125.05px;
+    height: 45.47px;
+}
+.weekly {
+    position: absolute;
+    top: 13px;
+    left: 23.1px;
+    display: inline-block;
+    width: 61.1px;
+    height: 21.32px;
+}
+.groupChild7 {
+    position: absolute;
+    height: 12.21%;
+    width: 7.82%;
+    top: 46.18%;
+    right: 18.47%;
+    bottom: 41.61%;
+    left: 73.71%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: contain;
+}
+.rectangleGroup {
+    position: absolute;
+    top: 0px;
+    left: 494.49px;
+    width: 125.05px;
+    height: 45.47px;
+    font-size: 18.47px;
+    font-family: Roboto;
+}
+.workingHoursParent {
+    position: absolute;
+    top: 52px;
+    left: 4px;
+    width: 619.54px;
+    height: 45.47px;
+    font-size: 18px;
+}
+.mon1 {
+    position: absolute;
+    top: 306px;
+    left: 120.45px;
+    text-transform: capitalize;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: 44px;
+}
+.div15 {
+    position: absolute;
+    top: 255px;
+    left: 0px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.div16 {
+    position: absolute;
+    top: 204px;
+    left: 0px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.div17 {
+    position: absolute;
+    top: 153px;
+    left: 0px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.div18 {
+    position: absolute;
+    top: 102px;
+    left: 0px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.div19 {
+    position: absolute;
+    top: 51px;
+    left: 0px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.div20 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.tue1 {
+    position: absolute;
+    top: 306px;
+    left: 209.45px;
+    text-transform: capitalize;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: 44px;
+}
+.wed1 {
+    position: absolute;
+    top: 306px;
+    left: 298.45px;
+    text-transform: capitalize;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: 44px;
+}
+.thu1 {
+    position: absolute;
+    top: 306px;
+    left: 387.45px;
+    text-transform: capitalize;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: 44px;
+}
+.fri1 {
+    position: absolute;
+    top: 306px;
+    left: 476.45px;
+    text-transform: capitalize;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: 44px;
+}
+.sat1 {
+    position: absolute;
+    top: 306px;
+    left: 565.45px;
+    text-transform: capitalize;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: 44px;
+}
+.sun1 {
+    position: absolute;
+    top: 306px;
+    left: 31.45px;
+    text-transform: capitalize;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: 44px;
+}
+.dividerIcon {
+    position: absolute;
+    width: calc(100% - 53.83px);
+    top: calc(50% + 102px);
+    right: 3.64px;
+    left: 50.2px;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.dividerIcon1 {
+    position: absolute;
+    width: calc(100% - 53.83px);
+    top: calc(50% + 51px);
+    right: 3.59px;
+    left: 50.24px;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.dividerIcon2 {
+    position: absolute;
+    width: calc(100% - 53.83px);
+    top: calc(50% - 0px);
+    right: 3.64px;
+    left: 50.2px;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.dividerIcon3 {
+    position: absolute;
+    width: calc(100% - 53.83px);
+    top: calc(50% - 51px);
+    right: 3.64px;
+    left: 50.2px;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.dividerIcon4 {
+    position: absolute;
+    width: calc(100% - 53.83px);
+    top: calc(50% - 102px);
+    right: 3.64px;
+    left: 50.2px;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.groupChild8 {
+    position: absolute;
+    width: calc(100% - 53.83px);
+    top: calc(50% - 153px);
+    right: 3.64px;
+    left: 50.2px;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.monGroup {
+    position: absolute;
+    top: 156px;
+    left: 0px;
+    width: 609.45px;
+    height: 334px;
+    font-size: 18.47px;
+}
+.path2Icon {
+    position: absolute;
+    height: 52.52%;
+    width: 94.24%;
+    top: 33.6%;
+    right: 1.64%;
+    bottom: 13.88%;
+    left: 4.12%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: contain;
+}
+.path3Icon {
+    position: absolute;
+    height: 64.9%;
+    width: 96.34%;
+    top: 29.97%;
+    right: 0%;
+    bottom: 5.13%;
+    left: 3.66%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: contain;
+}
+.circlePointer4Icon1 {
+    position: absolute;
+    top: 315px;
+    right: 131.6px;
+    width: 15.71px;
+    height: 15.71px;
+    object-fit: cover;
+}
+.circlePointer5Icon1 {
+    position: absolute;
+    top: 4.89px;
+    right: 78px;
+    width: 12px;
+    height: 12px;
+    object-fit: cover;
+}
+.thisWeek {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+}
+.circlePointer5Parent {
+    position: absolute;
+    top: 0px;
+    right: 145.48px;
+    width: 90px;
+    height: 21px;
+}
+.circlePointer6Icon1 {
+    position: absolute;
+    top: 5px;
+    right: 78px;
+    width: 12px;
+    height: 12px;
+    object-fit: cover;
+}
+.lastWeekParent {
+    position: absolute;
+    top: 0px;
+    left: 145.48px;
+    width: 90px;
+    height: 21px;
+}
+.groupParent {
+    position: absolute;
+    top: 121px;
+    right: 1.83px;
+    width: 235.48px;
+    height: 21px;
+    font-size: 14px;
+    color: #000;
+}
+.yourStatisticsSection {
+    position: absolute;
+    top: 375px;
+    left: 285px;
+    width: 626.31px;
+    height: 490px;
+    font-size: 24px;
+}
+.statsBox1Item {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 14px;
+    background-color: #f5f5f7;
+    width: 193.33px;
+    height: 96.33px;
+}
+.hoursWorked {
+    position: absolute;
+    top: 39px;
+    left: 0px;
+    line-height: 24px;
+}
+.div21 {
+    position: absolute;
+    top: 0px;
+    left: 0.26px;
+    font-size: 32px;
+    line-height: 89.4%;
+    font-weight: 600;
+}
+.hoursWorkedParent {
+    position: absolute;
+    top: 18px;
+    left: 32px;
+    width: 125px;
+    height: 63px;
+}
+.statsBox11 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 193.33px;
+    height: 96.33px;
+}
+.statsBoxes1 {
+    position: absolute;
+    top: 247px;
+    left: 289px;
+    width: 193.33px;
+    height: 96.33px;
+    font-size: 18px;
+}
+.k {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    line-height: 89.4%;
+    font-weight: 600;
+}
+.moneyPaid {
+    position: absolute;
+    top: 39px;
+    left: 0px;
+    font-size: 18px;
+    line-height: 24px;
+}
+.kParent {
+    position: absolute;
+    top: 18px;
+    left: 24.33px;
+    width: 104px;
+    height: 63px;
+}
+.statsBoxes2 {
+    position: absolute;
+    top: 247px;
+    left: 502.67px;
+    width: 193.33px;
+    height: 96.33px;
+}
+.parent {
+    position: absolute;
+    top: 18px;
+    left: 24.33px;
+    width: 102px;
+    height: 63px;
+}
+.statsBoxes3 {
+    position: absolute;
+    top: 247px;
+    left: 716px;
+    width: 193.33px;
+    height: 96.33px;
+}
+.groupChild9 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+.ellipseDiv {
+    position: absolute;
+    top: 207px;
+    left: 5px;
+    border-radius: 50%;
+    background-color: #2a2a2a;
+    border: 2px solid #2b2b2b;
+    box-sizing: border-box;
+    width: 14px;
+    height: 14px;
+}
+.groupChild10 {
+    position: absolute;
+    top: 32px;
+    left: 12px;
+    max-width: 100%;
+    overflow: hidden;
+    height: 166px;
+    object-fit: cover;
+}
+.groupChild11 {
+    position: absolute;
+    top: 230px;
+    left: 12px;
+    max-width: 100%;
+    overflow: hidden;
+    height: 234px;
+    object-fit: cover;
+}
+.groupDiv {
+    position: absolute;
+    top: 507px;
+    left: 952px;
+    width: 24px;
+    height: 464px;
+}
+.taskManagement {
+    position: absolute;
+    top: 150px;
+    left: 80px;
+    border-radius: 32px;
+    background-color: #fff;
+    box-shadow: 20px 65px 60px rgba(0, 0, 0, 0.2);
+    width: 1440px;
+    height: 900px;
+    overflow: hidden;
+}
+.wwwnickelfoxcom {
+    position: absolute;
+    top: 1130px;
+    left: 1294px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #444;
+    text-align: center;
+}
+.taskManagementDashboard1 {
+    position: relative;
+    background-color: #cbcbce;
+    width: 100%;
+    height: 1200px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 32px;
+    color: #0c0b0b;
+    font-family: Poppins;
+}
+

@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gilroy:wght@500;600;700&display=swap');
+.myBody {
+  	margin: 0; line-height: normal;
+}
+.desktop1Child {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #fafafa;
+    width: 309.21px;
+    height: 1203.57px;
+}
+.iconmediumgrayscale {
+    position: relative;
+    width: 40.16px;
+    height: 53.15px;
+    object-fit: cover;
+}
+.nftgram {
+    position: relative;
+}
+.iconmediumgrayscaleParent {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    font-size: 23.62px;
+    font-family: Pacifico;
+}
+.pages {
+    position: relative;
+    font-weight: 500;
+}
+.iconlycurvedarrowDown2 {
+    position: relative;
+    width: 18.9px;
+    height: 18.9px;
+    display: none;
+}
+.pagesParent {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5.91px;
+}
+.frameWrapper {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    color: #9196a8;
+}
+.iconlycurvedhome {
+    position: relative;
+    width: 22.44px;
+    height: 22.44px;
+    object-fit: cover;
+}
+.iconlycurvedhomeParent {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10.63px;
+}
+.iconlycurveddiscovery {
+    position: relative;
+    width: 23.62px;
+    height: 23.62px;
+    object-fit: cover;
+}
+.groupChild {
+    position: absolute;
+    height: 45.09%;
+    width: 68.45%;
+    top: 48.6%;
+    right: 31.55%;
+    bottom: 6.31%;
+    left: 0%;
+    border-radius: 2.95px;
+    border: 1.8px solid #323336;
+    box-sizing: border-box;
+    transform:  rotate(-45deg);
+    transform-origin: 0 0;
+}
+.groupItem {
+    position: absolute;
+    height: 28.18%;
+    width: 52.91%;
+    top: 42.51%;
+    right: -15.5%;
+    bottom: 29.32%;
+    left: 62.58%;
+    border-radius: 0px 2.95px 2.95px 0px;
+    border: 1.8px solid #323336;
+    box-sizing: border-box;
+    transform:  rotate(45deg);
+    transform-origin: 0 0;
+}
+.groupInner {
+    position: absolute;
+    height: 7.89%;
+    width: 26.7%;
+    top: 93.4%;
+    right: 70.17%;
+    bottom: -1.3%;
+    left: 3.12%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.rectangleParent {
+    position: relative;
+    width: 22.54px;
+    height: 22.44px;
+}
+.frameDiv {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 0px 0px 8.26759147644043px;
+    gap: 35.43px;
+}
+.iconlycurvedtimeCircle {
+    position: relative;
+    width: 22.54px;
+    height: 22.54px;
+    object-fit: cover;
+}
+.iconlycurvedarrowDown2Parent {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10.63px;
+    color: #ff6767;
+}
+.frameParent2 {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 41.34px;
+    color: #323336;
+}
+.frameParent1 {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 0px 0px 8.26759147644043px;
+    gap: 35.43px;
+    color: #9196a8;
+}
+.frameGroup {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 60px;
+}
+.iconlycurvedplus {
+    position: relative;
+    width: 23px;
+    height: 23px;
+    object-fit: cover;
+}
+.iconlycurvedplusParent {
+    align-self: stretch;
+    border-radius: 15px;
+    background-color: #ff6767;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 10.63px;
+    color: #fff;
+}
+.frameParent {
+    position: absolute;
+    top: 45px;
+    left: 54px;
+    height: 1107px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.frameChild {
+    position: relative;
+    width: 35.39px;
+    height: 35.39px;
+    object-fit: cover;
+}
+.groupParent1 {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+    font-size: 16px;
+    color: #9196a8;
+}
+.goodMorningArsinParent {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.rectangleDiv {
+    position: absolute;
+    top: -0.87px;
+    left: -0.87px;
+    border-radius: 15px;
+    background-color: #fafafa;
+    border: 0.9px solid rgba(85, 90, 106, 0.1);
+    box-sizing: border-box;
+    width: 201.74px;
+    height: 46.74px;
+}
+.groupChild1 {
+    position: absolute;
+    top: 2.16px;
+    left: 2.55px;
+    border-radius: 13px;
+    background-color: #fff;
+    box-shadow: 0px 84.07079315185547px 67.26px rgba(0, 0, 0, 0.03), 0px 54.49032974243164px 39.39px rgba(0, 0, 0, 0.02), 0px 32.38282775878906px 21.42px rgba(0, 0, 0, 0.02), 0px 16.814159393310547px 10.93px rgba(0, 0, 0, 0.01), 0px 6.850213527679443px 5.48px rgba(0, 0, 0, 0.01), 0px 1.5568665266036987px 2.65px rgba(0, 0, 0, 0.01);
+    width: 90.4px;
+    height: 40.68px;
+}
+.creators {
+    position: absolute;
+    top: 33.83%;
+    left: 10.88%;
+    font-weight: 500;
+}
+.collectors {
+    position: absolute;
+    top: 33.83%;
+    left: 59.88%;
+    font-weight: 500;
+    color: #9196a8;
+}
+.rectangleGroup {
+    position: relative;
+    width: 200px;
+    height: 45px;
+}
+.frameItem {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+}
+.groupParent2 {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    text-align: center;
+    font-size: 13px;
+}
+.frameParent4 {
+    width: 1030px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 32px;
+    color: #323336;
+}
+.frameChild1 {
+    align-self: stretch;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    height: 0px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+.iconlycurvedarrowDown26 {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+}
+.featuredParent {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+}
+.featuredCreators {
+    position: relative;
+    font-size: 32px;
+    color: #323336;
+}
+.allAuctions {
+    position: relative;
+    font-size: 14.21px;
+    color: #ff6767;
+}
+.frameParent6 {
+    width: 1030px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.frameChild2 {
+    position: relative;
+    width: 62.54px;
+    height: 62.54px;
+    object-fit: cover;
+}
+.skylarDias {
+    position: relative;
+    font-weight: 600;
+}
+.followWrapper {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 12px;
+    color: #ff6767;
+}
+.skylarDiasParent {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+.groupParent3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6.98px;
+}
+.maskGroupIcon {
+    align-self: stretch;
+    position: relative;
+    max-height: 100%;
+    width: 50px;
+    object-fit: cover;
+}
+.maskGroupIcon1 {
+    align-self: stretch;
+    position: relative;
+    max-height: 100%;
+    width: 42.96px;
+    object-fit: cover;
+}
+.maskGroupParent {
+    height: 53.81px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 5px;
+}
+.frameParent9 {
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 7px 44px rgba(225, 226, 231, 0.25);
+    width: 192px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px;
+    box-sizing: border-box;
+    gap: 20px;
+}
+.frameParent12 {
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 7px 44px rgba(225, 226, 231, 0.25);
+    width: 193px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px;
+    box-sizing: border-box;
+    gap: 20px;
+}
+.frameParent8 {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 19px;
+    text-align: center;
+    font-size: 15px;
+    color: #323336;
+}
+.frameParent5 {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 18px;
+}
+.maskGroupIcon15 {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.iconlycurvedbookmark1 {
+    position: relative;
+    width: 17.44px;
+    height: 17.44px;
+    object-fit: cover;
+}
+.iconlycurvedbookmarkWrapper {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+.coolCat05ItsAllInParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.frameChild8 {
+    position: relative;
+    width: 26.16px;
+    height: 26.16px;
+    object-fit: cover;
+}
+.groupParent8 {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6.98px;
+}
+.iconmediumgrayscale1 {
+    position: relative;
+    width: 15.7px;
+    height: 20.93px;
+    object-fit: cover;
+}
+.iconmediumgrayscaleGroup {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4.36px;
+    font-size: 12.21px;
+    color: #323336;
+}
+.frameParent18 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11.34px;
+    color: #9196a8;
+}
+.frameParent17 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4.36px;
+}
+.maskGroupParent3 {
+    border-radius: 20.44px;
+    background-color: #fff;
+    width: 242.44px;
+    height: 358.43px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 8.720917701721191px 8.720917701721191px 13.081377029418945px;
+    box-sizing: border-box;
+    gap: 13.08px;
+}
+.frameChild9 {
+    border-radius: 20.44px;
+    background-color: #fff;
+    width: 242.44px;
+    height: 358.43px;
+}
+.instanceParent {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 25px;
+    font-size: 14.83px;
+    color: #343539;
+}
+.frameParent14 {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 25px;
+}
+.flowerGirlWrapper {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.frameParent22 {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 19px;
+    font-size: 13.34px;
+}
+.frameParent3 {
+    position: absolute;
+    top: 44.65px;
+    left: 346px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 33px;
+    font-size: 14px;
+    color: #9196a8;
+}
+.desktop11 {
+    position: absolute;
+    top: 57px;
+    left: 143px;
+    background-color: #fdfdfd;
+    filter: blur(150px);
+    width: 1440px;
+    height: 1200px;
+    overflow: hidden;
+}
+.desktop2Child {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #f1f3f4;
+    width: 309.21px;
+    height: 1203.57px;
+}
+.desktop21 {
+    position: absolute;
+    top: 47px;
+    left: 143px;
+    background-color: rgba(253, 253, 253, 0.7);
+    backdrop-filter: blur(64px);
+    width: 1440px;
+    height: 1200px;
+    overflow: hidden;
+}
+.desktop1Parent {
+    position: relative;
+    background-color: #dbdfea;
+    width: 100%;
+    height: 1294px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 15.35px;
+    color: #323336;
+    font-family: Gilroy;
+}
+

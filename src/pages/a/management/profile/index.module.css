@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
+.myBody {
+  	margin: 0; line-height: normal;
+}
+.sideBar1Icon {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 120px;
+    height: 1117px;
+    object-fit: cover;
+}
+.settings {
+    position: absolute;
+    top: 41px;
+    left: 72px;
+    font-size: 32px;
+    color: #1c1c1c;
+}
+.keyboardArrowLeft1 {
+    position: absolute;
+    top: 35px;
+    left: 0px;
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.editProfile {
+    position: absolute;
+    top: 6px;
+    left: 73px;
+}
+.editIcon1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.editProfileParent {
+    position: absolute;
+    top: 164px;
+    left: 40px;
+    width: 210px;
+    height: 45px;
+    color: #1c1c1c;
+}
+.notification {
+    position: absolute;
+    top: 7px;
+    left: 71px;
+    font-weight: 500;
+}
+.notificationsIcon1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.notificationParent {
+    position: absolute;
+    top: 291px;
+    left: 40px;
+    width: 218px;
+    height: 40px;
+}
+.lockParent {
+    position: absolute;
+    top: 413px;
+    left: 40px;
+    width: 174px;
+    height: 40px;
+}
+.appearance {
+    position: absolute;
+    top: 8px;
+    left: 71px;
+    font-weight: 500;
+}
+.settingsParent {
+    position: absolute;
+    top: 535px;
+    left: 40px;
+    width: 221px;
+    height: 41px;
+}
+.helpOutlineParent {
+    position: absolute;
+    top: 658px;
+    left: 40px;
+    width: 129px;
+    height: 40px;
+}
+.sideBar2Child {
+    position: absolute;
+    top: -0.5px;
+    left: 327.5px;
+    border-right: 1px solid #858585;
+    box-sizing: border-box;
+    width: 1px;
+    height: 1118px;
+}
+.sideBar2 {
+    position: absolute;
+    top: 0px;
+    left: 134px;
+    width: 328px;
+    height: 1117px;
+    font-size: 28px;
+    color: #858585;
+}
+.unsplashc8ta0gwpbqgIcon {
+    position: absolute;
+    top: 0px;
+    left: 64px;
+    border-radius: 500px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+.profile1Child {
+    position: absolute;
+    top: 1px;
+    left: 0px;
+    width: 38px;
+    height: 38px;
+    object-fit: cover;
+}
+.profile1 {
+    position: absolute;
+    top: 40px;
+    left: 1584px;
+    width: 104px;
+    height: 40px;
+}
+.unsplashc8ta0gwpbqgIcon1 {
+    position: absolute;
+    top: 60px;
+    left: 1352px;
+    border-radius: 500px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+.editProfile1 {
+    position: absolute;
+    top: 83px;
+    left: 596px;
+    font-size: 45px;
+    font-weight: 600;
+    color: #000;
+    display: inline-block;
+    width: 232px;
+    height: 53px;
+}
+.firstnameChild {
+    position: absolute;
+    top: 36px;
+    left: -2px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 2px solid #858585;
+    box-sizing: border-box;
+    width: 409px;
+    height: 74px;
+}
+.firstName {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-weight: 600;
+}
+.mehrab {
+    position: absolute;
+    top: 59px;
+    left: 27px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #858585;
+}
+.firstname {
+    position: absolute;
+    top: 216px;
+    left: 596px;
+    width: 405px;
+    height: 108px;
+}
+.city1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-weight: 600;
+    display: inline-block;
+    width: 46px;
+}
+.mehrab1 {
+    position: absolute;
+    top: 59px;
+    left: 27px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #858585;
+    display: inline-block;
+    width: 82px;
+}
+.keyboardArrowDown2 {
+    position: absolute;
+    top: 49px;
+    left: 344px;
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.city {
+    position: absolute;
+    top: 720px;
+    left: 596px;
+    width: 405px;
+    height: 108px;
+}
+.stateChild {
+    position: absolute;
+    top: 36px;
+    left: -2px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 2px solid #858585;
+    box-sizing: border-box;
+    width: 414px;
+    height: 74px;
+}
+.state1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-weight: 600;
+    display: inline-block;
+    width: 62.77px;
+}
+.bozorgi {
+    position: absolute;
+    top: 59px;
+    left: 27.33px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #858585;
+    display: inline-block;
+    width: 84.02px;
+}
+.keyboardArrowDown3 {
+    position: absolute;
+    top: 49px;
+    left: 346.22px;
+    width: 48.59px;
+    height: 48px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.state {
+    position: absolute;
+    top: 720px;
+    left: 1062px;
+    width: 410px;
+    height: 108px;
+}
+.emailChild {
+    position: absolute;
+    top: 36px;
+    left: -2px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 2px solid #858585;
+    box-sizing: border-box;
+    width: 877px;
+    height: 74px;
+}
+.email1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-weight: 600;
+    display: inline-block;
+    width: 275.91px;
+}
+.mehrabbozorgibusinessgmailc {
+    position: absolute;
+    top: 59px;
+    left: 27.09px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #858585;
+    display: inline-block;
+    width: 407.4px;
+}
+.emailItem {
+    position: absolute;
+    top: 55px;
+    left: 815.8px;
+    width: 35.43px;
+    height: 35.63px;
+    object-fit: cover;
+}
+.email {
+    position: absolute;
+    top: 342px;
+    left: 596px;
+    width: 873px;
+    height: 108px;
+}
+.passwordChild {
+    position: absolute;
+    top: 36px;
+    left: -2px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 2px solid #858585;
+    box-sizing: border-box;
+    width: 880px;
+    height: 74px;
+}
+.passwordItem {
+    position: absolute;
+    top: 55px;
+    left: 815.79px;
+    width: 35.43px;
+    height: 35.63px;
+    object-fit: cover;
+}
+.password {
+    position: absolute;
+    top: 846px;
+    left: 596px;
+    width: 876px;
+    height: 108px;
+}
+.zboncakIsle {
+    position: absolute;
+    top: 59px;
+    left: 27.19px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #858585;
+    display: inline-block;
+    width: 408.8px;
+}
+.address {
+    position: absolute;
+    top: 468px;
+    left: 596px;
+    width: 876px;
+    height: 108px;
+}
+.contactNumber {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-weight: 600;
+    display: inline-block;
+    width: 276.86px;
+}
+.address2 {
+    position: absolute;
+    top: 594px;
+    left: 596px;
+    width: 876px;
+    height: 108px;
+}
+.lastnameChild {
+    position: absolute;
+    top: 36px;
+    left: -2px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 2px solid #858585;
+    box-sizing: border-box;
+    width: 411px;
+    height: 74px;
+}
+.lastName {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-weight: 600;
+    display: inline-block;
+    width: 126.62px;
+}
+.bozorgi1 {
+    position: absolute;
+    top: 59px;
+    left: 27.13px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #858585;
+    display: inline-block;
+    width: 83.41px;
+}
+.lastname {
+    position: absolute;
+    top: 216px;
+    left: 1065px;
+    width: 407px;
+    height: 108px;
+}
+.groupChild {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 2px solid #ff7008;
+    box-sizing: border-box;
+    width: 182px;
+    height: 57px;
+}
+.cancel {
+    position: absolute;
+    top: 11px;
+    left: 47px;
+}
+.rectangleParent {
+    position: absolute;
+    top: 1007px;
+    left: 593px;
+    width: 180px;
+    height: 55px;
+    font-size: 28px;
+    color: #ff7008;
+}
+.groupItem {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 5px;
+    background-color: #ff7008;
+    width: 180px;
+    height: 55px;
+}
+.save {
+    position: absolute;
+    top: 11px;
+    left: 60px;
+    font-weight: 600;
+}
+.rectangleGroup {
+    position: absolute;
+    top: 1007px;
+    left: 813px;
+    width: 180px;
+    height: 55px;
+    font-size: 28px;
+    color: #fff;
+}
+.macbookPro161 {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 1117px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 26px;
+    color: #1c1c1c;
+    font-family: Roboto;
+}
+

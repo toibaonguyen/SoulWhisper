@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+.myBody {
+  	margin: 0; line-height: normal;
+}
+.frameIcon1 {
+    position: absolute;
+    top: 447px;
+    left: 1142px;
+    width: 369px;
+    height: 339px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.frameIcon2 {
+    position: absolute;
+    top: -247px;
+    left: -292px;
+    width: 1217px;
+    height: 1119px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.groupChild {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+}
+.signInto {
+    position: absolute;
+    top: 13.61%;
+    left: 13.78%;
+}
+.yourAccount {
+    position: absolute;
+    top: 22.62%;
+    left: 13.78%;
+    font-size: 30px;
+}
+.groupItem {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    border-radius: 5px;
+    background: linear-gradient(90.17deg, #09a7bc, #2ec0ee);
+}
+.signIn1 {
+    position: absolute;
+    top: 26.32%;
+    left: 45.2%;
+}
+.rectangleGroup {
+    position: absolute;
+    height: 13.1%;
+    width: 100%;
+    top: 86.9%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+}
+.companyId {
+    position: absolute;
+    top: 0%;
+    left: 8.2%;
+}
+.groupInner {
+    position: absolute;
+    height: 60.32%;
+    width: 91.8%;
+    top: 39.68%;
+    right: 0%;
+    bottom: 0%;
+    left: 8.2%;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+}
+.briefcaseIcon1 {
+    position: absolute;
+    height: 25.4%;
+    width: 3.75%;
+    top: 57.14%;
+    right: 96.25%;
+    bottom: 17.46%;
+    left: 0%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.companyIdParent {
+    position: absolute;
+    height: 31.19%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 68.81%;
+    left: 0%;
+}
+.rectangleDiv {
+    position: absolute;
+    height: 62.3%;
+    width: 91.8%;
+    top: 37.7%;
+    right: 0%;
+    bottom: 0%;
+    left: 8.2%;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+}
+.lockIcon1 {
+    position: absolute;
+    height: 26.23%;
+    width: 3.75%;
+    top: 55.74%;
+    right: 96.25%;
+    bottom: 18.03%;
+    left: 0%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.passwordParent {
+    position: absolute;
+    height: 30.2%;
+    width: 100%;
+    top: 46.04%;
+    right: 0%;
+    bottom: 23.76%;
+    left: 0%;
+}
+.rememberMe {
+    position: absolute;
+    top: 0%;
+    left: 28.46%;
+}
+.groupChild1 {
+    position: absolute;
+    height: 88.89%;
+    width: 13.01%;
+    top: 5.56%;
+    right: 86.99%;
+    bottom: 5.56%;
+    left: 0%;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
+}
+.rememberMeParent {
+    position: absolute;
+    height: 8.91%;
+    width: 28.81%;
+    top: 91.09%;
+    right: 71.19%;
+    bottom: 0%;
+    left: 0%;
+}
+.groupDiv {
+    position: absolute;
+    height: 69.66%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 30.34%;
+    left: 0%;
+    color: #4b4b4b;
+}
+.groupParent {
+    position: absolute;
+    height: 49.32%;
+    width: 72.62%;
+    top: 37.07%;
+    right: 13.61%;
+    bottom: 13.61%;
+    left: 13.78%;
+    font-size: 12px;
+    color: #fff;
+}
+.rectangleParent {
+    position: absolute;
+    height: 77.27%;
+    width: 43.05%;
+    top: 11.3%;
+    right: 7.39%;
+    bottom: 11.43%;
+    left: 49.56%;
+    box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.2);
+}
+.yourLogo {
+    position: absolute;
+    height: 93.21%;
+    width: 66.48%;
+    top: 3.57%;
+    left: 33.52%;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+.frameIcon3 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 28px;
+    height: 28px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.yourLogoParent {
+    position: absolute;
+    height: 3.68%;
+    width: 9.5%;
+    top: 15.24%;
+    right: 9.52%;
+    bottom: 81.08%;
+    left: 80.98%;
+    font-size: 16px;
+}
+.signInChild {
+    position: absolute;
+    top: -50px;
+    left: 1302px;
+    border-radius: 50%;
+    background: linear-gradient(90.17deg, #09a7bc, #2ec0ee);
+    width: 99px;
+    height: 99px;
+}
+.signIn {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 761px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 32px;
+    color: #4b4b4b;
+    font-family: Poppins;
+}
+

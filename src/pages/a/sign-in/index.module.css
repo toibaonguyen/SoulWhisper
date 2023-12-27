@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+.myBody {
+  	margin: 0; line-height: normal;
+}
+.adminLogin {
+    position: absolute;
+    top: 73px;
+    left: 324px;
+    font-weight: 600;
+    display: inline-block;
+    width: 791px;
+}
+.desktop1Child {
+    position: absolute;
+    top: 149px;
+    left: 247px;
+    background-color: #da83f0;
+    width: 977px;
+    height: 849px;
+}
+.desktop1Item {
+    position: absolute;
+    top: 478px;
+    left: 622px;
+    background-color: #d9d9d9;
+    width: 517px;
+    height: 67px;
+}
+.adminId1 {
+    position: absolute;
+    top: 337px;
+    left: 326px;
+    font-weight: 600;
+    text-align: left;
+    display: inline-block;
+    width: 835px;
+    height: 89px;
+}
+.desktop1Inner {
+    position: absolute;
+    top: 337px;
+    left: 622px;
+    background-color: #d9d9d9;
+    width: 517px;
+    height: 67px;
+}
+.password {
+    position: absolute;
+    top: 478px;
+    left: 305px;
+    font-weight: 600;
+    text-align: left;
+    display: inline-block;
+    width: 856px;
+    height: 102px;
+}
+.rectangleDiv {
+    position: absolute;
+    top: 699px;
+    left: 460px;
+    background-color: #7b56ab;
+    width: 546px;
+    height: 104px;
+}
+.login {
+    position: absolute;
+    top: 726px;
+    left: 526px;
+    font-weight: 600;
+    color: #fff;
+    display: inline-block;
+    width: 416px;
+    height: 61px;
+}
+.desktop11 {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 1024px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 48px;
+    color: #000;
+    font-family: Inter;
+}
+

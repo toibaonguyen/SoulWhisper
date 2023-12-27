@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Telegraf:wght@400&display=swap');
+.myBody {
+  	margin: 0; line-height: normal;
+}
+.loginPageChild {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(91, 134, 229, 0.51);
+    width: 1920px;
+    height: 1080px;
+}
+.loginPageItem {
+    position: absolute;
+    top: 0px;
+    left: 648px;
+    border-radius: 50px;
+    background-color: #fff;
+    width: 1325px;
+    height: 1080px;
+}
+.needWebdesign {
+    margin: 0;
+}
+.designSpacee {
+    font-family: Telegraf;
+    color: #5b86e5;
+}
+.needWebdesignForContainer {
+    position: absolute;
+    top: 203px;
+    left: 80px;
+    font-size: 50px;
+    letter-spacing: 0.04em;
+    line-height: 60px;
+    white-space: pre-wrap;
+    display: inline-block;
+    width: 473px;
+    height: 236px;
+}
+.signIn {
+    position: absolute;
+    top: 321px;
+    left: 1023px;
+    font-size: 30px;
+    letter-spacing: 0.08em;
+    line-height: 40px;
+    color: #000;
+}
+.signupHere {
+    color: #5b86e5;
+}
+.dontHaveAnContainer {
+    position: absolute;
+    top: 246px;
+    left: 156px;
+    letter-spacing: 0.08em;
+    line-height: 40px;
+    color: #000;
+}
+.email {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    letter-spacing: 0.08em;
+    line-height: 40px;
+}
+.inputNameChild {
+    position: absolute;
+    top: 46.5px;
+    left: -0.5px;
+    border-top: 1px solid #9d9d9d;
+    box-sizing: border-box;
+    width: 576px;
+    height: 1px;
+}
+.inputName {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 575px;
+    height: 47px;
+}
+.inputName1 {
+    position: absolute;
+    top: 76px;
+    left: 0px;
+    width: 575px;
+    height: 47px;
+}
+.loginContentChild {
+    position: absolute;
+    top: 167px;
+    left: 0px;
+    border-radius: 8px;
+    background-color: #5b86e5;
+    width: 575px;
+    height: 60px;
+}
+.login2 {
+    position: absolute;
+    top: 177px;
+    left: 263px;
+    letter-spacing: 0.08em;
+    line-height: 40px;
+    color: #fff;
+}
+.loginContent {
+    position: absolute;
+    top: 473px;
+    left: 1023px;
+    width: 575px;
+    height: 286px;
+    color: #9d9d9d;
+}
+.figmacomdesignspacee {
+    position: absolute;
+    top: 1014px;
+    left: 201px;
+    letter-spacing: 0.08em;
+    line-height: 40px;
+}
+.logoChild {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 0px 120px 120px 0px;
+    background-color: #5b86e5;
+    width: 303px;
+    height: 303px;
+}
+.s {
+    position: absolute;
+    top: 29px;
+    left: 54px;
+    letter-spacing: 0.08em;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 176.18px;
+    height: 287.23px;
+}
+.logo {
+    position: absolute;
+    top: 589px;
+    left: 165px;
+    box-shadow: 0px 26px 56px rgba(0, 0, 0, 0.25);
+    width: 303px;
+    height: 316.23px;
+    text-align: center;
+    font-size: 300px;
+    color: #abc1f2;
+}
+.loginPage {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1973px;
+    height: 1080px;
+}
+.login1 {
+    position: absolute;
+    top: 123px;
+    left: 154px;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+}
+.login {
+    position: relative;
+    background-color: #5b86e5;
+    width: 100%;
+    height: 1325px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 16px;
+    color: #fff;
+    font-family: Telegraf;
+}
+
