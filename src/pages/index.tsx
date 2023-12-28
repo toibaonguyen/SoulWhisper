@@ -11,8 +11,8 @@ const LandingPage:NextPage = () => {
       			<div className={styles.footer}>
         				<div className={styles.healhtycarelyParent}>
           					<b className={styles.healhtycarely}>``
-            						<span>Healhty</span>
-            						<span className={styles.carely}>Carely</span>
+            						<span>Soul</span>
+            						<span className={styles.carely}>Whisper</span>
           					</b>
           					<div className={styles.thisFreeAppContainer}>
             						<p className={styles.youAOneStop}>This free App provides a solution to your health needs by offering</p>
@@ -60,7 +60,7 @@ const LandingPage:NextPage = () => {
         				<div className={styles.testimonial1}>
           					<div className={styles.testimonialChild} />
           					<div className={styles.healthycarelyIsAnContainer}>
-            						<p className={styles.youAOneStop}>“Healthycarely is an website and mobile app</p>
+            						<p className={styles.youAOneStop}>“HealthyWhisper is an website and mobile app</p>
             						<p className={styles.youAOneStop}>for you to feel better or get medical help.</p>
             						<p className={styles.youAOneStop}>We offer you a 24/7 doctor service with no</p>
             						<p className={styles.youAOneStop}>appointment needed”</p>
@@ -134,7 +134,7 @@ const LandingPage:NextPage = () => {
           					</div>
           					<div className={styles.healthcareIsAContainer}>
             						<p className={styles.youAOneStop}>Healthcare is a very painful process, especially if you’re not taking care</p>
-            						<p className={styles.youAOneStop}>of your health and having regular check-ups. HealhtyCarely makes it</p>
+            						<p className={styles.youAOneStop}>of your health and having regular check-ups. SoulWhisper makes it</p>
             						<p className={styles.youAOneStop}>easier for everyone to schedule a doctor’s appointment.</p>
           					</div>
           					<div className={styles.frameParent1}>
@@ -284,7 +284,7 @@ const LandingPage:NextPage = () => {
           					</p>
         				</b>
         				<div className={styles.healthCarelyIsContainer}>
-          					<p className={styles.youAOneStop}>Health carely is a new way to get health insurance quotes. We offer tools similar to those</p>
+          					<p className={styles.youAOneStop}>Health Whisper is a new way to get health insurance quotes. We offer tools similar to those</p>
           					<p className={styles.youAOneStop}>provided by insurance companies for free and prices are based on donations and not</p>
           					<p className={styles.youAOneStop}>restrictive health plan networks.</p>
         				</div>
@@ -294,8 +294,8 @@ const LandingPage:NextPage = () => {
         				<div className={styles.navbar}>
           					<div className={styles.healhtycarelyGroup}>
             						<b className={styles.healhtycarely}>
-              							<span>Healhty</span>
-              							<span className={styles.carely}>Carely</span>
+              							<span>Soul</span>
+              							<span className={styles.carely}>Whisper</span>
             						</b>
             						<div className={styles.homeGroup}>
               							<div className={styles.contactUs}>Home</div>

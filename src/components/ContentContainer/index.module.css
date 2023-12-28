@@ -1,0 +1,12 @@
+.container {
+    display: inline-block;
+    background-color: #fff;
+    padding: 10px;
+    min-width: content;
+    border-radius: 15px;
+    /* Thiết lập min-width thành content để chỉ mở rộng vừa đủ */
+    white-space: nowrap;
+    /* Ngăn ngừa việc xuống dòng */
+    overflow: hidden;
+    /* Ẩn phần nội dung bị tràn ra khỏi khung */
+}

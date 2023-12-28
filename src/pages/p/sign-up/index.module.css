@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 .myBody {
   	margin: 0; line-height: normal;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwC7Lt6Vv3jGhlQPb7pEwp6yWdu5TByNjOIg&usqp=CAU");
 }
 
 .loginPageDefaultStatesChild {

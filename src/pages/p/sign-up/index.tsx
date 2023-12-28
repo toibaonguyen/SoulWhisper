@@ -1,5 +1,4 @@
 import * as React from "react";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
@@ -8,7 +7,6 @@ import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -28,26 +26,27 @@ export default function SignUp() {
       email: data.get("email"),
       password: data.get("password"),
       birthday: data.get("birthday"),
-      name:data.get("name"),
-      gender:data.get("gender")
+      name: data.get("name"),
+      gender: data.get("gender"),
     });
 
-    try{
+    try {
       await CreatePatient({
         email: data.get("email")?.toString() || "",
         password: data.get("password")?.toString() || "",
-        birthday: new Date(Date.parse(data.get("birthday")?.toString().replace("/","-") || "2000-10-10")),
+        birthday: new Date(
+          Date.parse(
+            data.get("birthday")?.toString().replace("/", "-") || "2000-10-10"
+          )
+        ),
         name: data.get("name")?.toString() || "",
         gender: data.get("gender")?.toString() || "MALE",
         bloodType: "",
-       
-      })
+      });
 
-      console.log("OKOK")
-    }
-    catch(e)
-    {
-      console.log("????")
+      console.log("OKOK");
+    } catch (e) {
+      console.log("????");
       console.error(e);
     }
   };
@@ -55,7 +54,17 @@ export default function SignUp() {
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <ThemeProvider theme={defaultTheme}>
-        <Container component="main" maxWidth="xs">
+        <Container
+          component="main"
+          maxWidth="xs"
+          style={{
+            backgroundColor: "white",
+            borderRadius: 15,
+            padding: 15,
+            alignSelf: "center",
+            justifySelf: "center",
+          }}
+        >
           <CssBaseline />
           <Box
             sx={{
@@ -65,7 +74,7 @@ export default function SignUp() {
               alignItems: "center",
             }}
           >
-            <Typography component="h1" variant="h5">
+            <Typography component="h1" variant="h5" fontWeight={"bold"}>
               Sign up
             </Typography>
             <Box
@@ -87,7 +96,11 @@ export default function SignUp() {
                   />
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                  <DateTimePicker format="YYYY-MM-DD" views={["year","month","day"]} name="birthday"/>
+                  <DateTimePicker
+                    format="YYYY-MM-DD"
+                    views={["year", "month", "day"]}
+                    name="birthday"
+                  />
                 </Grid>
                 <Grid item xs={12}>
                   <TextField
@@ -121,6 +134,7 @@ export default function SignUp() {
                       // value={gender}
                       // onChange={handleGenderChange}
                       row // Hiển thị lựa chọn theo hàng ngang
+                      defaultValue={"MALE"}
                     >
                       <FormControlLabel
                         value="MALE"
