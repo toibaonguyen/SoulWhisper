@@ -25,10 +25,23 @@ export default function Appointment(props: IAppointment) {
         borderColor: "black",
         width: "auto",
         backgroundColor: "white",
-        padding:10
+        padding:15,
+        display:"flex",
+        justifyContent:"space-between"
       }}
     >
-      {props.id}
+      <div>
+        Start at: {props.startTime.toDateString()} - End at: {props.endTime.toDateString()}
+      </div>
+      <div>
+      <div>
+        status: {props.status.replace("_"," ")}
+      </div>
+      <div>
+        type: {props.type.replace("_"," ")}
+      </div>
+      </div>
+     
     </div>
   );
 }

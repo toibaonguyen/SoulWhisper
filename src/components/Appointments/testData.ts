@@ -21,7 +21,7 @@ export const appointment1s = [
         type: "FIXED_TIME",
         startTime:new Date(),
         endTime:new Date(),
-        status:"NOT_OCCURRED",
+        status:"FOLLOW_UP",
         diagnosis:" string | undefined;",
         prescription: "string | undefined;",
         notes: "string | undefined;",

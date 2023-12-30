@@ -42,6 +42,7 @@ export default function Appointments() {
               }}
               id="controllable-statuses"
               options={AppointmentStatuses}
+              getOptionLabel={a=>a.replace("_"," ")}
               sx={{ width: 300 }}
               renderInput={(params) => <TextField {...params} label="Status" />}
             />
@@ -52,35 +53,96 @@ export default function Appointments() {
               }}
               id="controllable-types"
               options={AppointmentTypes}
+              getOptionLabel={a=>a.replace("_"," ")}
               sx={{ width: 300, marginLeft: 5 }}
               renderInput={(params) => <TextField {...params} label="Type" />}
             />
           </div>
         </ContentContainer>
-        {
-          (appointments.length>0&&type!=null&&status!=null)&&(
-           <Stack gap={2}>
-              {appointments.map((a) => {
-                if (a.type == type && a.status == status) {
-                  return (
-                    <Appointment
-                      id={a.id}
-                      type={a.type}
-                      startTime={a.startTime}
-                      endTime={a.endTime}
-                      prescription={a.prescription}
-                      notes={a.notes}
-                      doctorId={a.doctorId}
-                      patientId={a.patientId}
-                      diagnosis={a.diagnosis}
-                      status={a.status}
-                    />
-                  );
-                }
-              })}
-           </Stack >
-          )
-        }
+        {appointments.length > 0 && type == null && status != null && (
+          <Stack gap={1}>
+            {appointments.map((a) => {
+              if (a.status == status) {
+                return (
+                  <Appointment
+                    id={a.id}
+                    type={a.type}
+                    startTime={a.startTime}
+                    endTime={a.endTime}
+                    prescription={a.prescription}
+                    notes={a.notes}
+                    doctorId={a.doctorId}
+                    patientId={a.patientId}
+                    diagnosis={a.diagnosis}
+                    status={a.status}
+                  />
+                );
+              }
+            })}
+          </Stack>
+        )}
+        {appointments.length > 0 && type != null && status == null && (
+          <Stack gap={1}>
+            {appointments.map((a) => {
+              if (a.type == type) {
+                return (
+                  <Appointment
+                    id={a.id}
+                    type={a.type}
+                    startTime={a.startTime}
+                    endTime={a.endTime}
+                    prescription={a.prescription}
+                    notes={a.notes}
+                    doctorId={a.doctorId}
+                    patientId={a.patientId}
+                    diagnosis={a.diagnosis}
+                    status={a.status}
+                  />
+                );
+              }
+            })}
+          </Stack>
+        )}
+        {appointments.length > 0 && type != null && status != null && (
+          <Stack gap={1}>
+            {appointments.map((a) => {
+              if (a.type == type && a.status == status) {
+                return (
+                  <Appointment
+                    id={a.id}
+                    type={a.type}
+                    startTime={a.startTime}
+                    endTime={a.endTime}
+                    prescription={a.prescription}
+                    notes={a.notes}
+                    doctorId={a.doctorId}
+                    patientId={a.patientId}
+                    diagnosis={a.diagnosis}
+                    status={a.status}
+                  />
+                );
+              }
+            })}
+          </Stack>
+        )}
+        {appointments.length > 0 && type == null && status == null && (
+          <Stack gap={1}>
+            {appointments.map((a) => (
+              <Appointment
+                id={a.id}
+                type={a.type}
+                startTime={a.startTime}
+                endTime={a.endTime}
+                prescription={a.prescription}
+                notes={a.notes}
+                doctorId={a.doctorId}
+                patientId={a.patientId}
+                diagnosis={a.diagnosis}
+                status={a.status}
+              />
+            ))}
+          </Stack>
+        )}
         
       </Stack>
     </Box>
