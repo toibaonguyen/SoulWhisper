@@ -1,10 +1,12 @@
 // App.js
-
+import Image from "next/image";
 import React, { useReducer } from "react";
 import styles from "./index.module.css";
 import LeftsideButton from "@/components/LeftsideButton";
 import Logo from "../../../../public/logo.png";
 import Home from "@/components/Home";
+import { Avatar } from "@mui/material";
+import Appointments from "@/components/Appointments";
 
 interface AppState {
   home: boolean;
@@ -158,9 +160,25 @@ function App() {
   const [appState, dispatch] = useReducer(appReducer, initialState);
   return (
     <div className={styles.container}>
+      <div>
       <div className={styles["left-side"]}>
         {/* Nội dung phía bên trái */}
-        <img src={require("../../../../public/logo.png")} alt="Logo.png" />
+
+        <div style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
+          <Image
+            src={Logo}
+            alt="Logo.png"
+            style={{
+              maxHeight: 50,
+              maxWidth: 50,
+              alignSelf: "center",
+              borderRadius: 50,
+            }}
+          />
+  
+          <h2 style={{marginLeft:15}}>Welcome</h2>
+        </div>
+
         <div className={styles["button-container"]}>
           <h3>Home</h3>
           <LeftsideButton
@@ -239,11 +257,8 @@ function App() {
           </LeftsideButton>
         </div>
       </div>
-      <div className={styles["right-side"]}>
-        {
-          appState.home&&<Home/>
-        }
       </div>
+      <div className={styles["right-side"]}>{appState.home && <Home />}{appState.appointment&&<Appointments/>}</div>
     </div>
   );
 }

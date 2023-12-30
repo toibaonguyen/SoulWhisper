@@ -17,6 +17,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/p/app/dashboards/messenger/index.jsx", "src/pages/p/meeting/App.js", "src/pages/p/meeting/index.tsx", "src/pages/p/app/dashboards/messenger/SendMessage.jsx", "src/pages/p/app/dashboards/messenger/ChatBox.jsx", "src/pages/p/app/dashboards/messenger/Message.jsx", "src/pages/p/sign-in/index.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/p/app/dashboards/messenger/index.jsx", "src/pages/p/meeting/App.js", "src/pages/p/meeting/index.tsx", "src/pages/p/app/dashboards/messenger/SendMessage.jsx", "src/pages/p/app/dashboards/messenger/ChatBox.jsx", "src/pages/p/app/dashboards/messenger/Message.jsx", "src/pages/p/sign-in/index.tsx", "src/components/Appointments/ComboBox/index.tsx"],
   "exclude": ["node_modules"]
 }
