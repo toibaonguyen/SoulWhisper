@@ -5,7 +5,6 @@ using soul_whisper.Data;
 using Microsoft.EntityFrameworkCore;
 using soul_whisper.Models.Public.Enum;
 using soul_whisper.Models.Private.Data;
-using soul_whisper.Service;
 using soul_whisper.Models.Private.Enum;
 
 namespace soul_whisper.Controllers;

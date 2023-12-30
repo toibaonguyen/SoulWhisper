@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace soul_whisper.Migrations
 {
     /// <inheritdoc />
-    public partial class InitDB : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -29,14 +29,14 @@ namespace soul_whisper.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "doctors",
+                name: "Doctor",
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     email = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    avatar = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    avatar = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     birthday = table.Column<DateOnly>(type: "date", nullable: false),
                     gender = table.Column<int>(type: "int", nullable: false),
                     activationStatus = table.Column<int>(type: "int", nullable: false),
@@ -45,11 +45,26 @@ namespace soul_whisper.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_doctors", x => x.id);
+                    table.PrimaryKey("PK_Doctor", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "messages",
+                name: "Exercise",
+                columns: table => new
+                {
+                    id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    type = table.Column<int>(type: "int", nullable: false),
+                    name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    duration = table.Column<TimeSpan>(type: "TIME", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Exercise", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Message",
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -59,29 +74,29 @@ namespace soul_whisper.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_messages", x => x.id);
+                    table.PrimaryKey("PK_Message", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "patients",
+                name: "Patient",
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     email = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    BloodType = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    bloodType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     birthday = table.Column<DateOnly>(type: "date", nullable: false),
                     gender = table.Column<int>(type: "int", nullable: false),
                     activationStatus = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_patients", x => x.id);
+                    table.PrimaryKey("PK_Patient", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "rules",
+                name: "Rule",
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -91,7 +106,7 @@ namespace soul_whisper.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_rules", x => x.id);
+                    table.PrimaryKey("PK_Rule", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -104,7 +119,7 @@ namespace soul_whisper.Migrations
                     title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     dateEarned = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    status = table.Column<int>(type: "int", nullable: false),
+                    activationStatus = table.Column<int>(type: "int", nullable: false),
                     createAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     modifiedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -112,55 +127,67 @@ namespace soul_whisper.Migrations
                 {
                     table.PrimaryKey("PK_Achievement", x => x.id);
                     table.ForeignKey(
-                        name: "FK_Achievement_doctors_doctorid",
+                        name: "FK_Achievement_Doctor_doctorid",
                         column: x => x.doctorid,
-                        principalTable: "doctors",
+                        principalTable: "Doctor",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "doctorship_registrations",
+                name: "Doctorship_Registration",
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     status = table.Column<int>(type: "int", nullable: false),
-                    createdAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    createdAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    expiredAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_doctorship_registrations", x => x.id);
+                    table.PrimaryKey("PK_Doctorship_Registration", x => x.id);
                     table.ForeignKey(
-                        name: "FK_doctorship_registrations_doctors_id",
+                        name: "FK_Doctorship_Registration_Doctor_id",
                         column: x => x.id,
-                        principalTable: "doctors",
+                        principalTable: "Doctor",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "exercises",
+                name: "Appointment",
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     type = table.Column<int>(type: "int", nullable: false),
-                    name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    duration = table.Column<TimeSpan>(type: "TIME", nullable: false),
-                    Doctorid = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                    startTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    endTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    diagnosis = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    prescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    notes = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    doctorid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    patientid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    status = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_exercises", x => x.id);
+                    table.PrimaryKey("PK_Appointment", x => x.id);
                     table.ForeignKey(
-                        name: "FK_exercises_doctors_Doctorid",
-                        column: x => x.Doctorid,
-                        principalTable: "doctors",
-                        principalColumn: "id");
+                        name: "FK_Appointment_Doctor_doctorid",
+                        column: x => x.doctorid,
+                        principalTable: "Doctor",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Appointment_Patient_patientid",
+                        column: x => x.patientid,
+                        principalTable: "Patient",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "habits",
+                name: "Habit",
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -171,44 +198,17 @@ namespace soul_whisper.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_habits", x => x.id);
+                    table.PrimaryKey("PK_Habit", x => x.id);
                     table.ForeignKey(
-                        name: "FK_habits_patients_patientid",
+                        name: "FK_Habit_Patient_patientid",
                         column: x => x.patientid,
-                        principalTable: "patients",
+                        principalTable: "Patient",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "patient_doctor_registrations",
-                columns: table => new
-                {
-                    id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    patientid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    doctorid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    status = table.Column<int>(type: "int", nullable: false),
-                    createdAt = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_patient_doctor_registrations", x => x.id);
-                    table.ForeignKey(
-                        name: "FK_patient_doctor_registrations_doctors_doctorid",
-                        column: x => x.doctorid,
-                        principalTable: "doctors",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_patient_doctor_registrations_patients_patientid",
-                        column: x => x.patientid,
-                        principalTable: "patients",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "ratings",
+                name: "Rating",
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -221,44 +221,45 @@ namespace soul_whisper.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ratings", x => x.id);
+                    table.PrimaryKey("PK_Rating", x => x.id);
                     table.ForeignKey(
-                        name: "FK_ratings_doctors_doctorid",
+                        name: "FK_Rating_Doctor_doctorid",
                         column: x => x.doctorid,
-                        principalTable: "doctors",
+                        principalTable: "Doctor",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ratings_patients_patientid",
+                        name: "FK_Rating_Patient_patientid",
                         column: x => x.patientid,
-                        principalTable: "patients",
+                        principalTable: "Patient",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "receipts",
+                name: "Receipt",
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     type = table.Column<int>(type: "int", nullable: false),
                     doctorid = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     patientid = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    Amount = table.Column<decimal>(type: "Money", nullable: false),
-                    Details = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    amount = table.Column<decimal>(type: "Money", nullable: false),
+                    details = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    createAt = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_receipts", x => x.id);
+                    table.PrimaryKey("PK_Receipt", x => x.id);
                     table.ForeignKey(
-                        name: "FK_receipts_doctors_doctorid",
+                        name: "FK_Receipt_Doctor_doctorid",
                         column: x => x.doctorid,
-                        principalTable: "doctors",
+                        principalTable: "Doctor",
                         principalColumn: "id");
                     table.ForeignKey(
-                        name: "FK_receipts_patients_patientid",
+                        name: "FK_Receipt_Patient_patientid",
                         column: x => x.patientid,
-                        principalTable: "patients",
+                        principalTable: "Patient",
                         principalColumn: "id");
                 });
 
@@ -282,39 +283,36 @@ namespace soul_whisper.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "appointments",
+                name: "Appointment_Registration",
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    type = table.Column<int>(type: "int", nullable: false),
-                    startTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    endTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    diagnosis = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    prescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    notes = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    doctorid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     patientid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    status = table.Column<int>(type: "int", nullable: false),
-                    Patient_Doctor_Registrationid = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                    doctorid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    appointmentid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    status = table.Column<int>(type: "int", nullable: true),
+                    createdAt = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    modifiedAt = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_appointments", x => x.id);
+                    table.PrimaryKey("PK_Appointment_Registration", x => x.id);
                     table.ForeignKey(
-                        name: "FK_appointments_doctors_doctorid",
-                        column: x => x.doctorid,
-                        principalTable: "doctors",
+                        name: "FK_Appointment_Registration_Appointment_appointmentid",
+                        column: x => x.appointmentid,
+                        principalTable: "Appointment",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_appointments_patient_doctor_registrations_Patient_Doctor_Registrationid",
-                        column: x => x.Patient_Doctor_Registrationid,
-                        principalTable: "patient_doctor_registrations",
-                        principalColumn: "id");
+                        name: "FK_Appointment_Registration_Doctor_doctorid",
+                        column: x => x.doctorid,
+                        principalTable: "Doctor",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_appointments_patients_patientid",
+                        name: "FK_Appointment_Registration_Patient_patientid",
                         column: x => x.patientid,
-                        principalTable: "patients",
+                        principalTable: "Patient",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -336,70 +334,65 @@ namespace soul_whisper.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_appointments_doctorid",
-                table: "appointments",
+                name: "IX_Appointment_doctorid",
+                table: "Appointment",
                 column: "doctorid");
 
             migrationBuilder.CreateIndex(
-                name: "IX_appointments_Patient_Doctor_Registrationid",
-                table: "appointments",
-                column: "Patient_Doctor_Registrationid");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_appointments_patientid",
-                table: "appointments",
+                name: "IX_Appointment_patientid",
+                table: "Appointment",
                 column: "patientid");
 
             migrationBuilder.CreateIndex(
-                name: "IX_doctors_email",
-                table: "doctors",
+                name: "IX_Appointment_Registration_appointmentid",
+                table: "Appointment_Registration",
+                column: "appointmentid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Appointment_Registration_doctorid",
+                table: "Appointment_Registration",
+                column: "doctorid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Appointment_Registration_patientid",
+                table: "Appointment_Registration",
+                column: "patientid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Doctor_email",
+                table: "Doctor",
                 column: "email",
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_exercises_Doctorid",
-                table: "exercises",
-                column: "Doctorid");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_habits_patientid",
-                table: "habits",
+                name: "IX_Habit_patientid",
+                table: "Habit",
                 column: "patientid");
 
             migrationBuilder.CreateIndex(
-                name: "IX_patient_doctor_registrations_doctorid",
-                table: "patient_doctor_registrations",
-                column: "doctorid");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_patient_doctor_registrations_patientid",
-                table: "patient_doctor_registrations",
-                column: "patientid");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_patients_email",
-                table: "patients",
+                name: "IX_Patient_email",
+                table: "Patient",
                 column: "email",
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_ratings_doctorid",
-                table: "ratings",
+                name: "IX_Rating_doctorid",
+                table: "Rating",
                 column: "doctorid");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ratings_patientid",
-                table: "ratings",
+                name: "IX_Rating_patientid",
+                table: "Rating",
                 column: "patientid");
 
             migrationBuilder.CreateIndex(
-                name: "IX_receipts_doctorid",
-                table: "receipts",
+                name: "IX_Receipt_doctorid",
+                table: "Receipt",
                 column: "doctorid");
 
             migrationBuilder.CreateIndex(
-                name: "IX_receipts_patientid",
-                table: "receipts",
+                name: "IX_Receipt_patientid",
+                table: "Receipt",
                 column: "patientid");
         }
 
@@ -413,40 +406,40 @@ namespace soul_whisper.Migrations
                 name: "Admin");
 
             migrationBuilder.DropTable(
-                name: "appointments");
+                name: "Appointment_Registration");
 
             migrationBuilder.DropTable(
-                name: "doctorship_registrations");
+                name: "Doctorship_Registration");
 
             migrationBuilder.DropTable(
-                name: "exercises");
+                name: "Exercise");
 
             migrationBuilder.DropTable(
-                name: "habits");
+                name: "Habit");
 
             migrationBuilder.DropTable(
-                name: "messages");
+                name: "Message");
 
             migrationBuilder.DropTable(
-                name: "ratings");
+                name: "Rating");
 
             migrationBuilder.DropTable(
-                name: "receipts");
+                name: "Receipt");
 
             migrationBuilder.DropTable(
-                name: "rules");
+                name: "Rule");
 
             migrationBuilder.DropTable(
                 name: "Achievement");
 
             migrationBuilder.DropTable(
-                name: "patient_doctor_registrations");
+                name: "Appointment");
 
             migrationBuilder.DropTable(
-                name: "doctors");
+                name: "Doctor");
 
             migrationBuilder.DropTable(
-                name: "patients");
+                name: "Patient");
         }
     }
 }

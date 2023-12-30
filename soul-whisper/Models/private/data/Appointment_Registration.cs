@@ -15,7 +15,7 @@ public class Appointment_Registration
     public required Patient patient { get; set; }
 
     public required Doctor doctor { get; set; }
-    public required Appointment appointment { get; set; }
+    public Appointment? appointment { get; set; }
     [DefaultValue(RegistrationStatus.PENDING)]
     public RegistrationStatus? status { get; set; }
     [DefaultValue("GETDATE()")]

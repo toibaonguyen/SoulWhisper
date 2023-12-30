@@ -24,9 +24,12 @@ namespace soul_whisper.Migrations
 
             modelBuilder.Entity("soul_whisper.Models.Private.Data.Achievement", b =>
                 {
-                    b.Property<Guid>("id")
+                    b.Property<Guid?>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("activationStatus")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("createAt")
                         .HasColumnType("datetime2");
@@ -44,9 +47,6 @@ namespace soul_whisper.Migrations
                     b.Property<DateTime>("modifiedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("status")
-                        .HasColumnType("int");
-
                     b.Property<string>("title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -63,7 +63,7 @@ namespace soul_whisper.Migrations
 
             modelBuilder.Entity("soul_whisper.Models.Private.Data.Achievement_Image", b =>
                 {
-                    b.Property<Guid>("id")
+                    b.Property<Guid?>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -83,7 +83,7 @@ namespace soul_whisper.Migrations
 
             modelBuilder.Entity("soul_whisper.Models.Private.Data.Admin", b =>
                 {
-                    b.Property<Guid>("id")
+                    b.Property<Guid?>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -118,11 +118,8 @@ namespace soul_whisper.Migrations
 
             modelBuilder.Entity("soul_whisper.Models.Private.Data.Appointment", b =>
                 {
-                    b.Property<Guid>("id")
+                    b.Property<Guid?>("id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("Patient_Doctor_Registrationid")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("diagnosis")
@@ -154,18 +151,51 @@ namespace soul_whisper.Migrations
 
                     b.HasKey("id");
 
-                    b.HasIndex("Patient_Doctor_Registrationid");
+                    b.HasIndex("doctorid");
+
+                    b.HasIndex("patientid");
+
+                    b.ToTable("Appointment");
+                });
+
+            modelBuilder.Entity("soul_whisper.Models.Private.Data.Appointment_Registration", b =>
+                {
+                    b.Property<Guid?>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("appointmentid")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("createdAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("doctorid")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("modifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("patientid")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int?>("status")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("appointmentid");
 
                     b.HasIndex("doctorid");
 
                     b.HasIndex("patientid");
 
-                    b.ToTable("appointments");
+                    b.ToTable("Appointment_Registration");
                 });
 
             modelBuilder.Entity("soul_whisper.Models.Private.Data.Doctor", b =>
                 {
-                    b.Property<Guid>("id")
+                    b.Property<Guid?>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -173,7 +203,6 @@ namespace soul_whisper.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("avatar")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateOnly>("birthday")
@@ -205,15 +234,19 @@ namespace soul_whisper.Migrations
                     b.HasIndex("email")
                         .IsUnique();
 
-                    b.ToTable("doctors");
+                    b.ToTable("Doctor");
                 });
 
             modelBuilder.Entity("soul_whisper.Models.Private.Data.Doctorship_Registration", b =>
                 {
-                    b.Property<Guid>("id")
+                    b.Property<Guid?>("id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("createdAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("expiredAt")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("status")
@@ -221,16 +254,13 @@ namespace soul_whisper.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("doctorship_registrations");
+                    b.ToTable("Doctorship_Registration");
                 });
 
             modelBuilder.Entity("soul_whisper.Models.Private.Data.Exercise", b =>
                 {
-                    b.Property<Guid>("id")
+                    b.Property<Guid?>("id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("Doctorid")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("description")
@@ -249,14 +279,12 @@ namespace soul_whisper.Migrations
 
                     b.HasKey("id");
 
-                    b.HasIndex("Doctorid");
-
-                    b.ToTable("exercises");
+                    b.ToTable("Exercise");
                 });
 
             modelBuilder.Entity("soul_whisper.Models.Private.Data.Habit", b =>
                 {
-                    b.Property<Guid>("id")
+                    b.Property<Guid?>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -278,12 +306,12 @@ namespace soul_whisper.Migrations
 
                     b.HasIndex("patientid");
 
-                    b.ToTable("habits");
+                    b.ToTable("Habit");
                 });
 
             modelBuilder.Entity("soul_whisper.Models.Private.Data.Message", b =>
                 {
-                    b.Property<Guid>("id")
+                    b.Property<Guid?>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -298,24 +326,24 @@ namespace soul_whisper.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("messages");
+                    b.ToTable("Message");
                 });
 
             modelBuilder.Entity("soul_whisper.Models.Private.Data.Patient", b =>
                 {
-                    b.Property<Guid>("id")
+                    b.Property<Guid?>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("BloodType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("activationStatus")
                         .HasColumnType("int");
 
                     b.Property<DateOnly>("birthday")
                         .HasColumnType("date");
+
+                    b.Property<string>("bloodType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("email")
                         .IsRequired()
@@ -337,39 +365,12 @@ namespace soul_whisper.Migrations
                     b.HasIndex("email")
                         .IsUnique();
 
-                    b.ToTable("patients");
-                });
-
-            modelBuilder.Entity("soul_whisper.Models.Private.Data.Patient_Doctor_Registration", b =>
-                {
-                    b.Property<Guid>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("createdAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("doctorid")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("patientid")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("status")
-                        .HasColumnType("int");
-
-                    b.HasKey("id");
-
-                    b.HasIndex("doctorid");
-
-                    b.HasIndex("patientid");
-
-                    b.ToTable("patient_doctor_registrations");
+                    b.ToTable("Patient");
                 });
 
             modelBuilder.Entity("soul_whisper.Models.Private.Data.Rating", b =>
                 {
-                    b.Property<Guid>("id")
+                    b.Property<Guid?>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -398,19 +399,22 @@ namespace soul_whisper.Migrations
 
                     b.HasIndex("patientid");
 
-                    b.ToTable("ratings");
+                    b.ToTable("Rating");
                 });
 
             modelBuilder.Entity("soul_whisper.Models.Private.Data.Receipt", b =>
                 {
-                    b.Property<Guid>("id")
+                    b.Property<Guid?>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<decimal>("Amount")
+                    b.Property<decimal>("amount")
                         .HasColumnType("Money");
 
-                    b.Property<string>("Details")
+                    b.Property<DateTime?>("createAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("details")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -429,12 +433,12 @@ namespace soul_whisper.Migrations
 
                     b.HasIndex("patientid");
 
-                    b.ToTable("receipts");
+                    b.ToTable("Receipt");
                 });
 
             modelBuilder.Entity("soul_whisper.Models.Private.Data.Rule", b =>
                 {
-                    b.Property<Guid>("id")
+                    b.Property<Guid?>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -451,7 +455,7 @@ namespace soul_whisper.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("rules");
+                    b.ToTable("Rule");
                 });
 
             modelBuilder.Entity("soul_whisper.Models.Private.Data.Achievement", b =>
@@ -468,7 +472,7 @@ namespace soul_whisper.Migrations
             modelBuilder.Entity("soul_whisper.Models.Private.Data.Achievement_Image", b =>
                 {
                     b.HasOne("soul_whisper.Models.Private.Data.Achievement", "belongTo")
-                        .WithMany("image")
+                        .WithMany("images")
                         .HasForeignKey("belongToid")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -478,10 +482,6 @@ namespace soul_whisper.Migrations
 
             modelBuilder.Entity("soul_whisper.Models.Private.Data.Appointment", b =>
                 {
-                    b.HasOne("soul_whisper.Models.Private.Data.Patient_Doctor_Registration", null)
-                        .WithMany("appointments")
-                        .HasForeignKey("Patient_Doctor_Registrationid");
-
                     b.HasOne("soul_whisper.Models.Private.Data.Doctor", "doctor")
                         .WithMany("appointments")
                         .HasForeignKey("doctorid")
@@ -493,6 +493,33 @@ namespace soul_whisper.Migrations
                         .HasForeignKey("patientid")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("doctor");
+
+                    b.Navigation("patient");
+                });
+
+            modelBuilder.Entity("soul_whisper.Models.Private.Data.Appointment_Registration", b =>
+                {
+                    b.HasOne("soul_whisper.Models.Private.Data.Appointment", "appointment")
+                        .WithMany()
+                        .HasForeignKey("appointmentid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("soul_whisper.Models.Private.Data.Doctor", "doctor")
+                        .WithMany("appointmentRegistrations")
+                        .HasForeignKey("doctorid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("soul_whisper.Models.Private.Data.Patient", "patient")
+                        .WithMany("appointmentRegistrations")
+                        .HasForeignKey("patientid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("appointment");
 
                     b.Navigation("doctor");
 
@@ -510,39 +537,13 @@ namespace soul_whisper.Migrations
                     b.Navigation("registrant");
                 });
 
-            modelBuilder.Entity("soul_whisper.Models.Private.Data.Exercise", b =>
-                {
-                    b.HasOne("soul_whisper.Models.Private.Data.Doctor", null)
-                        .WithMany("exercises")
-                        .HasForeignKey("Doctorid");
-                });
-
             modelBuilder.Entity("soul_whisper.Models.Private.Data.Habit", b =>
                 {
                     b.HasOne("soul_whisper.Models.Private.Data.Patient", "patient")
-                        .WithMany("Habits")
+                        .WithMany("habits")
                         .HasForeignKey("patientid")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("patient");
-                });
-
-            modelBuilder.Entity("soul_whisper.Models.Private.Data.Patient_Doctor_Registration", b =>
-                {
-                    b.HasOne("soul_whisper.Models.Private.Data.Doctor", "doctor")
-                        .WithMany("patientDoctorRegistrations")
-                        .HasForeignKey("doctorid")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("soul_whisper.Models.Private.Data.Patient", "patient")
-                        .WithMany("registrations")
-                        .HasForeignKey("patientid")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("doctor");
 
                     b.Navigation("patient");
                 });
@@ -556,7 +557,7 @@ namespace soul_whisper.Migrations
                         .IsRequired();
 
                     b.HasOne("soul_whisper.Models.Private.Data.Patient", "patient")
-                        .WithMany("ratings")
+                        .WithMany("doctorRatings")
                         .HasForeignKey("patientid")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -583,18 +584,16 @@ namespace soul_whisper.Migrations
 
             modelBuilder.Entity("soul_whisper.Models.Private.Data.Achievement", b =>
                 {
-                    b.Navigation("image");
+                    b.Navigation("images");
                 });
 
             modelBuilder.Entity("soul_whisper.Models.Private.Data.Doctor", b =>
                 {
                     b.Navigation("achievements");
 
+                    b.Navigation("appointmentRegistrations");
+
                     b.Navigation("appointments");
-
-                    b.Navigation("exercises");
-
-                    b.Navigation("patientDoctorRegistrations");
 
                     b.Navigation("ratings");
 
@@ -603,20 +602,15 @@ namespace soul_whisper.Migrations
 
             modelBuilder.Entity("soul_whisper.Models.Private.Data.Patient", b =>
                 {
-                    b.Navigation("Habits");
+                    b.Navigation("appointmentRegistrations");
 
                     b.Navigation("appointments");
 
-                    b.Navigation("ratings");
+                    b.Navigation("doctorRatings");
+
+                    b.Navigation("habits");
 
                     b.Navigation("receipts");
-
-                    b.Navigation("registrations");
-                });
-
-            modelBuilder.Entity("soul_whisper.Models.Private.Data.Patient_Doctor_Registration", b =>
-                {
-                    b.Navigation("appointments");
                 });
 #pragma warning restore 612, 618
         }

@@ -47,7 +47,7 @@ public class PatientService : IOperation
             using (FlatformContext context = new FlatformContext())
             {
                 var patient = await context.patients.FirstOrDefaultAsync(a => a.email == email && a.password == password);
-
+                
                 if (patient == null)
                 {
                     throw new InvalidCredentialException(WRONG_EMAIL_OR_PASSWORD);
@@ -68,7 +68,7 @@ public class PatientService : IOperation
                     string refreshTokenS = refreshToken.ToString();
                     TokenOperator.AddLegitAccessToken(patient.id, accessTokenS, DateTime.Now.AddSeconds(TokenConfig.ACCESS_TOKEN_EXPIRATION_IN_SECONDS));
                     TokenOperator.AddLegitRefreshToken(patient.id, refreshTokenS, DateTime.Now.AddSeconds(TokenConfig.REFRESH_TOKEN_EXPIRATION_IN_SECONDS));
-                    return new AccessRightDTO { accessToken = accessTokenS, accessTokenExpiredAt = DateTime.Now.AddSeconds(TokenConfig.ACCESS_TOKEN_EXPIRATION_IN_SECONDS), refreshToken = refreshTokenS, refreshTokenExpiredAt = DateTime.Now.AddSeconds(TokenConfig.REFRESH_TOKEN_EXPIRATION_IN_SECONDS) };
+                    return new AccessRightDTO { userId= (Guid)patient.id,accessToken = accessTokenS, accessTokenExpiredAt = DateTime.Now.AddSeconds(TokenConfig.ACCESS_TOKEN_EXPIRATION_IN_SECONDS), refreshToken = refreshTokenS, refreshTokenExpiredAt = DateTime.Now.AddSeconds(TokenConfig.REFRESH_TOKEN_EXPIRATION_IN_SECONDS) };
                 }
 
             }
@@ -97,7 +97,7 @@ public class PatientService : IOperation
                     name = patient.name,
                     birthday = patient.birthday,
                     gender = (Gender)Enum.Parse(typeof(Gender), patient.gender),
-                    activationStatus = ActivationStatus.PENDING,
+                    activationStatus = ActivationStatus.ACTIVE,
                     bloodType = patient.bloodType
                 });
                 context.SaveChanges();

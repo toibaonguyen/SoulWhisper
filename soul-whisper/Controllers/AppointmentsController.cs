@@ -92,7 +92,7 @@ public class AppointmentsController : ControllerBase
     {
         var service = new AppointmentService();
         UserDTO user = this.ConvertAccessTokenToUserDTO();
-        if (user.role != UserRole.ADMIN)
+        if (user.role != UserRole.DOCTOR)
         {
             throw new InvalidOperationException(DO_NOT_HAVE_PERMISSION);
         }
@@ -100,4 +100,3 @@ public class AppointmentsController : ControllerBase
         return Ok(new ContainMessageResponseDTO { message = UPDATE_SUCCESSFULLY });
     }
 }
-

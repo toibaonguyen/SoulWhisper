@@ -23,7 +23,7 @@ public class AdminService : IOperation
     public async Task<AccessRightDTO> Login(string email, string password)
     {
         try
-        {
+        { 
             using (FlatformContext context = new FlatformContext())
             {
                 var admin = await context.admins.FirstOrDefaultAsync(a => a.email == email && a.password == password);
@@ -48,7 +48,7 @@ public class AdminService : IOperation
                     string refreshTokenS = refreshToken.ToString();
                     TokenOperator.AddLegitAccessToken(admin.id, accessTokenS, DateTime.Now.AddSeconds(TokenConfig.ACCESS_TOKEN_EXPIRATION_IN_SECONDS));
                     TokenOperator.AddLegitRefreshToken(admin.id, refreshTokenS, DateTime.Now.AddSeconds(TokenConfig.REFRESH_TOKEN_EXPIRATION_IN_SECONDS));
-                    return new AccessRightDTO { accessToken = accessTokenS, accessTokenExpiredAt = DateTime.Now.AddSeconds(TokenConfig.ACCESS_TOKEN_EXPIRATION_IN_SECONDS), refreshToken = refreshTokenS, refreshTokenExpiredAt = DateTime.Now.AddSeconds(TokenConfig.REFRESH_TOKEN_EXPIRATION_IN_SECONDS) };
+                    return new AccessRightDTO { userId= (Guid)admin.id,accessToken = accessTokenS, accessTokenExpiredAt = DateTime.Now.AddSeconds(TokenConfig.ACCESS_TOKEN_EXPIRATION_IN_SECONDS), refreshToken = refreshTokenS, refreshTokenExpiredAt = DateTime.Now.AddSeconds(TokenConfig.REFRESH_TOKEN_EXPIRATION_IN_SECONDS) };
                 }
 
             }

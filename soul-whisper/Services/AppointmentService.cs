@@ -42,7 +42,6 @@ public class AppointmentService
                 {
                     throw new TargetException("Appointment is not exist");
                 }
-                appointment.type = update.type != null ? (AppointmentType)Enum.Parse(typeof(AppointmentType), update.type) : appointment.type;
                 appointment.diagnosis = update.diagnosis != null ? update.diagnosis : appointment.diagnosis;
                 appointment.prescription = update.prescription != null ? update.prescription : appointment.prescription;
                 appointment.notes = update.notes != null ? update.notes : appointment.notes;

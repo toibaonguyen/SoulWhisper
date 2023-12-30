@@ -16,15 +16,16 @@ public class GlobalModifierMiddleware
 
     public async Task InvokeAsync(HttpContext context)
     {
-        // FlatformContext Appcontext=new FlatformContext();
-        // await Appcontext.DeleteDatabase();
-        // await Appcontext.CreateDatabase();
+
+      
         // Xử lý trước khi gửi yêu cầu đến middleware tiếp theo
         // Console.WriteLine("-----------Middleware đang xử lý trước khi gửi yêu cầu đến middleware tiếp theo.");
         TokenOperator.RemoveExpiredTokens();
         // Gọi middleware tiếp theo trong pipeline
         await _next(context);
 
+var d=new FlatformContext();
+await d.CreateDatabase();
         // Xử lý sau khi nhận phản hồi từ middleware tiếp theo
         // Console.WriteLine("-------------Middleware đang xử lý sau khi nhận phản hồi từ middleware tiếp theo.");
     }

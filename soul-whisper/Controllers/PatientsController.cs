@@ -74,7 +74,6 @@ public class PatientsController : ControllerBase
             return Ok(new ContainDataResponseDTO { data = patients });
         }
         return BadRequest(new ContainMessageResponseDTO { message = "User do not have permisstion" });
-
     }
     [HttpPost]
     public async Task<ActionResult<BaseResponseDTO>> CreatePatient(PatientDTO patient)

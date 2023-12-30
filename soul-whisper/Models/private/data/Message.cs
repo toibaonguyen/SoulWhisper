@@ -12,8 +12,8 @@ public class Message
     [Key]
     public Guid? id { get; set; }
 
-    public required Guid sender { get; set; }
+    public  Guid? sender { get; set; }
 
-    public required Guid receiver { get; set; }
+    public  Guid? receiver { get; set; }
     public required DateTime createdAt { get; set; }
 }

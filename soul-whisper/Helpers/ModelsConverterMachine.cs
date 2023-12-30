@@ -92,7 +92,8 @@ public static class ModelsConverterMachine
             birthday = d.birthday,
             gender = d.gender.ToString(),
             activationStatus = d.activationStatus.ToString(),
-            specialty = d.specialty.ToString()
+            specialty = d.specialty.ToString(),
+            wallet=d.moneyInWallet
         };
     }
     static public ExerciseDTO ConvertExerciseToExerciseDTO(Exercise exercise)

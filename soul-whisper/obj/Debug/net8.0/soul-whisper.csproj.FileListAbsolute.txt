@@ -258,3 +258,4 @@ C:\Users\ThaiBao\Desktop\SoulWhilper\SoulWhisper-BE\soul-whisper\bin\Debug\net8.
 C:\Users\ThaiBao\Desktop\SoulWhilper\SoulWhisper-BE\soul-whisper\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\ThaiBao\Desktop\SoulWhilper\SoulWhisper-BE\soul-whisper\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\ThaiBao\Desktop\SoulWhilper\SoulWhisper-BE\soul-whisper\obj\Debug\net8.0\soul-whisper.sourcelink.json
+C:\Users\ThaiBao\Desktop\SoulWhilper\SoulWhisper-BE\soul-whisper\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
