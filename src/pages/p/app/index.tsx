@@ -8,6 +8,7 @@ import Home from "@/components/Home";
 import { Avatar } from "@mui/material";
 import Appointments from "@/components/Appointments";
 import Statistics from "@/components/Statistics";
+import Account from "@/components/Account"
 
 interface AppState {
   home: boolean;
@@ -230,14 +231,7 @@ function App() {
             >
               Account
             </LeftsideButton>
-            <LeftsideButton
-              onSelected={appState.profile}
-              onClick={() => {
-                dispatch({ type: "CHOOSE_PROFILE" });
-              }}
-            >
-              Profile
-            </LeftsideButton>
+      
             <LeftsideButton
               onSelected={appState.habit}
               onClick={() => {
@@ -269,6 +263,8 @@ function App() {
         {appState.home && <Home />}
         {appState.appointment && <Appointments />}
         {appState.statistics && <Statistics />}
+        {appState.account && <Account />}
+        {appState.habit && <Account />}
       </div>
     </div>
   );

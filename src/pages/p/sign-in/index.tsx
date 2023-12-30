@@ -20,8 +20,8 @@ import { useRouter } from "next/router";
 const defaultTheme = createTheme();
 
 export default function SignInSide() {
-const dispatch=useDispatch();
-const router=useRouter();
+  const dispatch = useDispatch();
+  const router = useRouter();
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -29,21 +29,22 @@ const router=useRouter();
       email: data.get("email"),
       password: data.get("password"),
     });
-    try{
-      let da=await LoginAsPatient({
-        email: data.get("email")?.toString()  || "",
-        password: data.get("password")?.toString() ||"",
+    try {
+      let da = await LoginAsPatient({
+        email: data.get("email")?.toString() || "",
+        password: data.get("password")?.toString() || "",
       });
-      localStorage.setItem("accessToken",da["accessToken"])
-      localStorage.setItem("accessTokenExpiredAt",da["accessTokenExpiredAt"])
-      localStorage.setItem("refreshTokenExpiredAt",da["refreshTokenExpiredAt"])
-      localStorage.setItem("refreshToken",da["refreshToken"])
-      dispatch(setUserState({role:"PATIENT",id:da.userId}))
-      router.push("../")
-    }
-    catch(e)
-    {
-console.error(e)
+      localStorage.setItem("accessToken", da["accessToken"]);
+      localStorage.setItem("accessTokenExpiredAt", da["accessTokenExpiredAt"]);
+      localStorage.setItem(
+        "refreshTokenExpiredAt",
+        da["refreshTokenExpiredAt"]
+      );
+      localStorage.setItem("refreshToken", da["refreshToken"]);
+      dispatch(setUserState({ role: "PATIENT", id: da.userId }));
+      router.push("../");
+    } catch (e) {
+      console.error(e);
     }
   };
 
@@ -134,7 +135,6 @@ console.error(e)
                   </Link>
                 </Grid>
               </Grid>
-    
             </Box>
           </Box>
         </Grid>
