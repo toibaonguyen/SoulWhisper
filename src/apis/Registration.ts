@@ -14,12 +14,12 @@ interface UpdateDoctorshipRegistration {
     status: string
 }
 
-interface AppointmentRegistration {
-    id: string | null
+export interface AppointmentRegistration {
+    id?: string
     appointment: Appointment
     doctorId:string
     patientId:string
-    status: string | null
+    status?: string
     createdAt: Date
 }
 interface UpdateAppointmentRegistration {

@@ -1,12 +1,13 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import ContentContainer from "../ContentContainer";
+import ContentContainer from "../../ContentContainer";
 import styles from "./index.module.css";
 import SearchBar from "./SearchBar";
-import { Avatar } from "@mui/material";
 import DoctorProfile, { Doctor } from "./DoctorProfile";
 import { recommendDoctorsTestData } from "./testData";
+import { GetDoctorById, GetDoctors } from "@/apis/Doctor";
+import { Console } from "console";
 export default function Home() {
   const [onSearch, SetOnSearch] = useState(false);
   const [doctors, SetDoctors] = useState<Doctor[]>([]);
@@ -36,14 +37,28 @@ export default function Home() {
   const [healthCareQuote, SethealthCareQuote] = useState("");
 
   useEffect(() => {
-    SetRecommendedDoctors(recommendDoctorsTestData);
+    async function GetRecomendedDoctors() {
+      const docs = await GetDoctors(20);
+      SetDoctors(docs);
+    }
+    GetRecomendedDoctors();
     SethealthCareQuote(
       healthCareQuotes[Math.floor(Math.random() * healthCareQuotes.length)]
     );
-  }, [onSearch]);
+  }, []);
 
-  const onSearchText = async (text: string) => {
-    console.log(text);
+  const onSearchText = async (text: string | undefined | null) => {
+    try {
+      if ((text as string).length == 0 || text == undefined || text == null) {
+        throw new Error("EEEEE");
+      }
+      const ds = await GetDoctorById(text);
+      console.log(ds);
+      SetDoctors(ds != undefined && ds != null ? [ds] : []);
+    } catch (e: any) {
+      console.log(e);
+      SetDoctors([]);
+    }
   };
 
   const onClickDoctor = async (id: string) => {
@@ -62,33 +77,31 @@ export default function Home() {
         </div>
         <div style={{ padding: 15 }}>{healthCareQuote}</div>
       </div>
-      {!onSearch && (
-        <>
-          <ContentContainer>
-            <h4 style={{ marginLeft: 15 }}>Most popular doctors</h4>
-          </ContentContainer>
-          <div
-            style={{
-              alignSelf: "center",
-              display: "grid",
-              gap: 10,
-              justifyItems: "center",
-              gridTemplateColumns: "repeat(2, 1fr)",
-            }}
-          >
-            {recommendedDoctors.map((d) => (
-              <DoctorProfile
-                id={d.id}
-                avatar={d.avatar}
-                name={d.name}
-                medicalSpecialty={d.medicalSpecialty}
-                rating={d.rating}
-                onClick={onClickDoctor}
-              />
-            ))}
-          </div>
-        </>
-      )}
+
+      {/* <ContentContainer>
+          <h4 style={{ marginLeft: 15 }}>Doctors:</h4>
+        </ContentContainer> */}
+      <div
+        style={{
+          alignSelf: "center",
+          display: "grid",
+          gap: 10,
+          justifyItems: "center",
+          gridTemplateColumns: "repeat(2, 1fr)",
+        }}
+      >
+        {doctors.map((d) => (
+          <DoctorProfile
+            key={d.id}
+            id={d.id}
+            avatar={d.avatar}
+            name={d.name}
+            medicalSpecialty={d.medicalSpecialty}
+            rating={d.rating}
+            onClick={onClickDoctor}
+          />
+        ))}
+      </div>
     </div>
   );
 }

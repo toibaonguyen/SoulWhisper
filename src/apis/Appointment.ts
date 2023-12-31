@@ -21,7 +21,30 @@ interface UpdateAppointment {
 
 export async function GetAppointments(limit: number | null, doctorId: string | null, patientId: string | null) {
     try {
-        let res = await axios.get(`Appointments?limit=${limit}&&doctorId=${doctorId}&&patienId=${patientId}`);
+        console.log(localStorage.getItem("accessToken"))
+        let url1:string=""
+        if(limit!=null)
+        {
+            url1+=`limit=${limit}`;
+        }
+        if(doctorId!=null)
+        {
+            if(limit!=null)
+            {
+                url1+="&&"
+            }
+            url1+=`doctorId=${doctorId}`
+        }
+        if(patientId!=null)
+        {
+            if(limit!=null||doctorId!=null)
+            {
+                url1+="&&"
+            }
+            url1+=`patienId=${patientId}`
+        }
+        axios.head
+        let res = await axios.get("/Appointments?"+url1);
         return res.data;
     }
     catch (e) {

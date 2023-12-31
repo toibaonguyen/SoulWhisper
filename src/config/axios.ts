@@ -14,8 +14,8 @@ if (typeof window !== 'undefined') {
 // Add a request interceptor
 instance.interceptors.request.use(function (config) {
     // Do something before request is sent
-
-    instance.defaults.headers.common['Content-Type'] = "application/json";
+    config.headers['Authorization']= localStorage.getItem('accessToken') ? localStorage.getItem('accessToken') : "*";
+    config.headers['Content-Type'] = "application/json";
     return config;
 }, function (error) {
     // Do something with request error
@@ -26,8 +26,7 @@ instance.interceptors.request.use(function (config) {
 instance.interceptors.response.use(function (response) {
     // Any status code that lie within the range of 2xx cause this function to trigger
     // Do something with response data
-    instance.defaults.headers.common['Authorization'] = localStorage.getItem('accessToken') ? localStorage.getItem('accessToken') : "*";
-    return response.data;
+   return response.data;
 }, function (err) {
     // Any status codes that falls outside the range of 2xx cause this function to trigger
     // Do something with response error

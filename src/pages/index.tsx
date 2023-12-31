@@ -305,8 +305,8 @@ const LandingPage:NextPage = () => {
             						</div>
           					</div>
           					<div className={styles.signInParent}>
-            						<Link href={"#"} className={styles.contactUs}>Sign In</Link>
-            						<Link href={"#"} className={styles.signUpWrapper}>
+            						<Link href={"./p/sign-in"} className={styles.contactUs}>Sign In</Link>
+            						<Link href={"./p/sign-up"} className={styles.signUpWrapper}>
               							<div className={styles.contactUs}>Sign Up</div>
             						</Link>
           					</div>

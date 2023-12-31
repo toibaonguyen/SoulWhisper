@@ -19,6 +19,20 @@ interface Account{
 }
 
 
+export async function GetDoctors(limit: number|null) {
+    try {
+        let url="Doctors";
+        if(limit!=null)
+        {
+            url+=`?limit=${limit}`
+        }
+        let res = await axios.get(url);
+        return res.data;
+    }
+    catch (e) {
+        throw e;
+    }
+}
 
 export async function GetDoctorById(id: string) {
     try {

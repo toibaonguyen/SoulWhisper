@@ -1,5 +1,5 @@
 import React from "react";
-import ContentContainer from "../../ContentContainer";
+import ContentContainer from "../../../ContentContainer";
 import { Avatar, Rating } from "@mui/material";
 
 export interface Doctor {
@@ -18,14 +18,14 @@ interface Props extends Doctor, OnClickDoctor {}
 
 export default function DoctorProfile(props: Props) {
   return (
-
-      <ContentContainer>
+    <ContentContainer>
       <button
-      id={props.id}
-      style={{ alignSelf: "center"}}
-      onClick={async () => {
-        await props.onClick(props.id);
-      }}>
+        id={props.id}
+        style={{ alignSelf: "center" }}
+        onClick={async () => {
+          await props.onClick(props.id);
+        }}
+      >
         <div
           style={{
             display: "flex",
@@ -42,9 +42,9 @@ export default function DoctorProfile(props: Props) {
           <h3 style={{ marginTop: 10 }}>{props.name}</h3>
           <div>{props.medicalSpecialty}</div>
 
-          <Rating value={props.rating} readOnly/>
+          <Rating value={props.rating} readOnly />
         </div>
-    </button>
-      </ContentContainer>
+      </button>
+    </ContentContainer>
   );
 }

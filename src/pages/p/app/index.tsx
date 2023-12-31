@@ -4,11 +4,13 @@ import React, { useReducer } from "react";
 import styles from "./index.module.css";
 import LeftsideButton from "@/components/LeftsideButton";
 import Logo from "../../../../public/logo.png";
-import Home from "@/components/Home";
-import { Avatar } from "@mui/material";
-import Appointments from "@/components/Appointments";
-import Statistics from "@/components/Statistics";
-import Account from "@/components/Account"
+import Home from "@/components/patient/Home";
+import Appointments from "@/components/patient/Appointments";
+import Statistics from "@/components/patient/Statistics";
+import Account from "@/components/patient/Account";
+import Habits from "@/components/patient/Habits";
+import Receipts from "@/components/patient/Receipts";
+import Registrations from "@/components/patient/Registrations";
 
 interface AppState {
   home: boolean;
@@ -231,7 +233,7 @@ function App() {
             >
               Account
             </LeftsideButton>
-      
+
             <LeftsideButton
               onSelected={appState.habit}
               onClick={() => {
@@ -264,7 +266,9 @@ function App() {
         {appState.appointment && <Appointments />}
         {appState.statistics && <Statistics />}
         {appState.account && <Account />}
-        {appState.habit && <Account />}
+        {appState.habit && <Habits />}
+        {appState.registrations && <Registrations />}
+        {appState.receipts&&<Receipts/>}
       </div>
     </div>
   );

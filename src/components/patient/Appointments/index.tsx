@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import Box from "@mui/system/Box";
 import ContentContainer from "@/components/ContentContainer";
 import { Autocomplete, Grid, Stack, TextField } from "@mui/material";
-import { styled } from "@mui/system";
-import ContentItem from "../ContentItem";
-import Card from "@mui/material";
 import Appointment, { IAppointment } from "./Appointment";
 import { appointment1s } from "./testData";
+import { GetAppointments } from "@/apis/Appointment";
+import { useSelector } from "react-redux";
+import { UserState } from "@/redux/reducers";
+
 const AppointmentStatuses = [
   "NOT_OCCURRED",
   "OCCURRED",
@@ -26,8 +27,17 @@ export default function Appointments() {
   const [status, SetStatus] = useState<string | null>(null);
   const [type, SetType] = useState<string | null>(null);
   const [appointments, SetAppointments] = useState<IAppointment[]>([]);
+  const id = useSelector((state: UserState) => state.id);
   useEffect(() => {
-    SetAppointments(appointment1s);
+    async function as() {
+      try {
+        const memay = await GetAppointments(null, null, id);
+        SetAppointments(memay);
+      } catch (e) {
+        console.log(e);
+      }
+    }
+    as();
   }, []);
   return (
     <Box>
@@ -42,7 +52,7 @@ export default function Appointments() {
               }}
               id="controllable-statuses"
               options={AppointmentStatuses}
-              getOptionLabel={a=>a.replace("_"," ")}
+              getOptionLabel={(a) => a.replace("_", " ")}
               sx={{ width: 300 }}
               renderInput={(params) => <TextField {...params} label="Status" />}
             />
@@ -53,7 +63,7 @@ export default function Appointments() {
               }}
               id="controllable-types"
               options={AppointmentTypes}
-              getOptionLabel={a=>a.replace("_"," ")}
+              getOptionLabel={(a) => a.replace("_", " ")}
               sx={{ width: 300, marginLeft: 5 }}
               renderInput={(params) => <TextField {...params} label="Type" />}
             />
@@ -143,7 +153,6 @@ export default function Appointments() {
             ))}
           </Stack>
         )}
-        
       </Stack>
     </Box>
   );

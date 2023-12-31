@@ -35,14 +35,9 @@ export default function SignInSide() {
         password: data.get("password")?.toString() || "",
       });
       localStorage.setItem("accessToken", da["accessToken"]);
-      localStorage.setItem("accessTokenExpiredAt", da["accessTokenExpiredAt"]);
-      localStorage.setItem(
-        "refreshTokenExpiredAt",
-        da["refreshTokenExpiredAt"]
-      );
       localStorage.setItem("refreshToken", da["refreshToken"]);
       dispatch(setUserState({ role: "PATIENT", id: da.userId }));
-      router.push("../");
+      router.push("../p/app");
     } catch (e) {
       console.error(e);
     }

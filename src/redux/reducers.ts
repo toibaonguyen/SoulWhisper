@@ -1,8 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-interface UserState{
+export interface UserState{
     role:string|null
     id:string|null
+    
 }
 
 const counterSlice = createSlice({
