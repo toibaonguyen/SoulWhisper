@@ -81,6 +81,31 @@ namespace soul_whisper.Migrations
                     b.ToTable("Achievement_Image");
                 });
 
+            modelBuilder.Entity("soul_whisper.Models.Private.Data.Achievement_Registration", b =>
+                {
+                    b.Property<Guid?>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("createdAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("expiredAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("registeredid")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("status")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("registeredid");
+
+                    b.ToTable("Achievement_Registration");
+                });
+
             modelBuilder.Entity("soul_whisper.Models.Private.Data.Admin", b =>
                 {
                     b.Property<Guid?>("id")
@@ -164,7 +189,7 @@ namespace soul_whisper.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("appointmentid")
+                    b.Property<Guid?>("appointmentid")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime?>("createdAt")
@@ -318,10 +343,10 @@ namespace soul_whisper.Migrations
                     b.Property<DateTime>("createdAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("receiver")
+                    b.Property<Guid?>("receiver")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("sender")
+                    b.Property<Guid?>("sender")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("id");
@@ -480,6 +505,17 @@ namespace soul_whisper.Migrations
                     b.Navigation("belongTo");
                 });
 
+            modelBuilder.Entity("soul_whisper.Models.Private.Data.Achievement_Registration", b =>
+                {
+                    b.HasOne("soul_whisper.Models.Private.Data.Achievement", "registered")
+                        .WithMany("registrations")
+                        .HasForeignKey("registeredid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("registered");
+                });
+
             modelBuilder.Entity("soul_whisper.Models.Private.Data.Appointment", b =>
                 {
                     b.HasOne("soul_whisper.Models.Private.Data.Doctor", "doctor")
@@ -503,9 +539,7 @@ namespace soul_whisper.Migrations
                 {
                     b.HasOne("soul_whisper.Models.Private.Data.Appointment", "appointment")
                         .WithMany()
-                        .HasForeignKey("appointmentid")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("appointmentid");
 
                     b.HasOne("soul_whisper.Models.Private.Data.Doctor", "doctor")
                         .WithMany("appointmentRegistrations")
@@ -585,6 +619,8 @@ namespace soul_whisper.Migrations
             modelBuilder.Entity("soul_whisper.Models.Private.Data.Achievement", b =>
                 {
                     b.Navigation("images");
+
+                    b.Navigation("registrations");
                 });
 
             modelBuilder.Entity("soul_whisper.Models.Private.Data.Doctor", b =>

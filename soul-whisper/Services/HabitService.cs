@@ -40,17 +40,25 @@ public class HabitService
         {
             using (FlatformContext context = new FlatformContext())
             {
+                Console.WriteLine($"cmm");
                 var ds = await context.habits.ToListAsync();
+                // Console.WriteLine(ds);
+                // Console.WriteLine($"ds[0]:{ds[1].patient.id}");
+                // Console.WriteLine($"ds[0]:{ds[1].patient.id}");
+                //   Console.WriteLine($"cm 22");
                 List<HabitDTO> publicStandardDs = [];
+                Console.WriteLine($"cm 22--");
                 ds.ForEach(a =>
                 {
                     publicStandardDs.Add(ModelsConverterMachine.ConvertHabitToHabitDTO(a));
                 });
+                 Console.WriteLine($"cm yeu em lam");
                 return publicStandardDs;
             }
         }
-        catch (Exception)
+        catch (Exception e)
         {
+            Console.WriteLine(e);
             throw;
         }
     }
@@ -84,20 +92,21 @@ public class HabitService
         {
             using (FlatformContext context = new FlatformContext())
             {
-                var patient=await context.patients.FirstOrDefaultAsync(e=>e.id==habit.patientId);
-                if(patient==null)
+                var patient = await context.patients.FirstOrDefaultAsync(e => e.id == habit.patientId);
+                if (patient == null)
                 {
                     throw new HttpRequestException("Patient is not exist");
                 }
-                else{
-                await context.habits.AddAsync(new Habit
+                else
                 {
-                    name = habit.name,
-                    type = (HabitType)Enum.Parse(typeof(HabitType), habit.type),
-                    description = habit.description,
-                    patient = patient
-                });
-                context.SaveChanges();
+                    await context.habits.AddAsync(new Habit
+                    {
+                        name = habit.name,
+                        type = (HabitType)Enum.Parse(typeof(HabitType), habit.type),
+                        description = habit.description,
+                        patient = patient
+                    });
+                    context.SaveChanges();
                 }
             }
         }

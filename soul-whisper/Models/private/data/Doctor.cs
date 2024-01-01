@@ -18,7 +18,7 @@ public class Doctor
     public string? avatar { get; set; }
     public required DateOnly birthday { get; set; }
     public required Gender gender { get; set; }
-    [DefaultValue(ActivationStatus.PENDING)]
+    [DefaultValue(ActivationStatus.PENDING)] 
     public required ActivationStatus activationStatus { get; set; }
     public required MedicalSpecialty specialty { get; set; }
     public required ICollection<Achievement> achievements { get; set; }

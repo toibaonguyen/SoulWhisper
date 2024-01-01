@@ -11,6 +11,6 @@ public class HabitDTO
     public required string type { get; set; }
     public required string name { get; set; }
     public required string description { get; set; }
-    public required Guid patientId { get; set; }
+    public  Guid? patientId { get; set; }
     
 }

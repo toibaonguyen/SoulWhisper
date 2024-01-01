@@ -20,12 +20,12 @@ public class GlobalModifierMiddleware
       
         // Xử lý trước khi gửi yêu cầu đến middleware tiếp theo
         // Console.WriteLine("-----------Middleware đang xử lý trước khi gửi yêu cầu đến middleware tiếp theo.");
+        // var DB= new FlatformContext();
+        // await   DB.CreateDatabase();
         TokenOperator.RemoveExpiredTokens();
         // Gọi middleware tiếp theo trong pipeline
         await _next(context);
 
-var d=new FlatformContext();
-await d.CreateDatabase();
         // Xử lý sau khi nhận phản hồi từ middleware tiếp theo
         // Console.WriteLine("-------------Middleware đang xử lý sau khi nhận phản hồi từ middleware tiếp theo.");
     }

@@ -68,8 +68,8 @@ namespace soul_whisper.Migrations
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    sender = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    receiver = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    sender = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    receiver = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     createdAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
@@ -283,13 +283,34 @@ namespace soul_whisper.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Achievement_Registration",
+                columns: table => new
+                {
+                    id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    registeredid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    status = table.Column<int>(type: "int", nullable: false),
+                    createdAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    expiredAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Achievement_Registration", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_Achievement_Registration_Achievement_registeredid",
+                        column: x => x.registeredid,
+                        principalTable: "Achievement",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Appointment_Registration",
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     patientid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     doctorid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    appointmentid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    appointmentid = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     status = table.Column<int>(type: "int", nullable: true),
                     createdAt = table.Column<DateTime>(type: "datetime2", nullable: true),
                     modifiedAt = table.Column<DateTime>(type: "datetime2", nullable: true)
@@ -301,8 +322,7 @@ namespace soul_whisper.Migrations
                         name: "FK_Appointment_Registration_Appointment_appointmentid",
                         column: x => x.appointmentid,
                         principalTable: "Appointment",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "id");
                     table.ForeignKey(
                         name: "FK_Appointment_Registration_Doctor_doctorid",
                         column: x => x.doctorid,
@@ -326,6 +346,11 @@ namespace soul_whisper.Migrations
                 name: "IX_Achievement_Image_belongToid",
                 table: "Achievement_Image",
                 column: "belongToid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Achievement_Registration_registeredid",
+                table: "Achievement_Registration",
+                column: "registeredid");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Admin_email",
@@ -401,6 +426,9 @@ namespace soul_whisper.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Achievement_Image");
+
+            migrationBuilder.DropTable(
+                name: "Achievement_Registration");
 
             migrationBuilder.DropTable(
                 name: "Admin");

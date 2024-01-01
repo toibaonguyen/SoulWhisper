@@ -25,18 +25,27 @@ public static class ModelsConverterMachine
     }
     static public HabitDTO ConvertHabitToHabitDTO(Habit habit)
     {
-        if (habit.patient.id == null)
+        try
         {
-            throw new Exception("BAD BOYY");
+            Console.WriteLine($"me no chu");
+            Console.WriteLine($"memaynhathglozdottnet {habit.description}");
+
+           Console.WriteLine($"me no chu 3");
+                return new HabitDTO
+                {
+                    id = habit.id,
+                    type = habit.type.ToString(),
+                    name = habit.name,
+                    description = habit.description,
+                    patientId = (Guid)habit.patient.id
+                };
+       
         }
-        return new HabitDTO
+        catch (Exception e)
         {
-            id = habit.id,
-            type = habit.type.ToString(),
-            name = habit.name,
-            description = habit.description,
-            patientId = (Guid)habit.patient.id
-        };
+            Console.WriteLine($"con gai me may: {e}");
+            throw;
+        }
     }
     static public AchievementDTO ConvertAchievementToAchievementDTO(Achievement achievement)
     {
@@ -93,7 +102,7 @@ public static class ModelsConverterMachine
             gender = d.gender.ToString(),
             activationStatus = d.activationStatus.ToString(),
             specialty = d.specialty.ToString(),
-            wallet=d.moneyInWallet
+            wallet = d.moneyInWallet
         };
     }
     static public ExerciseDTO ConvertExerciseToExerciseDTO(Exercise exercise)

@@ -94,7 +94,7 @@ public class HabitsController : ControllerBase
     {
         UserDTO user = this.ConvertAccessTokenToUserDTO();
         habit.patientId = user.userId;
-        if (user.role == UserRole.PATIENT)
+        if (user.userId == habit.patientId)
         {
             var service = new HabitService();
             await service.CreateHabit(habit);
