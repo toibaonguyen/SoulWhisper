@@ -12,7 +12,7 @@ using soul_whisper.Data;
 namespace soul_whisper.Migrations
 {
     [DbContext(typeof(FlatformContext))]
-    [Migration("20240101013637_InitialCreate")]
+    [Migration("20240103123309_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

@@ -56,7 +56,6 @@ public class TokenConverterMachine : TokenConverter
 
             foreach (Claim claim in token.Claims.ToArray())
             {
-                Console.WriteLine(claim);
                 switch (claim.Type)
                 {
                     case "userId":
@@ -68,7 +67,7 @@ public class TokenConverterMachine : TokenConverter
 
                         break;
                     case "http://schemas.microsoft.com/ws/2008/06/identity/claims/role":
-                        Console.WriteLine($"HERE : : ;{claim.Value}");
+             
                         if (claim.Value == "ADMIN")
                         {
                             userRole = UserRole.ADMIN;
@@ -91,7 +90,6 @@ public class TokenConverterMachine : TokenConverter
         }
         catch (Exception e)
         {
-            Console.WriteLine($"Mua it thoi: {e.GetType()}");
             if (e is SecurityTokenInvalidLifetimeException)
             {
                 throw new SecurityTokenInvalidLifetimeException(this.EXPIRED_TOKEN);

@@ -118,4 +118,3 @@ public class HabitsController : ControllerBase
         return BadRequest(new ContainMessageResponseDTO { message = "You do not have permission" });
     }
 }
-

@@ -18,11 +18,13 @@ public class AchievementService
     {
         try
         {
+            Console.WriteLine("ME MAY CONCHO");
             using (FlatformContext context = new FlatformContext())
             {
                 var doctor = await context.doctors.FirstOrDefaultAsync(d => d.id == doctorId);
                 if (doctor == null)
                 {
+                      Console.WriteLine("ME MAY CONCHO2");
                     throw new TargetException(DOCTOR_NOT_EXIST);
                 }
                 List<Achievement> achievements = await context.achievements.Where(a => a.doctor == doctor).ToListAsync();

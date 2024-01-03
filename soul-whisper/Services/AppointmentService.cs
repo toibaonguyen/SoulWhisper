@@ -13,16 +13,30 @@ public class AppointmentService
 {
     public async Task<List<AppointmentDTO>> GetAppointmentDTOs()
     {
+
         try
         {
             using (FlatformContext context = new FlatformContext())
             {
                 var appointments = await context.appointments.ToListAsync();
                 List<AppointmentDTO> publicStandardAppointments = [];
+                List<Guid> AppointmentIDs = [];
                 appointments.ForEach(a =>
                 {
-                    publicStandardAppointments.Add(ModelsConverterMachine.ConvertAppointmentToAppointmentDTO(a));
+                    AppointmentIDs.Add((Guid)a.id);
                 });
+                AppointmentIDs.ForEach(a =>
+                {
+                    // var sql = "SELECT * FROM TenBang WHERE DieuKien = {0}";
+                    // var paramValue = a;
+                    var i = context.appointments.FirstOrDefault(q => q.id == a);
+                    Console.WriteLine("ME MAY NHA MS");
+                    Console.WriteLine(i?.doctor.id);
+                    // publicStandardAppointments.Add(ModelsConverterMachine.ConvertAppointmentToAppointmentDTO(i));
+                    Console.WriteLine("adu ba ma nhan k ra");
+                });
+
+
                 return publicStandardAppointments;
             }
         }

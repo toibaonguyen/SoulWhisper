@@ -1,6 +1,7 @@
 
 using soul_whisper.Models.Public;
 using soul_whisper.Models.Private.Data;
+using soul_whisper.Data;
 
 namespace soul_whisper.Helpers;
 
@@ -30,16 +31,16 @@ public static class ModelsConverterMachine
             Console.WriteLine($"me no chu");
             Console.WriteLine($"memaynhathglozdottnet {habit.description}");
 
-           Console.WriteLine($"me no chu 3");
-                return new HabitDTO
-                {
-                    id = habit.id,
-                    type = habit.type.ToString(),
-                    name = habit.name,
-                    description = habit.description,
-                    patientId = (Guid)habit.patient.id
-                };
-       
+            Console.WriteLine($"me no chu 3");
+            return new HabitDTO
+            {
+                id = habit.id,
+                type = habit.type.ToString(),
+                name = habit.name,
+                description = habit.description,
+                patientId = (Guid)habit.patient.id
+            };
+
         }
         catch (Exception e)
         {
@@ -75,19 +76,37 @@ public static class ModelsConverterMachine
     }
     static public AppointmentDTO ConvertAppointmentToAppointmentDTO(Appointment appointment)
     {
-        return new AppointmentDTO
+        //bi tuong tu habit
+        try
         {
-            id = appointment.id,
-            type = appointment.type.ToString(),
-            startTime = appointment.startTime,
-            endTime = appointment.endTime,
-            diagnosis = appointment.diagnosis,
-            prescription = appointment.prescription,
-            notes = appointment.notes,
-            doctorId = (Guid)appointment.doctor.id,
-            patientId = (Guid)appointment.patient.id,
-            status = appointment.status.ToString()
-        };
+            using (var context = new FlatformContext())
+            {
+                Console.WriteLine("OKOK");
+                var d=context.doctors.FirstOrDefault(dt=>dt.appointments.Contains(appointment));
+                var p=context.patients.FirstOrDefault(dt=>dt.appointments.Contains(appointment));
+                Console.WriteLine(d.id);
+                Console.WriteLine("OKOK");
+                return new AppointmentDTO
+                {
+                    id = appointment.id,
+                    type = appointment.type.ToString(),
+                    startTime = appointment.startTime,
+                    endTime = appointment.endTime,
+                    diagnosis = appointment.diagnosis,
+                    prescription = appointment.prescription,
+                    notes = appointment.notes,
+                    doctorId = (Guid)d.id,
+                    patientId = (Guid)p.id,
+                    status = appointment.status.ToString()
+                };
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw e;
+        }
+
     }
     static public DoctorDTO ConvertDoctorToDoctorDTO(Doctor d)
     {

@@ -42,7 +42,9 @@ public class AppointmentsController : ControllerBase
 
         UserDTO user = this.ConvertAccessTokenToUserDTO();
         var service = new AppointmentService();
+      
         List<AppointmentDTO> appointments = await service.GetAppointmentDTOs();
+    
         if (limit != null)
         {
             if (doctorId != null || patientId != null)
