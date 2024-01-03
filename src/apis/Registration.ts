@@ -66,6 +66,7 @@ export async function RegisterAppointment(props: AppointmentRegistration) {
 
 export async function GetAppointmentRegistrations() {
     try {
+        console.log("DAYNE BAN HIEN");
         let res = await axios.get("Registrations/appointments");
         return res.data;
     }

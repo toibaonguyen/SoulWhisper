@@ -8,6 +8,7 @@ import DoctorProfile, { Doctor } from "./DoctorProfile";
 import { recommendDoctorsTestData } from "./testData";
 import { GetDoctorById, GetDoctors } from "@/apis/Doctor";
 import { Console } from "console";
+import { useRouter } from "next/router";
 export default function Home() {
   const [onSearch, SetOnSearch] = useState(false);
   const [doctors, SetDoctors] = useState<Doctor[]>([]);
@@ -35,7 +36,7 @@ export default function Home() {
     "The wish for healing has always been half of health. - Lucius Annaeus Seneca",
   ];
   const [healthCareQuote, SethealthCareQuote] = useState("");
-
+const router=useRouter()
   useEffect(() => {
     async function GetRecomendedDoctors() {
       const docs = await GetDoctors(20);
@@ -62,7 +63,7 @@ export default function Home() {
   };
 
   const onClickDoctor = async (id: string) => {
-    console.log("ID:", id);
+    router.push(`/p/app/doctors/${id}`)
   };
 
   return (

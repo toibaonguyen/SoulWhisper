@@ -34,6 +34,8 @@ const style = {
 };
 
 export default function Habits() {
+  
+  const uid = useSelector((state: UserState) => state.id);
   const [type, SetType] = useState<string | null>(null);
   const [habits, SetHabits] = useState<Habit[]>([]);
   const [checkFlag, SetCheckFlag] = useState<boolean>(false);
@@ -44,15 +46,14 @@ export default function Habits() {
   const handleClose = () => {
     setOpen(false);
   };
-  const uid = useSelector((state: UserState) => state.id);
   const RemoveHabit = async (id: string) => {
-    await DeleteHabit(uid as string);
+    await DeleteHabit(id);
     SetHabits(await GetAllHabits(uid));
   };
   useEffect(() => {
     async function FetchData() {
       try {
-        console.log("PatientId: ", uid);
+        console.log("PatientId88: ", uid);
         SetHabits(await GetAllHabits(uid));
       } catch (e) {
         console.log(e);
@@ -98,9 +99,6 @@ export default function Habits() {
                 </>
               )}
             />
-            <Button variant="contained" color="success">
-              Save
-            </Button>
           </div>
         </ContentContainer>
         {habits.length > 0 && type == null && (
@@ -113,8 +111,8 @@ export default function Habits() {
                   name={a.name}
                   patientId={a.patientId}
                   description={a.description}
-                  onRemove={() => {
-                    RemoveHabit(a.id as string);
+                  onRemove={async() => {
+                   await RemoveHabit(a.id as string);
                   }}
                 />
               );
@@ -132,7 +130,7 @@ export default function Habits() {
                     name={a.name}
                     patientId={a.patientId}
                     description={a.description}
-                    onRemove={() => RemoveHabit(a.id as string)}
+                    onRemove={async() =>await RemoveHabit(a.id as string)}
                   />
                 );
               }

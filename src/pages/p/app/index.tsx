@@ -11,6 +11,8 @@ import Account from "@/components/patient/Account";
 import Habits from "@/components/patient/Habits";
 import Receipts from "@/components/patient/Receipts";
 import Registrations from "@/components/patient/Registrations";
+import Messager from "@/components/patient/Messenger";
+import { ChatContextProvider } from "@/context/ChatContext";
 
 interface AppState {
   home: boolean;
@@ -163,114 +165,117 @@ function App() {
   };
   const [appState, dispatch] = useReducer(appReducer, initialState);
   return (
-    <div className={styles.container}>
-      <div>
-        <div className={styles["left-side"]}>
-          {/* Nội dung phía bên trái */}
+    <ChatContextProvider>
+      <div className={styles.container}>
+        <div>
+          <div className={styles["left-side"]}>
+            {/* Nội dung phía bên trái */}
 
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-            }}
-          >
-            <Image
-              src={Logo}
-              alt="Logo.png"
+            <div
               style={{
-                maxHeight: 50,
-                maxWidth: 50,
-                alignSelf: "center",
-                borderRadius: 50,
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
               }}
-            />
+            >
+              <Image
+                src={Logo}
+                alt="Logo.png"
+                style={{
+                  maxHeight: 50,
+                  maxWidth: 50,
+                  alignSelf: "center",
+                  borderRadius: 50,
+                }}
+              />
 
-            <h2 style={{ marginLeft: 15 }}>Welcome</h2>
-          </div>
+              <h2 style={{ marginLeft: 15 }}>Welcome</h2>
+            </div>
 
-          <div className={styles["button-container"]}>
-            <h3>Home</h3>
-            <LeftsideButton
-              onSelected={appState.home}
-              onClick={() => {
-                dispatch({ type: "CHOOSE_HOME" });
-              }}
-            >
-              Home
-            </LeftsideButton>
-            <h3>Dashboard</h3>
-            <LeftsideButton
-              onSelected={appState.appointment}
-              onClick={() => {
-                dispatch({ type: "CHOOSE_APPOINTMENT" });
-              }}
-            >
-              Appointments
-            </LeftsideButton>
-            <LeftsideButton
-              onSelected={appState.messenger}
-              onClick={() => {
-                dispatch({ type: "CHOOSE_MESSENGER" });
-              }}
-            >
-              Messenger
-            </LeftsideButton>
-            <LeftsideButton
-              onSelected={appState.statistics}
-              onClick={() => {
-                dispatch({ type: "CHOOSE_STATISTICS" });
-              }}
-            >
-              Statistics
-            </LeftsideButton>
-            <h3>Management</h3>
-            <LeftsideButton
-              onSelected={appState.account}
-              onClick={() => {
-                dispatch({ type: "CHOOSE_ACCOUNT" });
-              }}
-            >
-              Account
-            </LeftsideButton>
+            <div className={styles["button-container"]}>
+              <h3>Home</h3>
+              <LeftsideButton
+                onSelected={appState.home}
+                onClick={() => {
+                  dispatch({ type: "CHOOSE_HOME" });
+                }}
+              >
+                Home
+              </LeftsideButton>
+              <h3>Dashboard</h3>
+              <LeftsideButton
+                onSelected={appState.appointment}
+                onClick={() => {
+                  dispatch({ type: "CHOOSE_APPOINTMENT" });
+                }}
+              >
+                Appointments
+              </LeftsideButton>
+              <LeftsideButton
+                onSelected={appState.messenger}
+                onClick={() => {
+                  dispatch({ type: "CHOOSE_MESSENGER" });
+                }}
+              >
+                Messenger
+              </LeftsideButton>
+              <LeftsideButton
+                onSelected={appState.statistics}
+                onClick={() => {
+                  dispatch({ type: "CHOOSE_STATISTICS" });
+                }}
+              >
+                Statistics
+              </LeftsideButton>
+              <h3>Management</h3>
+              <LeftsideButton
+                onSelected={appState.account}
+                onClick={() => {
+                  dispatch({ type: "CHOOSE_ACCOUNT" });
+                }}
+              >
+                Account
+              </LeftsideButton>
 
-            <LeftsideButton
-              onSelected={appState.habit}
-              onClick={() => {
-                dispatch({ type: "CHOOSE_HABIT" });
-              }}
-            >
-              Habit
-            </LeftsideButton>
-            <LeftsideButton
-              onSelected={appState.registrations}
-              onClick={() => {
-                dispatch({ type: "CHOOSE_REGISTRATIONS" });
-              }}
-            >
-              Registrations
-            </LeftsideButton>
-            <LeftsideButton
-              onSelected={appState.receipts}
-              onClick={() => {
-                dispatch({ type: "CHOOSE_RECEIPTS" });
-              }}
-            >
-              Receipts
-            </LeftsideButton>
+              <LeftsideButton
+                onSelected={appState.habit}
+                onClick={() => {
+                  dispatch({ type: "CHOOSE_HABIT" });
+                }}
+              >
+                Habit
+              </LeftsideButton>
+              <LeftsideButton
+                onSelected={appState.registrations}
+                onClick={() => {
+                  dispatch({ type: "CHOOSE_REGISTRATIONS" });
+                }}
+              >
+                Registrations
+              </LeftsideButton>
+              <LeftsideButton
+                onSelected={appState.receipts}
+                onClick={() => {
+                  dispatch({ type: "CHOOSE_RECEIPTS" });
+                }}
+              >
+                Receipts
+              </LeftsideButton>
+            </div>
           </div>
         </div>
+        <div className={styles["right-side"]}>
+          {appState.messenger && <Messager />}
+          {appState.home && <Home />}
+          {appState.appointment && <Appointments />}
+          {appState.statistics && <Statistics />}
+          {appState.account && <Account />}
+          {appState.habit && <Habits />}
+          {appState.registrations && <Registrations />}
+          {appState.receipts && <Receipts />}
+        </div>
       </div>
-      <div className={styles["right-side"]}>
-        {appState.home && <Home />}
-        {appState.appointment && <Appointments />}
-        {appState.statistics && <Statistics />}
-        {appState.account && <Account />}
-        {appState.habit && <Habits />}
-        {appState.registrations && <Registrations />}
-        {appState.receipts&&<Receipts/>}
-      </div>
-    </div>
+    </ChatContextProvider>
   );
 }
 

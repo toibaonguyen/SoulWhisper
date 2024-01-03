@@ -37,9 +37,11 @@ export default function SignInSide() {
       localStorage.setItem("accessToken", da["accessToken"]);
       localStorage.setItem("refreshToken", da["refreshToken"]);
       dispatch(setUserState({ role: "PATIENT", id: da.userId }));
+      alert("Login successfully!");
       router.push("../p/app");
     } catch (e) {
       console.error(e);
+      alert("Some thing wrong!!");
     }
   };
 

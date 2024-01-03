@@ -11,10 +11,13 @@ interface Habit {
 
 
 
-    
-export async function CreateHabits(props: Habit) {
+
+export async function CreateHabit(props: Habit) {
     try {
-        let res = await axios.post("Habits", props);
+        let res = await axios.post("Habits", {
+            type: props.type, name: props.name,
+            description: props.description, patientId: props.patientId
+        });
         return res.data;
     }
     catch (e) {
@@ -24,13 +27,12 @@ export async function CreateHabits(props: Habit) {
 }
 
 
-export async function GetAllHabits(patientId:string|null) {
+export async function GetAllHabits(patientId: string | null) {
     try {
 
-        let url="Habits"
-        if(patientId!=null)
-        {
-            url+=`?patientId=${patientId}`
+        let url = "Habits"
+        if (patientId != null) {
+            url += `?patientId=${patientId}`
         }
         let res = await axios.get(url);
         return res.data;
@@ -41,11 +43,10 @@ export async function GetAllHabits(patientId:string|null) {
     }
 }
 
-export async function DeleteHabit(id:string)
-{
+export async function DeleteHabit(id: string) {
     try {
 
-        let url=`Habits/${id}`
+        let url = `Habits/${id}`
         let res = await axios.delete(url);
         return res.data;
     }

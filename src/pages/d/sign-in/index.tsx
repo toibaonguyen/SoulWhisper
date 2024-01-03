@@ -1,55 +1,122 @@
-import type { NextPage } from 'next';
-import styles from './index.module.css';
-import { useRouter } from 'next/router';
+import * as React from "react";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import CssBaseline from "@mui/material/CssBaseline";
+import TextField from "@mui/material/TextField";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import Link from "@mui/material/Link";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { useDispatch } from "react-redux";
+import { useRouter } from "next/router";
+import { LoginAsDoctor } from "@/apis/Doctor";
+import { setUserState } from "@/redux/reducers";
 
+// TODO remove, this demo shouldn't need to reset the theme.
 
-const Login:NextPage = () => {
-	const router = useRouter()
+const defaultTheme = createTheme();
 
-	const handleSignupd = () => {
-		router.push('./sign-up')
-	}
-  	return (
-		<div className={styles.myBody}>
-    		<div className={styles.login}>
-      			<div className={styles.login1}>
-        				<div className={styles.loginPage}>
-          					<div className={styles.loginPageChild} />
-          					<div className={styles.loginPageItem} />
-          					<div className={styles.needWebdesignForContainer}>
-            						<p className={styles.needWebdesign}>{`Need webdesign `}</p>
-            						<p className={styles.needWebdesign}>{`for your business? `}</p>
-            						<p className={styles.needWebdesign}>
-              							<span className={styles.designSpacee}>Design Spacee</span>
-              							<span>{` will help you.  `}</span>
-            						</p>
-          					</div>
-          					<div className={styles.signIn}>Sign-in</div>
-          					<div className={styles.loginContent}>
-            						<div className={styles.dontHaveAnContainer}>
-              							<span>{`Don’t have an account? `}</span>
-              							<span className={styles.signupHere} onClick={handleSignupd}>Signup Here</span>
-            						</div>
-            						<div className={styles.inputName}>
-              							<div className={styles.email}>Email</div>
-              							<div className={styles.inputNameChild} />
-            						</div>
-            						<div className={styles.inputName1}>
-              							<div className={styles.email}>Password</div>
-              							<div className={styles.inputNameChild} />
-            						</div>
-            						<div className={styles.loginContentChild} />
-            						<div className={styles.login2}>Login</div>
-          					</div>
-          					<div className={styles.figmacomdesignspacee}>figma.com/@designspacee</div>
-          					<div className={styles.logo}>
-            						<div className={styles.logoChild} />
-            						<div className={styles.s}>S</div>
-          					</div>
-        				</div>
-      			</div>
-				  </div>
-    		</div>);
-};
+export default function SignIn() {
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    console.log({
+      email: data.get("email"),
+      password: data.get("password"),
+    });
+    try {
+      let da = await LoginAsDoctor({
+        email: data.get("email")?.toString() || "",
+        password: data.get("password")?.toString() || "",
+      });
+      localStorage.setItem("accessToken", da["accessToken"]);
+      localStorage.setItem("refreshToken", da["refreshToken"]);
+      dispatch(setUserState({ role: "DOCTOR", id: da.userId }));
+      alert("Login successfully!");
+      router.push("../d/app");
+    } catch (e) {
+      console.error(e);
+      alert(e);
+    }
+  };
 
-export default Login;
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <Container component="main" maxWidth="xs">
+        <CssBaseline />
+        <Box
+          sx={{
+            marginTop: 8,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <Typography component="h1" variant="h5" color={"black"}>
+            Sign in
+          </Typography>
+          <Box
+            component="form"
+            onSubmit={handleSubmit}
+            noValidate
+            sx={{ mt: 1 }}
+          >
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="email"
+              label="Email Address"
+              name="email"
+              autoComplete="email"
+              autoFocus
+			  style={{backgroundColor:"white"}}
+            />
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              name="password"
+              label="Password"
+              type="password"
+              id="password"
+			  style={{backgroundColor:"white"}}
+              autoComplete="current-password"
+            />
+            <FormControlLabel
+              control={<Checkbox value="remember" color="default" style={{color:"black"}} />}
+              label="Remember me"
+            />
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Sign In
+            </Button>
+            <Grid container>
+              <Grid item xs>
+                <Link href="#" variant="body2">
+                  Forgot password?
+                </Link>
+              </Grid>
+              <Grid item>
+                <Link href="#" variant="body2">
+                  {"Don't have an account? Sign Up"}
+                </Link>
+              </Grid>
+            </Grid>
+          </Box>
+        </Box>
+      </Container>
+    </ThemeProvider>
+  );
+}

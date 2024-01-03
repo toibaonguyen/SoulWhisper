@@ -32,6 +32,7 @@ export default function Appointments() {
     async function as() {
       try {
         const memay = await GetAppointments(null, null, id);
+        console.log("CMM",memay)
         SetAppointments(memay);
       } catch (e) {
         console.log(e);

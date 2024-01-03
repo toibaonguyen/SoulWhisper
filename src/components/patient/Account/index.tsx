@@ -9,19 +9,55 @@ import {
   Button,
 } from "@mui/material";
 import { DateTimePicker } from "@mui/x-date-pickers";
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent, useEffect, useReducer, useState } from "react";
 import { useSelector } from "react-redux";
 import { UserState } from "@/redux/reducers";
-import { ChangePatientPassword } from "@/apis/Patient";
+import { ChangePatientPassword, GetPatientById } from "@/apis/Patient";
+
+const reducer = (
+  state: { id: string; name: string; birthday: Date; bloodType: string },
+  action: {
+    type: string;
+    payload: { id: string; name: string; birthday: Date; bloodType: string };
+  }
+) => {
+  switch (action.type) {
+    case "SET_USER":
+      return action.payload;
+    default:
+      return state;
+  }
+};
 export default function Account() {
   const id = useSelector((state: UserState) => state.id);
+  const [state, dispatch] = useReducer(reducer, {
+    id: "",
+    name: "",
+    birthday: new Date(),
+    bloodType: "",
+  });
   const [newPassword, SetNewPassword] = useState("");
   const onChangePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
     SetNewPassword(e.target.value);
   };
+  useEffect(() => {
+    const fetchPatient = async () => {
+      const a = await GetPatientById(id as string);
+      dispatch({
+        type: "SET_USER",
+        payload: {
+          id: a.id,
+          name: a.name,
+          birthday: a.birthday,
+          bloodType: a.bloodType,
+        },
+      });
+    };
+    fetchPatient();
+  }, []);
   const UpdatePassword = async () => {
     try {
-      console.log("id:", id);
+      console.log("patientid:", id);
       console.log(newPassword);
       const mes = await ChangePatientPassword(id as string, {
         password: newPassword,
@@ -63,7 +99,7 @@ export default function Account() {
             }}
           >
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <text>New password</text>
+              <h4>New password</h4>
               <TextField
                 style={{ marginTop: 5 }}
                 size="small"
@@ -98,10 +134,10 @@ export default function Account() {
             spacing={2}
           >
             <h3>Infomation</h3>
-            <text>ID: {id}</text>
-            <text>Name: {id}</text>
-            <text>Birthday: {id}</text>
-            <text>BloodType: {id}</text>
+            <h3>ID: {id}</h3>
+            <h3>Name: {state.name}</h3>
+            <h3>Birthday: {state.birthday.toString()}</h3>
+            <h3>BloodType: {state.bloodType}</h3>
             <Divider />
             <h3>Gender</h3>
             <RadioGroup

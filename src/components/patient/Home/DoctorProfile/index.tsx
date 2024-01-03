@@ -1,6 +1,7 @@
 import React from "react";
 import ContentContainer from "../../../ContentContainer";
 import { Avatar, Rating } from "@mui/material";
+import { useRouter } from "next/router";
 
 export interface Doctor {
   id: string;
@@ -17,6 +18,7 @@ export interface OnClickDoctor {
 interface Props extends Doctor, OnClickDoctor {}
 
 export default function DoctorProfile(props: Props) {
+
   return (
     <ContentContainer>
       <button

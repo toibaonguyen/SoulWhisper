@@ -1,7 +1,8 @@
 
+import { initializeApp } from "firebase/app";
+import { getStorage } from "firebase/storage";
+import { getFirestore } from "firebase/firestore";
 
-import firebase from "firebase/compat/app";
-import "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBMRDC2fIaFp3S1rE_lc7kz79It-gEKbpA",
@@ -13,9 +14,9 @@ const firebaseConfig = {
     measurementId: "G-R4RNQ59HQ6"
 };
 
-if (!firebase.apps.length) {
-    firebase.initializeApp(firebaseConfig);
-}
-const db = firebase.firestore;
-export default {db}
+export const app = initializeApp(firebaseConfig);
+export const storage = getStorage();
+const db =  getFirestore();
 
+console.log("db????????: ",db);
+export {db}

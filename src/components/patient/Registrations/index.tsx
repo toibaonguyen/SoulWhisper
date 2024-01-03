@@ -2,14 +2,26 @@ import React, { useEffect, useState } from "react";
 import Box from "@mui/system/Box";
 import ContentContainer from "@/components/ContentContainer";
 import { Autocomplete, Grid, Stack, TextField } from "@mui/material";
-import { AppointmentRegistration } from "@/apis/Registration";
+import {
+  AppointmentRegistration,
+  GetAppointmentRegistrations,
+} from "@/apis/Registration";
 
 export default function Registrations() {
   const [registrations, SetRegistrations] = useState<AppointmentRegistration[]>(
     []
   );
   useEffect(() => {
-    SetRegistrations([]);
+    async function as() {
+      try {
+        SetRegistrations(await GetAppointmentRegistrations());
+      } catch (e) {
+        console.log("loi", e);
+
+        SetRegistrations([]);
+      }
+    }
+    as()
   }, []);
   return (
     <Box>

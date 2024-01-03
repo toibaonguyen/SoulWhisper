@@ -2,6 +2,7 @@
 :root {
     --primary-color: #4d77ff;
     --white-color: #C5C5C5;
+    margin: 0;
   }
   
   /* Apply the primary color to different elements */

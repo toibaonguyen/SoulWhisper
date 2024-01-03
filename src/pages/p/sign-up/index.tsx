@@ -10,7 +10,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { RadioGroup, Radio, FormControl, FormLabel } from "@mui/material";
+import { RadioGroup, Radio, FormControl, FormLabel, Alert } from "@mui/material";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -28,6 +28,7 @@ export default function SignUp() {
       birthday: data.get("birthday"),
       name: data.get("name"),
       gender: data.get("gender"),
+      bloodType:data.get("bloodType")
     });
 
     try {
@@ -41,12 +42,12 @@ export default function SignUp() {
         ),
         name: data.get("name")?.toString() || "",
         gender: data.get("gender")?.toString() || "MALE",
-        bloodType: "",
+        bloodType:data.get("bloodType")?.toString()|| "",
       });
 
       console.log("OKOK");
     } catch (e) {
-      console.log("????");
+      alert(e);
       console.error(e);
     }
   };
@@ -121,6 +122,16 @@ export default function SignUp() {
                     type="password"
                     id="password"
                     autoComplete="new-password"
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
+                    name="bloodType"
+                    label="Blood type"
+                    type="text"
+                    id="bloodType"
                   />
                 </Grid>
                 <Grid item xs={12}>

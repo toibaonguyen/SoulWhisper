@@ -1,3 +1,5 @@
+import { CreateHabit } from "@/apis/Habits";
+import { UserState } from "@/redux/reducers";
 import {
   Box,
   Button,
@@ -9,6 +11,7 @@ import {
   TextField,
 } from "@mui/material";
 import React, { ChangeEvent, useState } from "react";
+import { useSelector } from "react-redux";
 const style = {
   position: "absolute" as "absolute",
   top: "50%",
@@ -24,7 +27,9 @@ const style = {
 };
 
 const habitTypes = ["PHYSICAL", "SOCIAL", "ENERGY", "MENTAL", "PRODUCTIVITY"];
+
 export default function AddHabitModal() {
+  const uid = useSelector((state: UserState) => state.id);
   const [name, SetName] = useState<string>();
   const [type, SetType] = useState<string>();
   const [description, SetDescription] = useState<string>();
@@ -70,7 +75,25 @@ export default function AddHabitModal() {
           SetDescription(e.target.value.toString());
         }}
       />
-      <Button style={{ marginTop: 10, left: 0 }} color="success" onClick={()=>{}}>
+      <Button
+        style={{ marginTop: 10, left: 0 }}
+        color="success"
+        onClick={async () => {
+          try{
+            await CreateHabit({
+              type: type as string,
+              name: name as string,
+              description: description as string,
+              patientId: uid as string,
+            });
+            alert("Success")
+          }
+          catch(e)
+          {
+            alert(e)
+          }
+        }}
+      >
         Add
       </Button>
     </Box>

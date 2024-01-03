@@ -1,16 +1,16 @@
 import axios from "../config/axios";
 
 export interface Appointment {
-    id: string | null
+    id?: string
     type: string
     startTime: Date
     endTime: Date
-    diagnosis: string | null
-    prescription: string | null
-    notes: string | null
+    diagnosis?: string
+    prescription?: string
+    notes?: string
     doctorId: string
     patientId: string
-    status: string | null
+    status?: string
 }
 interface UpdateAppointment {
     diagnosis: string | null

@@ -8,9 +8,9 @@ export interface Doctor {
     name: string,
     birthday: Date,
     gender: string,
-    bloodType: string,
     activationStatus:string|null,
-    specialty:string
+    specialty:string,
+    avatar:string|null
 }
 
 interface Account{
@@ -19,6 +19,11 @@ interface Account{
 }
 
 
+export interface UpdateDoctor {
+
+    password: string,
+
+}
 export async function GetDoctors(limit: number|null) {
     try {
         let url="Doctors";
@@ -47,10 +52,20 @@ export async function GetDoctorById(id: string) {
 export async function LoginAsDoctor(account:Account)
 {
     try {
-        let res = await axios.get(`Doctors/login`);
+        let res = await axios.post(`Doctors/login`,account);
         return res.data;
     }
     catch (e) {
         throw e;
     }
 }
+export async function ChangeDoctorPassword(id: string, props: UpdateDoctor) {
+    try {
+        let res = await axios.patch(`Patients/${id}`, props);
+        return res;
+    }
+    catch (e) {
+        throw e;
+    }
+}
+

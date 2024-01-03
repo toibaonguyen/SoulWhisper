@@ -1,7 +1,7 @@
 import { SERVER_URL } from "@/common/api";
 import axios from "../config/axios";
 
-interface Patient {
+export interface Patient {
     id?: string,
     email: string,
     password: string,
